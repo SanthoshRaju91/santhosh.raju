@@ -2,20 +2,32 @@
     margin: 45px 0;
     background: $primary;
     border-radius: 10px;
-    padding: 40px;
-    
+    padding: 40px 30px;
+
     &__container {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+
+        @media (min-width: $layout_bp_small) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         &--action {
-            flex: 2;
+            @media (min-width: $layout_bp_small) {
+                flex: 2;
+            }
+
             h1 {
-                font-size: 3.2em;
                 color: $secondary;
                 line-height: 1.4em;
+                font-size: 2.2em;
+
+                @media (min-width: $layout_bp_small) {
+                    font-size: 3em;
+                }
             }
+
             button {
                 background: $misc;
                 border: none;
@@ -23,18 +35,30 @@
                 color: $secondary;
                 border-radius: 10px;
                 margin-top: 15px;
-                font-weight: 600;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
+
         &--specialise {
-            flex: 1;
+            padding-top: 30px;
+
+            @media (min-width: $layout_bp_small) {
+                flex: 1;
+                padding: 15px 25px;
+            }
             h4 {
                 color: $secondary;
                 font-size: 1.6em;
             }
 
             ul {
-                padding: 15px 0;
+                padding-top: 15px;
             }
 
             &-item {
