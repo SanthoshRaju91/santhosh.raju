@@ -1,59 +1,85 @@
 .blog-card {
-    background: $background_one;
-    border-radius: 10px;
+    cursor: pointer;    
     width: 85%;
-    height: 175px;
-    margin: 50px 0;
-    cursor: pointer;
+    margin: 20px auto;
     transition: all .5s ease;
 
-    &:hover {
-        background: $background_two;
-        opacity: 0.9;
-        // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-        transform: scale(1.1);
-    }
-    &.left {
-        margin-right: 50px;
-    }
+    @media (min-width: $layout_bp_small) {
+        width: 90%;
+        margin: 60px auto;
+        
+        &.left {
+            margin-right: 50px;
+        }
 
-    &.right {
-        margin-left: 50px;
+        &.right {
+            margin-left: 50px;
+        }
+
+        &:hover {
+            background: $background_two;
+            opacity: 0.9;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
     }
 
     &__container {
         display: flex;
-        justify-content: space-between;
-        &.left {            
-            flex-direction: row;
-            .blog-card__container--preview {
-                img {
-                    border-top-left-radius: 10px;
-                    border-bottom-left-radius: 10px;
-                }
+        flex-direction: column;
+
+        &--preview {
+            img {
+                width: 100%;
+                height: 200px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
             }
         }
-        &.right {
-            flex-direction: row-reverse;
-            .blog-card__container--preview {
-                img {
-                    border-top-right-radius: 10px;
-                    border-bottom-right-radius: 10px;
+
+        @media (min-width: $layout_bp_small) {
+            &.left {
+                flex-direction: row;
+                .blog-card__container--preview {
+                    img {
+                        width: 275px;
+                        height: 175px;
+    
+                        border-top-right-radius: 0;
+                        border-bottom-left-radius: 10px;
+                    }
+                }
+            }
+
+            &.right {
+                flex-direction: row-reverse;
+                .blog-card__container--preview {
+                    img {
+                        width: 275px;
+                        height: 175px;
+    
+                        border-top-right-radius: 10px;
+                        border-top-left-radius: 0px;
+                        border-bottom-right-radius: 10px;
+                    }
                 }
             }
         }
 
         &--content {
             flex: 1;
-            padding: 20px;
+            padding: 20px 0;
             .container {
-                display: flex;
-                flex-direction: column;                
-                
                 h1 {
-                    font-size: 2em;
+                    font-size: 1.8em;
                     color: $secondary;
+                    line-height: 1.4em;
+
+                    @media (min-width: $layout_bp_small) {
+                        font-size: 2.2em;
+                    }
                 }
+
                 .divider {
                     height: 1px;
                     background-color: $primary;
@@ -62,19 +88,17 @@
                     width: 25%;
                     margin: 10px 0;
                 }
-                
-                .published-on {                    
+
+                .published-on {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-
                     span {
                         font-size: 1.2em;
                         margin-right: 5px;
                         font-weight: normal;
                         color: $secondary;
                     }
-
                     h4 {
                         font-size: 1.2em;
                         font-weight: 800;
@@ -88,6 +112,10 @@
                     line-height: 1.6em;
                     margin: 20px 0;
                 }
+            }
+
+            @media (min-width: $layout_bp_small) {
+                padding: 20px;
             }
         }
     }
