@@ -1,0 +1,94 @@
+.blog-card {
+    background: $background_one;
+    border-radius: 10px;
+    width: 85%;
+    height: 175px;
+    margin: 50px 0;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:hover {
+        background: $background_two;
+        opacity: 0.9;
+        // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+        transform: scale(1.1);
+    }
+    &.left {
+        margin-right: 50px;
+    }
+
+    &.right {
+        margin-left: 50px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        &.left {            
+            flex-direction: row;
+            .blog-card__container--preview {
+                img {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+        &.right {
+            flex-direction: row-reverse;
+            .blog-card__container--preview {
+                img {
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+        }
+
+        &--content {
+            flex: 1;
+            padding: 20px;
+            .container {
+                display: flex;
+                flex-direction: column;                
+                
+                h1 {
+                    font-size: 2em;
+                    color: $secondary;
+                }
+                .divider {
+                    height: 1px;
+                    background-color: $primary;
+                    opacity: 0.8;
+                    border-radius: 5px;
+                    width: 25%;
+                    margin: 10px 0;
+                }
+                
+                .published-on {                    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    span {
+                        font-size: 1.2em;
+                        margin-right: 5px;
+                        font-weight: normal;
+                        color: $secondary;
+                    }
+
+                    h4 {
+                        font-size: 1.2em;
+                        font-weight: 800;
+                        color: $secondary;
+                    }
+                }
+
+                p {
+                    font-size: 1.4em;
+                    color: $secondary;
+                    line-height: 1.6em;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
