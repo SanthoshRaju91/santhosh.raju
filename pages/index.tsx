@@ -2,17 +2,13 @@ import React from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
 
-import { Header } from '../components/Header'
 import { Banner } from '../components/Banner'
 import { Blogs } from '../components/Blogs'
-import { Hire } from '../components/Hire'
-import { Footer } from '../components/Footer'
 
 const Index = (props: any) => {
   const data = props.data.map((blog: string) => matter(blog))
-  console.log(data)
   return (
-    <div className="site-layout">
+    <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
@@ -20,12 +16,9 @@ const Index = (props: any) => {
         <title>{props.title}</title>
       </Head>
 
-      <Header />
       <Banner />
       <Blogs />
-      <Hire />
-      <Footer />
-    </div>
+    </>
   )
 }
 
