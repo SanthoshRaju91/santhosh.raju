@@ -1,0 +1,127 @@
+.blog {
+  width: 90%;
+  margin: 75px auto;
+
+  &__container {
+    &--title {
+      h1 {
+        color: $secondary;
+        font-size: 3em;
+        line-height: 1.2em;
+      }
+
+      @media (min-width: $layout_bp_small) {
+        width: 80%;
+        h1 {
+          font-size: 4.2em;
+        }
+      }
+    }
+
+    &--published {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 20px 0;
+      .published-author {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        h5 {
+          margin-left: 10px;
+          color: $secondary;
+          font-size: 1.4em;
+        }
+      }
+      .published-on {
+        margin-left: 15px;
+        h4 {
+          font-size: 1.4em;
+          font-weight: 500;
+          color: $secondary;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin: 50px 0;
+    p {
+      color: $secondary;
+      font-size: 1.6em;
+      line-height: 1.8em;
+      margin: 15px 0;
+    }
+
+    h1 {
+      font-size: 3.2em;
+      color: $secondary;
+      line-height: 1.4em;
+      margin: 30px 0;
+    }
+
+    h2 {
+      font-size: 3em;
+      color: $secondary;
+      line-height: 1.4em;
+      margin: 30px 0;
+    }
+
+    h3 {
+      font-size: 2.8em;
+      color: $secondary;
+      line-height: 1.4em;
+      margin: 30px 0;
+    }
+
+    h4 {
+      font-size: 2.6em;
+      color: $secondary;
+      line-height: 1.4em;
+      margin: 30px 0;
+    }
+
+    h5 {
+      font-size: 2.4em;
+      color: $secondary;
+      margin: 30px 0;
+      line-height: 1.4em;
+    }
+
+    img {
+      object-fit: contain;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    ol {
+      li {
+        list-style: decimal;
+        font-size: 1.6em;
+        color: $secondary;
+        line-height: 1.8em;
+
+        p {
+          font-size: 1em;
+          line-height: 1.8em;
+        }
+      }
+    }
+
+    .syntax-highlighter {
+      font-size: 1.4em;
+    }
+
+    .inline-code {
+      background-color: $code_background;
+      padding: 5px;
+      border-radius: 2px;
+      color: $code_text_color;
+    }
+  }
+}
