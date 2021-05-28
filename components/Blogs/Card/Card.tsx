@@ -14,7 +14,7 @@ export const Card = ({position, title, description, preview, published}: CardPar
         <div className={`blog-card ${position}`}>
             <div className={`blog-card__container ${position}`}>
                 <div className="blog-card__container--preview">
-                    <Image src={preview} alt="Preview" layout="fixed" width="275" height="175" />
+                    <Image src={preview} alt="Preview" layout="intrinsic" width="" height="" />
                 </div>
                 <div className="blog-card__container--content">
                     <div className="container">

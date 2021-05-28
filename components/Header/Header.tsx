@@ -6,7 +6,9 @@ export const Header = () => {
     return (
         <header className="site-header">            
             <div className="site-header__logo">
-                <Image src="/Logo.svg" alt="Site Logo" width="200" height="40" />
+                <Link href="/">
+                    <Image src="/Logo.svg" alt="Site Logo" width="200" height="40" />
+                </Link>
             </div>
 
             <div className="site-header__action">

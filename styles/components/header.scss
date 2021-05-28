@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: space-between;
 
+    &__logo {
+        cursor: pointer;
+    }
+
     &__action {
         &--content {
             display: flex;
