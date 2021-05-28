@@ -2,8 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import matter from 'gray-matter'
 
-import { Banner } from '../components/Banner'
-import { Blogs } from '../components/Blogs'
+import {Banner} from '../components/Banner'
+import {Blogs} from '../components/Blogs'
 
 const Index = (props: any) => {
   const data = props.data.map((blog: string) => matter(blog))
@@ -35,7 +35,7 @@ export async function getStaticProps() {
   const data = blogs.map((blog: any) => {
     const path = `${process.cwd()}/content/${blog}`
     const rawContent = fs.readFileSync(path, {
-      encoding: 'utf-8'
+      encoding: 'utf-8',
     })
 
     return rawContent
@@ -45,7 +45,7 @@ export async function getStaticProps() {
     props: {
       title: siteData.default.title,
       description: siteData.default.description,
-      data: data
-    }
+      data: data,
+    },
   }
 }

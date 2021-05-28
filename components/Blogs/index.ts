@@ -1,1 +1,1 @@
-export { Blogs } from './Blogs'
+export {Blogs} from './Blogs'
