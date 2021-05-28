@@ -7,6 +7,7 @@ import {Blogs} from '../components/Blogs'
 
 const Index = (props: any) => {
   const data = props.data.map((blog: string) => matter(blog))
+
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ const Index = (props: any) => {
       </Head>
 
       <Banner />
-      <Blogs />
+      <Blogs data={data} />
     </>
   )
 }
