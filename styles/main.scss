@@ -1,12 +1,14 @@
-@import "_variables";
-@import "_global";
-@import "_base";
-@import "_typography";
+@import '_variables';
+@import '_global';
+@import '_base';
+@import '_typography';
 
-@import "pages/index";
-@import "components/header";
-@import "components/banner";
-@import "components/blogs";
-@import "components/card";
-@import "components/hire";
-@import "components/footer";
+@import 'components/header';
+@import 'components/banner';
+@import 'components/blogs';
+@import 'components/card';
+@import 'components/hire';
+@import 'components/footer';
+
+@import 'pages/index';
+@import 'pages/about';
