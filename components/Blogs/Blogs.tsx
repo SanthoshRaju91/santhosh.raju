@@ -2,41 +2,29 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {Card} from './Card'
+import {Blog} from '../../types'
 
-export interface BlogsParam {}
+export interface BlogsParam {
+  data: Blog[]
+}
 
-export const Blogs = (props: BlogsParam) => {
+export const Blogs = ({data}: BlogsParam) => {
   return (
     <div className="site-blogs">
       <div className="site-blogs__list">
-        <Card
-          position="left"
-          title="Podcast-Equipment: Best one’s under Rs 1000"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur ultricies arcu, leo consectetur et."
-          preview="/unsplash.jpg"
-          published="25-05-2021"
-        />
-        <Card
-          position="right"
-          title="Podcast-Equipment: Best one’s under Rs 1000"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur ultricies arcu, leo consectetur et."
-          preview="/unsplash.jpg"
-          published="25-05-2021"
-        />
-        <Card
-          position="left"
-          title="Podcast-Equipment: Best one’s under Rs 1000"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur ultricies arcu, leo consectetur et."
-          preview="/unsplash.jpg"
-          published="25-05-2021"
-        />
-        <Card
-          position="right"
-          title="Podcast-Equipment: Best one’s under Rs 1000"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur ultricies arcu, leo consectetur et."
-          preview="/unsplash.jpg"
-          published="25-05-2021"
-        />
+        {data.map((blog: Blog, index: number) => (
+          <Card
+            key={index}
+            position={index % 2 === 0 ? 'left' : 'right'}
+            title={blog.data.title}
+            description={blog.data.description}
+            preview={blog.data.preview}
+            published={blog.data.published}
+            slug={blog.data.slug}
+            author={blog.data.author}
+            authorImage={blog.data.authorImage}
+          />
+        ))}
       </div>
 
       <div className="site-blogs__archive">
