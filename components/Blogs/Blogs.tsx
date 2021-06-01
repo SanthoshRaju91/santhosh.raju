@@ -15,7 +15,6 @@ export const Blogs = ({data}: BlogsParam) => {
         {data.map((blog: Blog, index: number) => (
           <Card
             key={index}
-            position={index % 2 === 0 ? 'left' : 'right'}
             title={blog.data.title}
             description={blog.data.description}
             preview={blog.data.preview}
@@ -30,7 +29,7 @@ export const Blogs = ({data}: BlogsParam) => {
       <div className="site-blogs__archive">
         <Link href="/">
           <div className="site-blogs__archive--link">
-            <h4>Check Archive</h4>
+            <h5>Check Archive</h5>
             <Image
               src="/arrow_right.svg"
               alt="Direction to about"

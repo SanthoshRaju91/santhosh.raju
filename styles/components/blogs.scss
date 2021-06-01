@@ -1,19 +1,17 @@
 .site-blogs {
-    &__archive {
-        margin-left: 30px;
-        &--link {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
+  margin-top: 150px;
+  &__archive {
+    &--link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
 
-            h4 {
-                font-size: 1.4em;
-                color: $misc;
-                font-weight: normal;
-                margin-right: 10px;
-            }
-        }
+      h5 {
+        @include h5;
+        color: var(--primary-text);
+        margin-right: 5px;
+      }
     }
+  }
 }
