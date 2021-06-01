@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="site-footer">
       <div className="site-footer__container">
         <div className="site-footer__container--copyright">
-          <h3>&copy; copyright 2021</h3>
+          <h6>&copy; copyright 2021</h6>
         </div>
         <div className="site-footer__container--social">
           <a target="__blank">

@@ -1,0 +1,108 @@
+$header-one: 64px;
+$header-two: 48px;
+$header-three: 36px;
+$header-four: 24px;
+$header-five: 18px;
+$header-six: 14px;
+
+$paragraph: 16px;
+
+$black-weight: 900;
+$bold-weight: 700;
+$medium-weight: 500;
+$regular-weight: 400;
+
+$line-height: 150%;
+
+@mixin font-face($font-name, $font-file, $weight, $style: normal) {
+  @font-face {
+    font-family: quote($font-name);
+    src: url($font-file) format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+
+@include font-face(
+  'Montserrat-Black-H1',
+  '/fonts/Montserrat-Black.ttf',
+  $black-weight
+);
+
+@include font-face(
+  'Montserrat-Medium-H2',
+  '/fonts/Montserrat-Medium.ttf',
+  $medium-weight
+);
+
+@include font-face(
+  'Montserrat-Bold-H3',
+  '/fonts/Montserrat-Bold.ttf',
+  $bold-weight
+);
+
+@include font-face(
+  'Montserrat-Medium-H4',
+  '/fonts/Montserrat-Medium.ttf',
+  $medium-weight
+);
+
+@include font-face(
+  'Montserrat-Bold-H5',
+  '/fonts/Montserrat-Bold.ttf',
+  $bold-weight
+);
+
+@include font-face(
+  'Montserrat-Medium-H6',
+  '/fonts/Montserrat-Medium.ttf',
+  $medium-weight
+);
+
+@include font-face(
+  'Montserrat-Regular-P',
+  '/fonts/Montserrat-Regular.ttf',
+  $regular-weight
+);
+
+@mixin h1 {
+  font-family: 'Montserrat-Black-H1';
+  font-size: $header-one;
+  line-height: 125%;
+}
+
+@mixin h2 {
+  font-family: 'Montserrat-Medium-H2';
+  font-size: $header-two;
+  line-height: $line-height;
+}
+
+@mixin h3 {
+  font-family: 'Montserrat-Bold-H3';
+  font-size: $header-three;
+  line-height: $line-height;
+}
+
+@mixin h4 {
+  font-family: 'Montserrat-Medium-H4';
+  font-size: $header-four;
+  line-height: $line-height;
+}
+
+@mixin h5 {
+  font-family: 'Montserrat-Bold-H5';
+  font-size: $header-five;
+  line-height: $line-height;
+}
+
+@mixin h6 {
+  font-family: 'Montserrat-Medium-H6';
+  font-size: $header-six;
+  line-height: $line-height;
+}
+
+@mixin p {
+  font-family: 'Montserrat-Regular-P';
+  font-size: $paragraph;
+  line-height: $line-height;
+}

@@ -2,7 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 
 export interface CardParams {
-  position: 'left' | 'right'
   title: string
   description: string
   preview: string
@@ -13,7 +12,6 @@ export interface CardParams {
 }
 
 export const Card = ({
-  position,
   title,
   description,
   preview,
@@ -23,26 +21,29 @@ export const Card = ({
   authorImage,
 }: CardParams) => {
   return (
-    <div className={`blog-card ${position}`}>
+    <div className="blog-card">
       <Link href={`/${slug}`}>
-        <div className={`blog-card__container ${position}`}>
+        <div className="blog-card__container">
           <div className="blog-card__container--preview">
             <img src={preview} alt="Preview" />
           </div>
           <div className="blog-card__container--content">
-            <div className="container">
-              <h1>{title}</h1>
-              <div className="divider"></div>
-              <div className="published">
-                <div className="published-author">
-                  <img src={authorImage} alt="Author" />
-                  <h5>{author}</h5>
-                </div>
-                <div className="published-on">
-                  <span>Published: </span>
-                  <h4>{published}</h4>
-                </div>
+            <div className="blog-card__container--content-title">
+              <h4>{title}</h4>
+            </div>
+
+            <div className="blog-card__container--content-published">
+              <div className="published-author">
+                <img src={authorImage} alt="Author" />
+                <p>{author}</p>
               </div>
+              <div className="published-on">
+                <span>Published: </span>
+                <p>{published}</p>
+              </div>
+            </div>
+
+            <div className="blog-card__container--content-description">
               <p>{description}</p>
             </div>
           </div>
