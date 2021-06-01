@@ -1,31 +1,21 @@
 .site-header {
-    margin: 30px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+    cursor: pointer;
+  }
 
-    &__logo {
-        cursor: pointer;
+  &__action {
+    button {
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      background-color: var(--tertiary-text);
+      box-shadow: 0px 0px 2px var(--tertiary-text);
     }
-
-    &__action {
-        &--content {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            a {
-                
-                font-size: 1.4em;
-                color: $secondary;
-                font-weight: normal;
-
-                @media (min-width: $layout-bp-small) {
-                    font-size: 1.6em;
-                }
-            }
-        }
-        
-    }
+  }
 }
