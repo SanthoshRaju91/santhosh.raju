@@ -30,7 +30,7 @@
       }
 
       &-published {
-        margin-top: 10px;
+        margin-top: 5px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -41,13 +41,13 @@
           align-items: center;
 
           img {
-            width: 40px;
-            height: 40px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
           }
 
           p {
-            @include p;
+            font-size: $text-small;
             margin: 0;
             margin-left: 10px;
             color: var(--secondary-text);
@@ -61,15 +61,15 @@
           align-items: center;
 
           span {
-            font-size: 12px;
+            font-size: $text-small;
             margin: 0;
             margin-left: 10px;
-            color: var(--secondary-text);
-            font-weight: $medium-weight;
+            color: var(--tertiary-text);
+            font-weight: $regular-weight;
           }
 
           p {
-            @include p;
+            font-size: $text-small;
             margin: 0;
             margin-left: 10px;
             color: var(--secondary-text);
@@ -80,7 +80,7 @@
 
       &-description {
         p {
-          @include p;
+          font-size: $text-small;
           margin: 0;
           margin-top: 20px;
           color: var(--primary-text);
