@@ -8,9 +8,9 @@
 
     &--copyright {
       h6 {
-        @include h6;
+        font-size: $text-small;
         letter-spacing: 1px;
-        color: var(--secondary-text);
+        color: var(--primary-text);
       }
     }
 
