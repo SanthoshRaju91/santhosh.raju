@@ -1,0 +1,13 @@
+@mixin container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+$layout-bp-large: 1920px;
+$layout-bp-medium: 1440px;
+$layout-bp-small: 720px;
+$layout-bp-xsmall: 480px;
+
+$border-radius-lg: 40px;
+$border-radius-md: 10px;
+$border-radius-sm: 5px;

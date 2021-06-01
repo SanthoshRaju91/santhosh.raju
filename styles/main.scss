@@ -1,15 +1,35 @@
-@import '_variables';
-@import '_global';
-@import '_base';
-@import '_typography';
+@import './common/font';
+@import './common/colors';
+@import './common/layout';
 
-@import 'components/header';
-@import 'components/banner';
-@import 'components/blogs';
-@import 'components/card';
-@import 'components/hire';
-@import 'components/footer';
+:root {
+  --primary-text: #{$primary-default-text};
+  --secondary-text: #{$secondary-default-text};
+  --tertiary-text: #{$tertiary-default-text};
+  --brand-background: #{$brand-default-background};
+}
 
-@import 'pages/index';
-@import 'pages/about';
-@import 'pages/blog';
+.dark {
+  --primary-text: #{$primary-dark-text};
+  --secondary-text: #{$secondary-dark-text};
+  --tertiary-text: #{$tertiary-dark-text};
+  --brand-background: #{$brand-dark-background};
+}
+
+body {
+  @include p;
+  @include container;
+  background: var(--brand-background);
+  color: var(--primary-text);
+}
+
+// @import 'components/header';
+// @import 'components/banner';
+// @import 'components/blogs';
+// @import 'components/card';
+// @import 'components/hire';
+// @import 'components/footer';
+
+// @import 'pages/index';
+// @import 'pages/about';
+// @import 'pages/blog';
