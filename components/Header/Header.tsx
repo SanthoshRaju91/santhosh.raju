@@ -1,27 +1,10 @@
-import React, {useEffect, useState} from 'react'
+import React, {useContext} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {getUserThemePreferrence, setUserThemePreference} from '../../utils/user'
+import {DarkModeContext} from '../../utils/context'
 
 export const Header = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
-
-  useEffect(() => {
-    const isDarkMode = getUserThemePreferrence()
-    setIsDarkTheme(isDarkMode)
-
-    if (isDarkMode) {
-      document.body.classList.add('dark')
-    } else {
-      document.body.classList.remove('dark')
-    }
-  }, [])
-
-  function toggleTheme() {
-    document.body.classList.toggle('dark')
-    setIsDarkTheme(!isDarkTheme)
-    setUserThemePreference(!isDarkTheme)
-  }
+  const darkModeContext = useContext(DarkModeContext)
 
   return (
     <header className="site-header">
@@ -30,7 +13,7 @@ export const Header = () => {
           <div>
             <Image
               src={
-                isDarkTheme
+                darkModeContext.isDarkMode
                   ? '/site-assets/Logo-White.svg'
                   : '/site-assets/Logo.svg'
               }
@@ -42,7 +25,7 @@ export const Header = () => {
         </Link>
       </div>
       <div className="site-header__action">
-        <button onClick={toggleTheme}>
+        <button onClick={darkModeContext.toggle}>
           <Image
             src="/site-assets/dark-mode.svg"
             alt="Dark Mode"
