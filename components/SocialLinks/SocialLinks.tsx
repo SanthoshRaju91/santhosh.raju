@@ -26,8 +26,8 @@ const socialLinks: SocalLink[] = [
 export const SocialLinks = () => {
   return (
     <div className="social-links">
-      {socialLinks.map((socialLink: SocalLink) => (
-        <a target="__blank" key={socialLink.url} href={socialLink.url}>
+      {socialLinks.map((socialLink: SocalLink, index: number) => (
+        <a target="__blank" key={index} href={socialLink.url}>
           <Image
             src={socialLink.light}
             alt={socialLink.name}
