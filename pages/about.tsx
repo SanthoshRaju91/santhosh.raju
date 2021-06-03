@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import {SocialLinks} from '../components/SocialLinks'
 
 const skills = [
   'Javscript',
@@ -22,7 +23,7 @@ const About = () => {
     <div className="about">
       <div className="about__container">
         <div className="about__container--general">
-          <h1>Hi, I'm Santhosh Raju</h1>
+          <h3>Hi, I'm Santhosh Raju</h3>
           <div className="introduction">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dis
@@ -36,15 +37,24 @@ const About = () => {
               vitae hendrerit leo. Ut tempus integer viverra id lacus. Elementum
               tristique aliquam purus, vitae, pretium sit.
             </p>
+            <div className="connect">
+              <h5>Connect via </h5>
+              <div className="links">
+                <SocialLinks />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="about__container--profile-pic">
-          <div className="blur"></div>
+        <div className="about__container--profile-image">
+          <div className="image-container">
+            <img src="/site-assets/Me.png" alt="Me" />
+            <div className="bg-box"></div>
+          </div>
         </div>
       </div>
 
       <div className="about__skills">
-        <h2>Skills</h2>
+        <h5>Skills</h5>
         <div className="about__skills--container">
           <ul>
             {skills.map((skill: string) => (
