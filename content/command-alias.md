@@ -31,7 +31,7 @@ aliases, just like the one which I showed above.
 
 Turns out it’s really not that complicated(depending on the Operating System)
 
-#### On Linux core system’s
+### On Linux core system’s
 
 Let’s check how to setup command alias in Linux core systems (Mac, Ubuntu)
 
@@ -44,15 +44,15 @@ Let’s check how to setup command alias in Linux core systems (Mac, Ubuntu)
 3. The syntax for aliasing is pretty simple alias
    `<your-alias>='<command-to-be-aliased>'`
 
-For eg — I want to alias the 10 characters git branch command to 2 character gb,
-so my syntax would be alias gb='git branch'
+   For eg — I want to alias the 10 characters git branch command to 2 character
+   gb, so my syntax would be alias gb='git branch'
 
-For completeness, I provide a screenshot of my simple alias below.
+   For completeness, I provide a screenshot of my simple alias below.
 
-![my alias](/command-alias/screen-2.png)
+   ![my alias](/command-alias/screen-2.png)
 
-Your preferences / command aliases need not match mine, I’m just sharing my
-preference as an example.
+   Your preferences / command aliases need not match mine, I’m just sharing my
+   preference as an example.
 
 4. Final step, once you have built your aliases. You now need to run the
    `.bash_profile` / `.profile` so that your alias are registered and recognised
@@ -60,7 +60,7 @@ preference as an example.
 
 To do that, run source .profile / source .bash_profile
 
-#### On Window’s based system’s
+### On Window’s based system’s
 
 Even with Window’s, it is quite simple and it’s just one simple command
 
@@ -68,7 +68,7 @@ Even with Window’s, it is quite simple and it’s just one simple command
 doskey <your-alias>= <command-to-alias> $*
 ```
 
-The $\* is optional, and it is used for command that take arguments.
+The `$\*` is optional, and it is used for command that take arguments.
 
 For eg — `git commit -m` would want to take message as an argument, so you write
 the alias as `doskey gc=git commit -m $*`
@@ -84,13 +84,12 @@ One more, main reason that I plan to share it is, I believe that automation or
 any small things like this, can really make a difference in our development
 time.
 
-As a programmer, I think that our main focus would go into the product /
-features that we build and ship everyday and we hardly get enough time to debug
-the errors / code issues we run into. Which would take up most of our time and
-we eventually #burnout.
-
-So having automations or time saving tools like this, can bring the burden down
-a bit and relive us, hard working programmers, from stress.
+> As a programmer, I think that our main focus would go into the product /
+> features that we build and ship everyday and we hardly get enough time to
+> debug the errors / code issues we run into. Which would take up most of our
+> time and we eventually #burnout. So having automations or time saving tools
+> like this, can bring the burden down a bit and relive us, hard working
+> programmers, from stress.
 
 That’s it for now folks, if you like the blog and found it helpful. Please do
 share it to as many developer / programmers, who can benefit from this.
