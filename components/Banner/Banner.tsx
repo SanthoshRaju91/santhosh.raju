@@ -19,7 +19,7 @@ export const Banner = () => {
           </div>
           <div className="site-banner__container--profile-action">
             <Link href="/about">
-              <>
+              <span className="about-link">
                 <h5>Say Hello</h5>
                 <img
                   src="/site-assets/hello.svg"
@@ -27,7 +27,7 @@ export const Banner = () => {
                   width="40"
                   height="40"
                 />
-              </>
+              </span>
             </Link>
           </div>
         </div>
