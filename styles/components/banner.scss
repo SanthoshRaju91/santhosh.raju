@@ -39,13 +39,15 @@
         }
       }
       &-action {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        cursor: pointer;
-        h5 {
-          @include h5;
-          color: $brand;
+        .about-link {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          cursor: pointer;
+          h5 {
+            @include h5;
+            color: $brand;
+          }
         }
       }
     }
