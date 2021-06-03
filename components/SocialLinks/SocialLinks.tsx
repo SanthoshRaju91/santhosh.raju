@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Image from 'next/image'
 import {SocalLink} from '../../types'
+import {DarkModeContext} from '../../utils/context'
 
 const socialLinks: SocalLink[] = [
   {
@@ -24,12 +25,16 @@ const socialLinks: SocalLink[] = [
 ]
 
 export const SocialLinks = () => {
+  const darkModeContext = useContext(DarkModeContext)
+
   return (
     <div className="social-links">
-      {socialLinks.map((socialLink: SocalLink) => (
-        <a target="__blank" key={socialLink.url} href={socialLink.url}>
+      {socialLinks.map((socialLink: SocalLink, index: number) => (
+        <a target="__blank" key={index} href={socialLink.url}>
           <Image
-            src={socialLink.light}
+            src={
+              darkModeContext.isDarkMode ? socialLink.dark : socialLink.light
+            }
             alt={socialLink.name}
             width="24"
             height="24"
