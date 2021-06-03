@@ -3,14 +3,14 @@ import React from 'react'
 import {NextPage, NextPageContext} from 'next'
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
-import {atomDark} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import {darcula} from 'react-syntax-highlighter/dist/cjs/styles/prism'
 
 const components = {
   code({node, inline, className, children, ...props}: any) {
     const match = /language-(\w+)/.exec(className || '')
     return !inline && match ? (
       <SyntaxHighlighter
-        style={atomDark}
+        style={darcula}
         language={match[1]}
         PreTag="div"
         className="syntax-highlighter"
@@ -35,19 +35,20 @@ const Blog: NextPage<any> = ({blog}) => {
     <div className="blog">
       <div className="blog__container">
         <div className="blog__container--title">
-          <h1>{frontmatter.title}</h1>
+          <h3>{frontmatter.title}</h3>
         </div>
         <div className="blog__container--published">
           <div className="published-author">
             <img src={frontmatter.authorImage} alt="Author" />
-            <h5>{frontmatter.author}</h5>
+            <p>{frontmatter.author}</p>
           </div>
           <div className="published-on">
+            <span>Published on </span>
             <h4>{frontmatter.published}</h4>
           </div>
         </div>
 
-        <div className="blog__content">
+        <div className="blog__container--content">
           <ReactMarkdown
             children={blog.content}
             skipHtml={true}
