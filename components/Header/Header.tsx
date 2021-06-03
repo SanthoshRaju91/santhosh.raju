@@ -1,13 +1,26 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import {getUserThemePreferrence, setUserThemePreference} from '../../utils/user'
 
 export const Header = () => {
   const [isDarkTheme, setIsDarkTheme] = useState(false)
 
+  useEffect(() => {
+    const isDarkMode = getUserThemePreferrence()
+    setIsDarkTheme(isDarkMode)
+
+    if (isDarkMode) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  }, [])
+
   function toggleTheme() {
     document.body.classList.toggle('dark')
     setIsDarkTheme(!isDarkTheme)
+    setUserThemePreference(!isDarkTheme)
   }
 
   return (
