@@ -14,3 +14,10 @@ export interface Blog {
     isEmpty: boolean;
     excerpt: string;
 }
+
+export interface SocalLink {
+    light: string;
+    dark: string;
+    url: string;
+    name: string;
+}
