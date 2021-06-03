@@ -27,16 +27,18 @@ export const Header = () => {
     <header className="site-header">
       <div className="site-header__logo">
         <Link href="/">
-          <Image
-            src={
-              isDarkTheme
-                ? '/site-assets/Logo-White.svg'
-                : '/site-assets/Logo.svg'
-            }
-            alt="Site Logo"
-            width="250"
-            height="75"
-          />
+          <div>
+            <Image
+              src={
+                isDarkTheme
+                  ? '/site-assets/Logo-White.svg'
+                  : '/site-assets/Logo.svg'
+              }
+              alt="Site Logo"
+              width="250"
+              height="75"
+            />
+          </div>
         </Link>
       </div>
       <div className="site-header__action">
