@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
+import {SocialLinks} from '../SocialLinks'
 
 export const Footer = () => {
   return (
@@ -9,30 +9,7 @@ export const Footer = () => {
           <h6>&copy; copyright 2021</h6>
         </div>
         <div className="site-footer__container--social">
-          <a target="__blank">
-            <Image
-              src="/LinkedIn.svg"
-              alt="LinkedIn Social"
-              width="24"
-              height="24"
-            />
-          </a>
-          <a target="__blank">
-            <Image
-              src="/twitter.svg"
-              alt="Twitter Social"
-              width="24"
-              height="24"
-            />
-          </a>
-          <a target="__blank">
-            <Image
-              src="/github.svg"
-              alt="Github Social"
-              width="24"
-              height="24"
-            />
-          </a>
+          <SocialLinks />
         </div>
       </div>
     </footer>
