@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 export const Header = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(false)
+
   function toggleTheme() {
     document.body.classList.toggle('dark')
+    setIsDarkTheme(!isDarkTheme)
   }
 
   return (
@@ -12,7 +15,11 @@ export const Header = () => {
       <div className="site-header__logo">
         <Link href="/">
           <Image
-            src="/site-assets/Logo.svg"
+            src={
+              isDarkTheme
+                ? '/site-assets/Logo-White.svg'
+                : '/site-assets/Logo.svg'
+            }
             alt="Site Logo"
             width="250"
             height="75"
