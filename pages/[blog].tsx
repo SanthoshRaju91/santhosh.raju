@@ -4,6 +4,7 @@ import {NextPage, NextPageContext} from 'next'
 import ReactMarkdown from 'react-markdown'
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {darcula} from 'react-syntax-highlighter/dist/cjs/styles/prism'
+import {LinkPreview} from '../components/LinkPreview'
 
 const components = {
   code({node, inline, className, children, ...props}: any) {
@@ -25,6 +26,9 @@ const components = {
   },
   img({src, alt}: any) {
     return <img src={src} alt={alt} width="200" height="200" />
+  },
+  a({href}: any) {
+    return <LinkPreview url={href} />
   },
 }
 
