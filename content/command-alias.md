@@ -76,7 +76,7 @@ the alias as `doskey gc=git commit -m $*`
 If you want to persist the alias command, for every new session. I found a very
 helpful Stackoverflow answer, which helped me when I was using Windows machine.
 
-https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt
+[aliases-in-windows-command-prompt](https://stackoverflow.com/questions/20530996/aliases-in-windows-command-prompt)
 
 That’s it, you now can go ahead and use them, instead of typing long commands
 
