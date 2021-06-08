@@ -85,8 +85,11 @@ $line-height: 150%;
 
 @mixin h3 {
   font-family: 'Montserrat-Bold-H3';
-  font-size: $header-three;
+  font-size: $header-four;
   line-height: $line-height;
+  @include big-screen {
+    font-size: $header-three;
+  }
 }
 
 @mixin h4 {

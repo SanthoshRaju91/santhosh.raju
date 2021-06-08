@@ -5,8 +5,14 @@
   &__container {
     &--title {
       h3 {
-        @include h3;
-        margin: 0;
+        font-family: 'Montserrat-Bold-H3';
+        font-size: $header-three;
+        line-height: $line-height;
+        margin: 15px 0;
+
+        @include big-screen {
+          margin: 0;
+        }
       }
     }
 
@@ -24,10 +30,11 @@
           border-radius: 50%;
         }
         p {
-          margin-left: 5px;
-          font-size: $paragraph;
-          font-family: 'Montserrat-Bold-H5';
-          color: var(--secondary-text);
+          color: $brand;
+          font-family: 'Montserrat-Medium-H4';
+          font-size: $text-small;
+          margin-left: 10px;
+          letter-spacing: 0.5px;
         }
       }
 
@@ -37,14 +44,14 @@
         flex-direction: row;
         align-items: center;
         span {
-          font-size: $text-small;
           color: var(--secondary-text);
+          font-size: $text-small;
         }
         h4 {
+          color: var(--primary-text);
+          font-family: 'Montserrat-Medium-H4';
+          font-size: $text-small;
           margin-left: 5px;
-          font-size: $paragraph;
-          font-family: 'Montserrat-Bold-H5';
-          color: var(--secondary-text);
         }
       }
     }
