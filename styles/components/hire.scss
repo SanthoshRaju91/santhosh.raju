@@ -7,9 +7,14 @@
   &__container {
     width: 90%;
     h3 {
-      @include h3;
-      margin: 0;
+      @include h4;
+      letter-spacing: 0.8px;
       color: $secondary-dark-text;
+
+      @include big-screen {
+        @include h3;
+        margin: 0;
+      }
     }
     p {
       font-size: $header-six;
