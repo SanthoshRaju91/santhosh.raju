@@ -11,6 +11,14 @@ export const Banner = () => {
             A developer’s personal blogging site, where I blog about my
             experiences as developer and living a life.
           </p>
+          <div className="site-banner__container--hero-info-action">
+            <Link href="/about">
+              <span className="about-link">
+                <h5>Say Hello</h5>
+                <img src="/site-assets/hello.svg" alt="Say hello" />
+              </span>
+            </Link>
+          </div>
         </div>
         <div className="site-banner__container--profile">
           <div className="site-banner__container--profile-image">

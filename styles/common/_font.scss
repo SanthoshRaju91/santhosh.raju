@@ -70,8 +70,11 @@ $line-height: 150%;
 
 @mixin h1 {
   font-family: 'Montserrat-Black-H1';
-  font-size: $header-one;
   line-height: 125%;
+  font-size: $header-two;
+  @include big-screen {
+    font-size: $header-one;
+  }
 }
 
 @mixin h2 {

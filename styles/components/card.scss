@@ -1,39 +1,67 @@
 .blog-card {
   margin: 20px 0;
   cursor: pointer;
+  border-radius: $border-radius-lg;
 
   &__container {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+
+    @include big-screen {
+      flex-direction: row;
+      align-items: stretch;
+    }
 
     &--preview {
       img {
-        width: 240px;
-        height: 100% !important;
+        width: 100%;
         object-fit: cover;
-
         border-top-left-radius: $border-radius-md;
-        border-bottom-left-radius: $border-radius-md;
+        border-top-right-radius: $border-radius-md;
+      }
+
+      @include big-screen {
+        img {
+          width: 240px;
+          height: 100% !important;
+          border-top-right-radius: 0;
+          border-top-left-radius: $border-radius-md;
+          border-bottom-left-radius: $border-radius-md;
+        }
       }
     }
 
     &--content {
-      padding: 5px 20px;
+      @include big-screen {
+        padding: 20px;
+      }
+
       &-title {
         h4 {
-          @include h4;
-          margin: 0;
+          font-family: 'Montserrat-Bold-H3';
+          font-size: $header-four;
+          margin: 15px 0;
           font-weight: $bold-weight;
+          line-height: 1.4em;
           color: var(--primary-text);
+
+          @include big-screen {
+            letter-spacing: 0.8px;
+            margin: 0;
+            margin-bottom: 10px;
+          }
         }
       }
 
       &-published {
-        margin-top: 5px;
+        margin-top: 10px;
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        @include big-screen {
+          margin-top: 5px;
+        }
 
         .published-author {
           display: flex;
@@ -47,13 +75,14 @@
           }
 
           p {
+            color: var(--secondary-text);
             font-size: $text-small;
+            font-weight: $medium-weight;
             margin: 0;
             margin-left: 10px;
-            color: var(--secondary-text);
-            font-weight: $medium-weight;
           }
         }
+
         .published-on {
           margin-left: 50px;
           display: flex;
@@ -61,29 +90,30 @@
           align-items: center;
 
           span {
+            color: var(--tertiary-text);
             font-size: $text-small;
+            font-weight: $regular-weight;
             margin: 0;
             margin-left: 10px;
-            color: var(--tertiary-text);
-            font-weight: $regular-weight;
           }
 
           p {
+            color: var(--secondary-text);
             font-size: $text-small;
+            font-weight: $medium-weight;
             margin: 0;
             margin-left: 10px;
-            color: var(--secondary-text);
-            font-weight: $medium-weight;
           }
         }
       }
 
       &-description {
         p {
-          font-size: $text-small;
+          color: var(--primary-text);
+          font-family: 'Montserrat-Regular-P';
+          font-size: $header-six;
           margin: 0;
           margin-top: 20px;
-          color: var(--primary-text);
         }
       }
     }
