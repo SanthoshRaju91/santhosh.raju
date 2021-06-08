@@ -12,6 +12,11 @@
         @include h1;
       }
 
+      p {
+        @include p;
+        line-height: 170%;
+      }
+
       @include big-screen {
         margin-top: 0px;
         max-width: 50%;
