@@ -7,20 +7,20 @@ const socialLinks: SocalLink[] = [
   {
     light: '/site-assets/LinkedIn-light.svg',
     dark: '/site-assets/LinkedIn.svg',
-    url: '',
+    url: 'https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/',
     name: 'LinkedIn',
-  },
-  {
-    light: '/site-assets/twitter-light.svg',
-    dark: '/site-assets/twitter.svg',
-    url: '',
-    name: 'Twitter',
   },
   {
     light: '/site-assets/github-light.svg',
     dark: '/site-assets/github.svg',
-    url: '',
+    url: 'https://github.com/SanthoshRaju91',
     name: 'Github',
+  },
+  {
+    light: '/site-assets/twitter-light.svg',
+    dark: '/site-assets/twitter.svg',
+    url: 'https://twitter.com/santhoshraju2',
+    name: 'Twitter',
   },
 ]
 
