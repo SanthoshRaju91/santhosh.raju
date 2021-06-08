@@ -19,12 +19,15 @@
     }
 
     &--content {
-      padding: 5px 20px;
+      padding: 20px;
       &-title {
         h4 {
-          @include h4;
+          font-family: 'Montserrat-Bold-H3';
+          font-size: $header-four;
           margin: 0;
+          margin-bottom: 10px;
           font-weight: $bold-weight;
+          letter-spacing: 0.8px;
           color: var(--primary-text);
         }
       }
@@ -80,7 +83,8 @@
 
       &-description {
         p {
-          font-size: $text-small;
+          font-family: 'Montserrat-Regular-P';
+          font-size: $header-six;
           margin: 0;
           margin-top: 20px;
           color: var(--primary-text);
