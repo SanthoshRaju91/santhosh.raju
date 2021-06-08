@@ -10,7 +10,9 @@ export const Hire = () => {
           for freelancing opportunity. This is only an outreach to try and
           connect them with you.
         </p>
-        <button>Connect with me</button>
+        <a href="https://forms.gle/CdxVHda786vopfvJ7" target="__blank">
+          Connect with me
+        </a>
       </div>
     </div>
   )
