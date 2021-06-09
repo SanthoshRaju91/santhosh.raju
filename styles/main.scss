@@ -25,6 +25,10 @@ body {
   color: var(--primary-text);
 }
 
+* {
+  transition: all 0.1s ease;
+}
+
 @import 'components/header';
 @import 'components/banner';
 @import 'components/card';
