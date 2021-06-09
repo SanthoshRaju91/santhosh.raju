@@ -1,6 +1,7 @@
 .site-blogs {
   margin-top: 150px;
   &__archive {
+    display: inline-block;
     &--link {
       display: flex;
       flex-direction: row;
