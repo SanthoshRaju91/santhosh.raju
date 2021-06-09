@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
+import {motion} from 'framer-motion'
 import {Card} from './Card'
 import {Blog} from '../../types'
 
@@ -28,15 +28,18 @@ export const Blogs = ({data}: BlogsParam) => {
 
       <div className="site-blogs__archive">
         <Link href="/">
-          <div className="site-blogs__archive--link">
+          <motion.div
+            whileHover={{x: 10}}
+            className="site-blogs__archive--link"
+          >
             <h5>Check Archive</h5>
-            <Image
+            <motion.img
               src="/arrow_right.svg"
               alt="Direction to about"
               width="32"
               height="32"
             />
-          </div>
+          </motion.div>
         </Link>
       </div>
     </div>
