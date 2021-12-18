@@ -1,1 +1,0 @@
-export {Hire} from './Hire'
