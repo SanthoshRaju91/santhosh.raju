@@ -1,6 +1,5 @@
 import { Box, HStack, VStack, Text } from "@chakra-ui/react";
-import { Image } from "../Image";
-import Placeholder from "../../assets/Placeholder.svg";
+import { IoIosShareAlt } from "react-icons/io";
 import { UserAvatar } from "../Avatar";
 import { Published } from "../Published";
 import User from "../../assets/user.png";
@@ -11,30 +10,28 @@ const Card: React.FC = () => {
       maxW={"4xl"}
       borderWidth={"1px"}
       borderRadius={"lg"}
-      overflow={"hidden"}
+      borderColor={"gray.200"}
       boxShadow={"sm"}
-      p={3}
+      p={6}
     >
-      <HStack spacing={6}>
-        <Box w={"25%"}>
-          <Image src={Placeholder} alt="Placeholder"></Image>
-        </Box>
-        <Box w={"75%"}>
-          <VStack alignItems={"left"} spacing={4}>
-            <Text fontSize={"2xl"} fontWeight={"bold"} textColor={"gray.700"}>
-              Using Command Alias, to help your Development Workflow
-            </Text>
-            <Text fontSize={"md"} fontWeight={"normal"} textColor={"gray.600"}>
-              Improve your Development Workflow by shortening commonly used
-              commands, and save yourself from Carpal Tunnel Syndrome.
-            </Text>
-            <HStack spacing={16}>
-              <UserAvatar imageSrc={User} userName="Santhosh Raju" />
-              <Published publishedDate="Dec 18, 2021"></Published>
-            </HStack>
-          </VStack>
-        </Box>
-      </HStack>
+      <VStack spacing={7} alignItems={"left"}>
+        <Text fontSize={"xl"} fontWeight={"black"} textColor={"gray.700"}>
+          Using Command Alias, to help your Development Workflow
+        </Text>
+        <Text fontSize={"md"} fontWeight={"light"} textColor={"gray.600"}>
+          Improve your Development workflow by shorten commonly used commands.
+          And save yourself from Carpal Tunnel Syndrome. Mac / Linux and Windows
+          users can follow this step-by-step guide, very easy to setup and be
+          done with long typings of command
+        </Text>
+        <HStack justifyContent={"space-between"} alignItems={"center"}>
+          <HStack spacing={16}>
+            <UserAvatar imageSrc={User} userName="Santhosh Raju" />
+            <Published publishedDate="Dec 18, 2021" />
+          </HStack>
+          <IoIosShareAlt size={28} color="#4A5568" />
+        </HStack>
+      </VStack>
     </Box>
   );
 };
