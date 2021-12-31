@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
           </Text>
           <Text
             fontSize={"md"}
-            fontWeight={"bold"}
-            textColor={"brand.800"}
+            fontWeight={"semibold"}
+            textColor={"brand.700"}
             letterSpacing={"wide"}
           >
             Making my bits count...
