@@ -52,13 +52,12 @@ const LatestBlogs: React.FC = () => {
         <Link href={"/blogs"} passHref>
           <HStack mt={4}>
             <Text
-              fontSize={"lg"}
-              fontWeight={"normal"}
-              textColor={"gray.800"}
+              fontSize={"md"}
+              fontWeight={"light"}
+              textColor={"gray.600"}
               px={1}
               inlineSize={"max-content"}
-              borderBottomWidth={1}
-              borderBottomColor={"gray.800"}
+              borderBottomColor={"gray.600"}
             >
               There&apos;s more, right her
             </Text>
