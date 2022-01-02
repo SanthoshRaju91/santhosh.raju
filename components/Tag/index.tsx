@@ -12,9 +12,9 @@ const Tag: React.FC<ITag> = ({ text }) => {
       borderRadius={"full"}
       w={"full"}
       fontSize={"xs"}
-      fontWeight={"normal"}
+      fontWeight={"medium"}
       justifyContent={"center"}
-      textColor={"gray.700"}
+      textColor={"blackAlpha.800"}
       bgColor={"brand.100"}
     >
       {text}

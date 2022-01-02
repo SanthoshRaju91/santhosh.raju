@@ -17,13 +17,13 @@ const Hero: React.FC = () => {
             fontSize={{ sm: "3xl", md: "3xl", lg: "4xl" }}
             fontWeight={"black"}
             letterSpacing={"wide"}
-            textColor={"gray.700"}
+            textColor={"blackAlpha.800"}
           >
             Build. Blog. Share...
           </Text>
           <Text
             fontSize={"md"}
-            fontWeight={"semibold"}
+            fontWeight={"medium"}
             letterSpacing={"wide"}
             textColor={"brand.800"}
           >
@@ -35,7 +35,7 @@ const Hero: React.FC = () => {
             fontWeight={"normal"}
             letterSpacing={"normal"}
             lineHeight={1.6}
-            textColor={"gray.600"}
+            textColor={"blackAlpha.700"}
           >
             Welcome to my personal Blogging Site. I share my thoughts, work and
             life experiences in Byte-size or Mega-Byte sizes.
@@ -46,11 +46,11 @@ const Hero: React.FC = () => {
                 <Text
                   fontSize={"md"}
                   fontWeight={"bold"}
-                  textColor={"gray.700"}
+                  textColor={"blackAlpha.800"}
                 >
                   Say Hello
                 </Text>
-                <MdWavingHand size={"18px"} color="gray.600"></MdWavingHand>
+                <MdWavingHand size={"18px"}></MdWavingHand>
               </HStack>
             </Link>
           </Box>
@@ -72,10 +72,14 @@ const Hero: React.FC = () => {
           ></Image>
           <Link href={"/about"} passHref>
             <HStack>
-              <Text fontSize={"md"} fontWeight={"bold"} textColor={"gray.700"}>
+              <Text
+                fontSize={"md"}
+                fontWeight={"bold"}
+                textColor={"blackAlpha.800"}
+              >
                 Say Hello
               </Text>
-              <MdWavingHand size={"18px"} color="gray.600"></MdWavingHand>
+              <MdWavingHand size={"18px"}></MdWavingHand>
             </HStack>
           </Link>
         </VStack>

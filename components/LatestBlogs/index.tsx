@@ -11,11 +11,11 @@ const LatestBlogs: React.FC = () => {
         <Text
           fontSize={{ sm: "lg", md: "xl" }}
           fontWeight={"bold"}
-          textColor={"gray.700"}
+          textColor={"blackAlpha.800"}
           borderBottomWidth={1}
           inlineSize={"max"}
           pb={1}
-          borderBottomColor={"gray.700"}
+          borderBottomColor={"blackAlpha.800"}
         >
           Latest Blogs
         </Text>
@@ -34,8 +34,8 @@ const LatestBlogs: React.FC = () => {
           <Text
             fontSize={"md"}
             fontWeight={"bold"}
-            textColor={"gray.700"}
-            borderBottomColor={"gray.700"}
+            textColor={"blackAlpha.800"}
+            borderBottomColor={"blackAlpha.800"}
             borderBottomWidth={1}
             inlineSize={"max"}
             pb={1}
@@ -60,7 +60,11 @@ const LatestBlogs: React.FC = () => {
       <Box mt={8}>
         <Link href={"/blogs"} passHref>
           <HStack alignItems={"center"} spacing={2} cursor={"pointer"}>
-            <Text fontSize={"sm"} fontWeight={"normal"} textColor={"gray.600"}>
+            <Text
+              fontSize={"sm"}
+              fontWeight={"medium"}
+              textColor={"blackAlpha.800"}
+            >
               There&apos;s more, right here
             </Text>
             <BsArrowRight size={"18px"} />
