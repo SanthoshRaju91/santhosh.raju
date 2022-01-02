@@ -1,4 +1,4 @@
-import { Box, Grid, HStack, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Grid, HStack, Text, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { Card } from "../Card";
@@ -7,61 +7,63 @@ import { Tag } from "../Tag";
 const LatestBlogs: React.FC = () => {
   return (
     <Box mt={24}>
-      <Text
-        fontSize={"2xl"}
-        fontWeight={"bold"}
-        textColor={"gray.700"}
-        borderBottomWidth={1}
-        pb={2}
-        inlineSize={"max"}
-        borderBottomColor={"gray.700"}
-      >
-        Latest Blogs
-      </Text>
-      <HStack spacing={12} mt={10} alignItems={"flex-start"}>
-        <VStack maxW={"75%"} w={"75%"} spacing={6} alignItems={"flex-start"}>
+      <Box>
+        <Text
+          fontSize={{ sm: "lg", md: "xl" }}
+          fontWeight={"bold"}
+          textColor={"gray.700"}
+          borderBottomWidth={1}
+          inlineSize={"max"}
+          pb={1}
+          borderBottomColor={"gray.700"}
+        >
+          Latest Blogs
+        </Text>
+      </Box>
+      <Flex flexDirection={{ sm: "column", md: "column", lg: "row" }} mt={10}>
+        <VStack spacing={6} maxW={{ sm: "100%", md: "100%", lg: "75%" }}>
           <Card />
           <Card />
           <Card />
         </VStack>
-        <VStack maxW={"25%"} w={"25%"} alignItems={"flex-start"}>
+        <VStack
+          ml={8}
+          maxW={{ sm: "0", md: "0", lg: "25%" }}
+          display={{ sm: "none", md: "none", lg: "block" }}
+        >
           <Text
-            fontSize={"sm"}
-            fontWeight={"semibold"}
+            fontSize={"md"}
+            fontWeight={"bold"}
             textColor={"gray.700"}
-            pb={1}
+            borderBottomColor={"gray.700"}
             borderBottomWidth={1}
             inlineSize={"max"}
-            borderBottomColor={"gray.700"}
+            pb={1}
           >
             Tags
           </Text>
-          <Box>
-            <Grid templateColumns={"repeat(2, 1fr)"} gap={4} mt={4}>
+
+          <Box pt={4}>
+            <Grid templateColumns={"repeat(2, 1fr)"} gap={4}>
               <Tag text="Devops" />
               <Tag text="Frontend" />
               <Tag text="Ansible" />
-              <Tag text="Kubernetes" />
+              <Tag text="React.js" />
+              <Tag text="Javascript" />
               <Tag text="Walk of Life" />
               <Tag text="Books" />
             </Grid>
           </Box>
         </VStack>
-      </HStack>
-      <Box>
+      </Flex>
+
+      <Box mt={8}>
         <Link href={"/blogs"} passHref>
-          <HStack mt={4}>
-            <Text
-              fontSize={"md"}
-              fontWeight={"light"}
-              textColor={"gray.600"}
-              px={1}
-              inlineSize={"max-content"}
-              borderBottomColor={"gray.600"}
-            >
-              There&apos;s more, right her
+          <HStack alignItems={"center"} spacing={2} cursor={"pointer"}>
+            <Text fontSize={"sm"} fontWeight={"normal"} textColor={"gray.600"}>
+              There&apos;s more, right here
             </Text>
-            <BsArrowRight size={"24px"} />
+            <BsArrowRight size={"18px"} />
           </HStack>
         </Link>
       </Box>
