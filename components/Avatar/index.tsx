@@ -19,7 +19,7 @@ const UserAvatar: React.FC<IUserAvatar> = ({ imageSrc, userName }) => {
           alt="User"
           boxShadow={"sm"}
         />
-        <Text fontSize="xs" fontWeight={"semibold"} textColor="gray.500">
+        <Text fontSize="xs" fontWeight={"medium"} textColor="blackAlpha.600">
           {userName}
         </Text>
       </HStack>

@@ -14,11 +14,15 @@ const Card: React.FC = () => {
       boxShadow={"sm"}
       p={6}
     >
-      <VStack spacing={7} alignItems={"left"}>
-        <Text fontSize={"xl"} fontWeight={"black"} textColor={"gray.700"}>
+      <VStack spacing={6} alignItems={"left"}>
+        <Text fontSize={"xl"} fontWeight={"black"} textColor={"blackAlpha.800"}>
           Using Command Alias, to help your Development Workflow
         </Text>
-        <Text fontSize={"md"} fontWeight={"light"} textColor={"gray.600"}>
+        <Text
+          fontSize={"sm"}
+          fontWeight={"medium"}
+          textColor={"blackAlpha.700"}
+        >
           Improve your Development workflow by shorten commonly used commands.
           And save yourself from Carpal Tunnel Syndrome. Mac / Linux and Windows
           users can follow this step-by-step guide, very easy to setup and be

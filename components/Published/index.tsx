@@ -9,7 +9,11 @@ const Published: React.FC<IPublished> = ({ publishedDate }) => {
     <Box>
       <HStack spacing={2}>
         <FaRegCalendarAlt />
-        <Text fontSize={"xs"} fontWeight={"semibold"} textColor={"gray.500"}>
+        <Text
+          fontSize={"xs"}
+          fontWeight={"medium"}
+          textColor={"blackAlpha.600"}
+        >
           {publishedDate}
         </Text>
       </HStack>
