@@ -4,8 +4,9 @@ import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/800.css";
 import { AppProps } from "next/app";
 import Head from "next/head";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../theme";
+import { Header } from "../components/Header";
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -14,6 +15,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="shortcut icon" href="/favicon.ico"></link>
         <title>santhoshraju.dev</title>
       </Head>
+      <Header />
       <Component {...pageProps} />
     </ChakraProvider>
   );

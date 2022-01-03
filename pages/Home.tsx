@@ -6,7 +6,6 @@ import { LatestBlogs } from "../components/LatestBlogs";
 const Home: React.FC = () => {
   return (
     <Box maxW={"80%"} w={"85%"} m={"auto"}>
-      <Header />
       <Hero />
       <LatestBlogs />
     </Box>
