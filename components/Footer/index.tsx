@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text } from "@chakra-ui/react";
 import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { AiOutlineCopyright } from "react-icons/ai";
 import LogoSmall from "../../assets/Logo-Small.svg";
@@ -37,16 +37,24 @@ const Copyright: React.FC = () => {
 const Footer: React.FC = () => {
   return (
     <Box py={8} mt={12} bgColor={"brand.50"}>
-      <HStack
-        maxW={"75%"}
-        w={"85%"}
-        m={"auto"}
-        justifyContent={"space-between"}
-      >
-        <Image src={LogoSmall} alt="Small Logo"></Image>
-        <SocialIcons />
-        <Copyright />
-      </HStack>
+      <Box maxW={"75%"} w={"85%"} m={"auto"}>
+        <Flex
+          flexDirection={{ sm: "column", md: "column", lg: "row" }}
+          justifyContent={"space-between"}
+        >
+          <HStack
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            spacing={6}
+          >
+            <Image src={LogoSmall} alt="Small Logo"></Image>
+            <SocialIcons />
+          </HStack>
+          <Box mt={{ sm: 4, md: 4, lg: 0 }}>
+            <Copyright />
+          </Box>
+        </Flex>
+      </Box>
     </Box>
   );
 };
