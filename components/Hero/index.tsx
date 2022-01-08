@@ -23,9 +23,10 @@ const Hero: React.FC = () => {
           </Text>
           <Text
             fontSize={"md"}
-            fontWeight={"medium"}
+            fontWeight={"black"}
             letterSpacing={"wide"}
-            textColor={"brand.800"}
+            bgClip="text"
+            bgGradient="linear(to-l, #06B2A7, #6DBB75)"
           >
             Making my bits count.
           </Text>
