@@ -18,51 +18,52 @@ import CompanyBlock from "../components/CompanyBlock";
 import { SocialIcons } from "../components/Footer";
 import { Image } from "../components/Image";
 import Photo from "../assets/Photo.png";
-import { AiFillExperiment } from "react-icons/ai";
 
 const About: React.FC = () => {
   return (
-    <Box maxW={"85%"} w={"85%"} m={"auto"}>
+    <Box maxW={"80%"} w={"85%"} m={"auto"}>
       <Flex
         pt={16}
-        gap={32}
+        gap={16}
         flexDirection={{
           sm: "column-reverse",
           md: "column-reverse",
           lg: "row",
         }}
       >
-        <VStack spacing={8} alignItems={"flex-start"}>
-          <VStack spacing={2} alignItems={"flex-start"}>
-            <Heading
-              fontSize={"3xl"}
-              fontWeight={"black"}
-              textColor={"blackAlpha.800"}
-            >
-              Hi I&apos;m Santhosh Raju.
-            </Heading>
-            <Heading
-              fontSize={"2xl"}
-              lineHeight={1.6}
-              fontWeight={"black"}
-              textColor={"blackAlpha.800"}
-            >
-              I&apos;m an experienced Full Stack Engineer.
-            </Heading>
+        <Box>
+          <VStack spacing={8} alignItems={"flex-start"}>
+            <VStack spacing={2} alignItems={"flex-start"}>
+              <Heading
+                fontSize={"3xl"}
+                fontWeight={"black"}
+                textColor={"blackAlpha.800"}
+              >
+                Hi I&apos;m Santhosh Raju.
+              </Heading>
+              <Heading
+                fontSize={"2xl"}
+                lineHeight={1.6}
+                fontWeight={"black"}
+                textColor={"blackAlpha.800"}
+              >
+                I&apos;m an experienced Full Stack Engineer.
+              </Heading>
+            </VStack>
+            <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
+              I develop and deploy web applications and productionize Machine
+              Learning Models at scale. Over the past 7 years of my professional
+              careers I have helped multiple organisation and clients on their
+              path to Digital products. With Machine Learning & AI products on
+              the rise, I’m now focused on succesfully production-izing Machine
+              Learning Models from POC to Products.
+            </Text>
+            <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
+              I love to play with Raspberry PI’s and reading books, which you
+              will find them in my blogs over and over again.
+            </Text>
           </VStack>
-          <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
-            I develop and deploy web applications and productionize Machine
-            Learning Models at scale. Over the past 7 years of my professional
-            careers I have helped multiple organisation and clients on their
-            path to Digital products. With Machine Learning & AI products on the
-            rise, I’m now focused on succesfully production-izing Machine
-            Learning Models from POC to Products.
-          </Text>
-          <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
-            I love to play with Raspberry PI’s and reading books, which you will
-            find them in my blogs over and over again.
-          </Text>
-        </VStack>
+        </Box>
         <Box
           width={{ sm: "280px", md: "280px", lg: "full" }}
           height={{ sm: "280px", md: "280px", lg: "full" }}
