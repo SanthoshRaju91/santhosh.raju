@@ -4,7 +4,7 @@ import { AiOutlineCopyright } from "react-icons/ai";
 import LogoSmall from "../../assets/Logo-Small.svg";
 import { Image } from "../Image";
 
-const SocialIcons: React.FC = () => {
+export const SocialIcons: React.FC = () => {
   return (
     <HStack spacing={6}>
       <a href="https://github.com/SanthoshRaju91" rel="noopener">
