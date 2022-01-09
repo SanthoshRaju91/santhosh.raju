@@ -1,17 +1,14 @@
 import { Flex, HStack, Text, VStack } from "@chakra-ui/react";
+import { IconType } from "react-icons";
 import { MdWork } from "react-icons/md";
 
 export interface CompanyBlockProps {
   name: string;
   title: string;
-  duration: string;
+  Icon: IconType;
 }
 
-const CompanyBlock: React.FC<CompanyBlockProps> = ({
-  name,
-  title,
-  duration,
-}) => {
+const CompanyBlock: React.FC<CompanyBlockProps> = ({ name, title, Icon }) => {
   return (
     <Flex
       boxShadow={"base"}
@@ -19,33 +16,30 @@ const CompanyBlock: React.FC<CompanyBlockProps> = ({
       borderColor={"blackAlpha.100"}
       rounded={"md"}
       w={"max-content"}
-      py={4}
-      px={6}
+      py={2}
+      px={4}
       gap={4}
       flexDirection={"row"}
     >
-      <HStack spacing={1}>
-        <MdWork size={"18px"} />
-        <Text fontSize={"md"} fontWeight={"black"} textColor={"blackAlpha.700"}>
-          {name}
-        </Text>
+      <HStack spacing={4}>
+        <Icon size={"20px"} color="#000000a3" />
+        <VStack alignItems={"flex-start"} spacing={0.5}>
+          <Text
+            fontSize={"md"}
+            fontWeight={"bold"}
+            textColor={"blackAlpha.700"}
+          >
+            {name}
+          </Text>
+          <Text
+            fontSize={"xs"}
+            fontWeight={"medium"}
+            textColor={"blackAlpha.700"}
+          >
+            {title}
+          </Text>
+        </VStack>
       </HStack>
-      <VStack alignItems={"flex-start"} spacing={1}>
-        <Text
-          fontSize={"sm"}
-          fontWeight={"medium"}
-          textColor={"blackAlpha.700"}
-        >
-          {title}
-        </Text>
-        <Text
-          fontSize={"xs"}
-          fontWeight={"normal"}
-          textColor={"blackAlpha.700"}
-        >
-          {duration}
-        </Text>
-      </VStack>
     </Flex>
   );
 };
