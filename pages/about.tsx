@@ -13,6 +13,8 @@ import {
   DiEmber,
 } from "react-icons/di";
 import { FiMail } from "react-icons/fi";
+import { MdWork } from "react-icons/md";
+import { SiFreelancer } from "react-icons/si";
 import TechBlock from "../components/TechBlock";
 import CompanyBlock from "../components/CompanyBlock";
 import { SocialIcons } from "../components/Footer";
@@ -81,54 +83,91 @@ const About: React.FC = () => {
         my={"40"}
         gap={8}
         flexDirection={{ sm: "column", md: "column", lg: "row" }}
+        justifyContent={"space-between"}
+        justifyItems={"center"}
       >
-        <VStack alignItems={"flex-start"} spacing={5}>
-          <Heading
-            fontSize={"2xl"}
-            fontWeight={"black"}
-            textColor={"blackAlpha.700"}
-          >
-            Professional Skills
-          </Heading>
-          <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
-            Over the years I had the opportunity to learn and build applications
-            with various <b>Tech Stacks</b> and <b>Programming Languages</b>.
-            But I was always interested in{" "}
-            <b>Designing and Developing Web Applications.</b> Javascript and its
-            eco-system is my core skill.
-          </Text>
-        </VStack>
-
-        <Flex flexDirection={"row"} flexWrap={"wrap"} gap={5} mt={8}>
-          <TechBlock skill="Javascript" Icon={DiJavascript} />
-          <TechBlock skill="Web Design" Icon={DiCss3} />
-          <TechBlock skill="Node.js" Icon={DiNodejsSmall} />
-          <TechBlock skill="React.js" Icon={DiReact} />
-          <TechBlock skill="Angular" Icon={DiAngularSimple} />
-          <TechBlock skill="Ember" Icon={DiEmber} />
-          <TechBlock skill="Python" Icon={DiPython} />
-          <TechBlock skill="Devops" Icon={DiDocker} />
-          <TechBlock skill="Kubernetes" Icon={DiLinux} />
-          <TechBlock skill="Machine Learning Ops" Icon={DiAptana} />
-          <TechBlock skill="SRE" Icon={DiGoogleCloudPlatform} />
-        </Flex>
+        <Box w={{ sm: "100%", md: "100%", lg: "50%" }}>
+          <VStack alignItems={"flex-start"} spacing={5}>
+            <Heading
+              fontSize={"2xl"}
+              fontWeight={"black"}
+              textColor={"blackAlpha.700"}
+            >
+              Professional Skills
+            </Heading>
+            <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
+              Over the years I had the opportunity to learn and build
+              applications with various <b>Tech Stacks</b> and{" "}
+              <b>Programming Languages</b>. But I was always interested in{" "}
+              <b>Designing and Developing Web Applications.</b> Javascript and
+              its eco-system is my core skill.
+            </Text>
+          </VStack>
+        </Box>
+        <Box w={{ sm: "100%", md: "100%", lg: "50%" }}>
+          <Flex flexDirection={"row"} flexWrap={"wrap"} gap={5} mt={8}>
+            <TechBlock skill="Javascript" Icon={DiJavascript} />
+            <TechBlock skill="Web Design" Icon={DiCss3} />
+            <TechBlock skill="Node.js" Icon={DiNodejsSmall} />
+            <TechBlock skill="React.js" Icon={DiReact} />
+            <TechBlock skill="Angular" Icon={DiAngularSimple} />
+            <TechBlock skill="Ember" Icon={DiEmber} />
+            <TechBlock skill="Python" Icon={DiPython} />
+            <TechBlock skill="Devops" Icon={DiDocker} />
+            <TechBlock skill="Kubernetes" Icon={DiLinux} />
+            <TechBlock skill="Machine Learning Ops" Icon={DiAptana} />
+            <TechBlock skill="SRE" Icon={DiGoogleCloudPlatform} />
+          </Flex>
+        </Box>
       </Flex>
-      <Box my={"40"}>
-        <VStack alignItems={"flex-start"} spacing={5}>
-          <Heading
-            fontSize={"2xl"}
-            fontWeight={"black"}
-            textColor={"blackAlpha.700"}
-          >
-            Work Experience
-          </Heading>
-          <Text fontSize={"sm"} textColor={"blackAlpha.700"}>
-            Currently I’m working as a Full-time professional, who does a
-            freelancing jobs if opportunity presents itself.
-          </Text>
-        </VStack>
+      <Flex
+        my={"40"}
+        gap={8}
+        flexDirection={{ sm: "column", md: "column", lg: "row" }}
+        justifyContent={"space-between"}
+        justifyItems={"center"}
+      >
+        <Box w={{ sm: "100%", md: "100%", lg: "50%" }}>
+          <VStack alignItems={"flex-start"} spacing={5}>
+            <Heading
+              fontSize={"2xl"}
+              fontWeight={"black"}
+              textColor={"blackAlpha.700"}
+            >
+              Work Experience
+            </Heading>
+            <Text fontSize={"sm"} textColor={"blackAlpha.700"} lineHeight={1.8}>
+              Currently I’m working as a Full-time professional, who does a
+              freelancing jobs if opportunity presents itself.
+            </Text>
+          </VStack>
+        </Box>
+        <Box w={{ sm: "100%", md: "100%", lg: "50%" }}>
+          <Flex flexDirection={"row"} flexWrap={"wrap"} gap={5} mt={8}>
+            <CompanyBlock
+              Icon={MdWork}
+              name="Rakuten"
+              title="Senior Software Engineer"
+            />
+            <CompanyBlock
+              Icon={MdWork}
+              name="Deloitte USI"
+              title="Consultant"
+            />
+            <CompanyBlock
+              Icon={MdWork}
+              name="Quinnox Consultancy"
+              title="Software Engineer"
+            />
+            <CompanyBlock
+              Icon={SiFreelancer}
+              name="Dwell Optimal"
+              title="Freelancer"
+            />
+          </Flex>
+        </Box>
 
-        <Flex
+        {/* <Flex
           flexDirection={{ sm: "column", md: "column", lg: "row" }}
           flexWrap={"wrap"}
           gap={4}
@@ -149,8 +188,8 @@ const About: React.FC = () => {
             title="Software Engineer"
             duration="Mar 2014 - Apr 2016"
           />
-        </Flex>
-      </Box>
+        </Flex> */}
+      </Flex>
 
       <Box
         my={"10"}
