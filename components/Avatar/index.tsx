@@ -6,7 +6,10 @@ export interface IUserAvatar {
   userName: string;
 }
 
-const UserAvatar: React.FC<IUserAvatar> = ({ imageSrc, userName }) => {
+const UserAvatar: React.FC<IUserAvatar> = ({
+  imageSrc = "/authors/santhosh.raju.jpeg",
+  userName,
+}) => {
   return (
     <Box>
       <HStack spacing={2} alignItems="center">
