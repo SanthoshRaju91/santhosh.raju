@@ -73,16 +73,18 @@ const LatestBlogs: React.FC<LatestBlogsProps> = ({ blogs = [] }) => {
 
       <Box mt={8}>
         <Link href={"/blogs"} passHref>
-          <HStack alignItems={"center"} spacing={2} cursor={"pointer"}>
-            <Text
-              fontSize={"sm"}
-              fontWeight={"medium"}
-              textColor={"blackAlpha.800"}
-            >
-              There&apos;s more, right here
-            </Text>
-            <BsArrowRight size={"18px"} />
-          </HStack>
+          <a>
+            <HStack alignItems={"center"} spacing={2} cursor={"pointer"}>
+              <Text
+                fontSize={"sm"}
+                fontWeight={"medium"}
+                textColor={"blackAlpha.800"}
+              >
+                There&apos;s more, right here
+              </Text>
+              <BsArrowRight size={"18px"} />
+            </HStack>
+          </a>
         </Link>
       </Box>
     </Box>

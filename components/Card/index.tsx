@@ -35,21 +35,27 @@ const Card: React.FC<CardProps> = ({
     >
       <VStack spacing={4} alignItems={"left"}>
         <Link href={`/post/${slug}`} passHref>
-          <Text
-            fontSize={"2xl"}
-            fontWeight={"black"}
-            textColor={"blackAlpha.800"}
-            cursor={"pointer"}
-          >
-            {title}
-          </Text>
+          <a>
+            <Text
+              fontSize={"2xl"}
+              fontWeight={"black"}
+              textColor={"blackAlpha.800"}
+              cursor={"pointer"}
+            >
+              {title}
+            </Text>
+          </a>
         </Link>
         <HStack justifyContent={"space-between"} alignItems={"center"}>
           <HStack spacing={16}>
             <UserAvatar imageSrc={userAvatar} userName={user} />
             <Published publishedDate={published} />
           </HStack>
-          <IoIosShareAlt size={28} color="#4A5568" />
+          <Link href={"/"}>
+            <a>
+              <IoIosShareAlt size={28} color="#4A5568" />
+            </a>
+          </Link>
         </HStack>
         <Text
           fontSize={"sm"}

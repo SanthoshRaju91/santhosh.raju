@@ -163,7 +163,7 @@ const Share: React.FC = () => {
           </VStack>
         </Box>
         <Box>
-          <Link>
+          <Link href="/">
             <IoIosShareAlt size={"48px"} />
           </Link>
         </Box>

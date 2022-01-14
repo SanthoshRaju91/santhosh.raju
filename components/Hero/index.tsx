@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { Box, Flex, HStack, Text, VStack } from "@chakra-ui/react";
 import { MdWavingHand } from "react-icons/md";
 import { Image } from "../Image";
 import Photo from "../../assets/Photo.png";
-import Link from "next/link";
 
 const Hero: React.FC = () => {
   return (
@@ -43,16 +43,18 @@ const Hero: React.FC = () => {
           </Text>
           <Box pt={6} display={{ lg: "none" }} cursor={"pointer"}>
             <Link href={"/about"} passHref>
-              <HStack>
-                <Text
-                  fontSize={"md"}
-                  fontWeight={"bold"}
-                  textColor={"blackAlpha.800"}
-                >
-                  Say Hello
-                </Text>
-                <MdWavingHand size={"18px"}></MdWavingHand>
-              </HStack>
+              <a>
+                <HStack>
+                  <Text
+                    fontSize={"md"}
+                    fontWeight={"bold"}
+                    textColor={"blackAlpha.800"}
+                  >
+                    Say Hello
+                  </Text>
+                  <MdWavingHand size={"18px"}></MdWavingHand>
+                </HStack>
+              </a>
             </Link>
           </Box>
         </VStack>
@@ -72,16 +74,18 @@ const Hero: React.FC = () => {
             backgroundSize={"contain"}
           ></Image>
           <Link href={"/about"} passHref>
-            <HStack>
-              <Text
-                fontSize={"md"}
-                fontWeight={"bold"}
-                textColor={"blackAlpha.800"}
-              >
-                Say Hello
-              </Text>
-              <MdWavingHand size={"18px"}></MdWavingHand>
-            </HStack>
+            <a>
+              <HStack>
+                <Text
+                  fontSize={"md"}
+                  fontWeight={"bold"}
+                  textColor={"blackAlpha.800"}
+                >
+                  Say Hello
+                </Text>
+                <MdWavingHand size={"18px"}></MdWavingHand>
+              </HStack>
+            </a>
           </Link>
         </VStack>
       </Box>

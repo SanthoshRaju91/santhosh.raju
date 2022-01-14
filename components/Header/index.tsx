@@ -8,7 +8,9 @@ const Header: React.FC = () => {
     <Box maxW={"80%"} w={"85%"} m={"auto"} my={8}>
       <HStack>
         <Link href={"/"} passHref>
-          <Image src={LogoLarge} alt="Logo" width={300} height={75}></Image>
+          <a>
+            <Image src={LogoLarge} alt="Logo" width={300} height={75}></Image>
+          </a>
         </Link>
       </HStack>
     </Box>
