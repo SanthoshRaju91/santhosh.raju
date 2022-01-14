@@ -9,21 +9,11 @@ import {
 } from "@chakra-ui/react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import matter from "gray-matter";
-
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
 import { Tag } from "../components/Tag";
-
-type BlogMatter = {
-  slug: string;
-  title: string;
-  synopsis: string;
-  published: string;
-  preview: string;
-  author: string;
-  authorProfilePic: string;
-  tags: Array<string>;
-};
+import { BlogMatter } from "../common/type";
+import getBlogs from "../common/getBlogs";
 
 export type BlogsProps = {
   blogs: Array<BlogMatter>;
@@ -125,24 +115,7 @@ const Blogs: React.FC<BlogsProps> = ({ blogs }) => {
 export default Blogs;
 
 export async function getStaticProps() {
-  const fs = require("fs");
-
-  const blogsDirPath = `${process.cwd()}/blogs`;
-
-  const files = fs.readdirSync(blogsDirPath, "utf-8");
-  const markdownFiles = files.filter((fn: any) =>
-    fn.endsWith(".md")
-  ) as Array<string>;
-
-  const blogs: Array<BlogMatter> = markdownFiles.map((blog) => {
-    const path = `${blogsDirPath}/${blog}`;
-    const rawContent = fs.readFileSync(path, { encoding: "utf-8" });
-    const { data } = matter(rawContent);
-    if (data.tags && typeof data.tags === "string") {
-      data.tags = data.tags.split(", ");
-    }
-    return data;
-  }) as Array<BlogMatter>;
+  const blogs = getBlogs();
 
   return {
     props: {

@@ -3,8 +3,13 @@ import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
 import { Card } from "../Card";
 import { Tag } from "../Tag";
+import { BlogMatter } from "../../common/type";
 
-const LatestBlogs: React.FC = () => {
+type LatestBlogsProps = {
+  blogs: Array<BlogMatter>;
+};
+
+const LatestBlogs: React.FC<LatestBlogsProps> = ({ blogs = [] }) => {
   return (
     <Box mt={24}>
       <Box>
@@ -22,9 +27,18 @@ const LatestBlogs: React.FC = () => {
       </Box>
       <Flex flexDirection={{ sm: "column", md: "column", lg: "row" }} mt={10}>
         <VStack spacing={6} maxW={{ sm: "100%", md: "100%", lg: "75%" }}>
-          <Card />
-          <Card />
-          <Card />
+          {blogs.map((blog, index) => (
+            <Card
+              key={index}
+              title={blog.title}
+              synopsis={blog.synopsis}
+              user={blog.author}
+              userAvatar={blog.authorProfilePic}
+              published={blog.published}
+              tags={blog.tags}
+              slug={blog.slug}
+            />
+          ))}
         </VStack>
         <VStack
           ml={8}
