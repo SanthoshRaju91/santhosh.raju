@@ -19,6 +19,8 @@ Also, this makes you look cool when you type commands like
 
 ![shorten version of "git branch"](/command-alias/screen-1.png)
 
+<br/>
+
 And this is the reason for writing this blog, because I get asked this question
 a lot nowadays.
 
@@ -34,7 +36,7 @@ Turns out it’s really not that complicated(depending on the Operating System)
 
 Let’s check how to setup command alias in Linux core systems (Mac, Ubuntu)
 
-1. Switch to user directory cd ~
+1. Switch to user directory `cd ~`
 
 2. Create a .bash_profile or .profile, if you already have one of these files in
    your current directory. Then you can edit the files and add the alias
@@ -86,7 +88,7 @@ time.
 > As a programmer, I think that our main focus would go into the product /
 > features that we build and ship everyday and we hardly get enough time to
 > debug the errors / code issues we run into. Which would take up most of our
-> time and we eventually #burnout. So having automations or time saving tools
+> time and we eventually <b>#burnout</b>. So having automations or time saving tools
 > like this, can bring the burden down a bit and relive us, hard working
 > programmers, from stress.
 
