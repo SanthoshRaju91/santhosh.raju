@@ -1,10 +1,29 @@
 import { Box, HStack, VStack, Text } from "@chakra-ui/react";
 import { IoIosShareAlt } from "react-icons/io";
+import { AiOutlineTags } from "react-icons/ai";
 import { UserAvatar } from "../Avatar";
 import { Published } from "../Published";
-import User from "../../assets/user.png";
+import Link from "next/link";
 
-const Card: React.FC = () => {
+export type CardProps = {
+  title: string;
+  synopsis: string;
+  user: string;
+  userAvatar: string;
+  published: string;
+  tags: Array<string>;
+  slug: string;
+};
+
+const Card: React.FC<CardProps> = ({
+  title,
+  synopsis,
+  user,
+  userAvatar,
+  published,
+  tags,
+  slug,
+}) => {
   return (
     <Box
       maxW={"4xl"}
@@ -14,27 +33,55 @@ const Card: React.FC = () => {
       boxShadow={"sm"}
       p={6}
     >
-      <VStack spacing={6} alignItems={"left"}>
-        <Text fontSize={"xl"} fontWeight={"black"} textColor={"blackAlpha.800"}>
-          Using Command Alias, to help your Development Workflow
-        </Text>
+      <VStack spacing={4} alignItems={"left"}>
+        <Link href={`/post/${slug}`} passHref>
+          <Text
+            fontSize={"2xl"}
+            fontWeight={"black"}
+            textColor={"blackAlpha.800"}
+            cursor={"pointer"}
+          >
+            {title}
+          </Text>
+        </Link>
+        <HStack justifyContent={"space-between"} alignItems={"center"}>
+          <HStack spacing={16}>
+            <UserAvatar imageSrc={userAvatar} userName={user} />
+            <Published publishedDate={published} />
+          </HStack>
+          <IoIosShareAlt size={28} color="#4A5568" />
+        </HStack>
         <Text
           fontSize={"sm"}
           fontWeight={"medium"}
           textColor={"blackAlpha.700"}
         >
-          Improve your Development workflow by shorten commonly used commands.
-          And save yourself from Carpal Tunnel Syndrome. Mac / Linux and Windows
-          users can follow this step-by-step guide, very easy to setup and be
-          done with long typings of command
+          {synopsis}
         </Text>
-        <HStack justifyContent={"space-between"} alignItems={"center"}>
-          <HStack spacing={16}>
-            <UserAvatar imageSrc={User} userName="Santhosh Raju" />
-            <Published publishedDate="Dec 18, 2021" />
+        <Box>
+          <HStack>
+            <HStack alignItems={"center"} spacing={1}>
+              <AiOutlineTags size={18} color="#0000007a" />
+              <Text fontSize={"sm"} textColor={"blackAlpha.600"}>
+                Tags:{" "}
+              </Text>
+            </HStack>
+            <HStack>
+              {tags.map((tag, index) => (
+                <Text
+                  key={index}
+                  fontSize={"sm"}
+                  textColor={"blue.400"}
+                  borderBottomWidth={1}
+                  borderBottomStyle={"dashed"}
+                  borderBottomColor={"blue.400"}
+                >
+                  {tag}
+                </Text>
+              ))}
+            </HStack>
           </HStack>
-          <IoIosShareAlt size={28} color="#4A5568" />
-        </HStack>
+        </Box>
       </VStack>
     </Box>
   );
