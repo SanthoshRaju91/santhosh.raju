@@ -21,7 +21,7 @@ const Card: React.FC<CardProps> = ({
   user,
   userAvatar,
   published,
-  tags,
+  tags = [],
   slug,
 }) => {
   return (
