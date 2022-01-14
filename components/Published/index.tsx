@@ -8,7 +8,7 @@ const Published: React.FC<IPublished> = ({ publishedDate }) => {
   return (
     <Box>
       <HStack spacing={2}>
-        <FaRegCalendarAlt />
+        <FaRegCalendarAlt color="#0000007a" />
         <Text
           fontSize={"xs"}
           fontWeight={"medium"}

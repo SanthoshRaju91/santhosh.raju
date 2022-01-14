@@ -8,12 +8,28 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import matter from "gray-matter";
 
 import { Card } from "../components/Card";
 import { Footer } from "../components/Footer";
 import { Tag } from "../components/Tag";
 
-const Blogs: React.FC = () => {
+type BlogMatter = {
+  slug: string;
+  title: string;
+  synopsis: string;
+  published: string;
+  preview: string;
+  author: string;
+  authorProfilePic: string;
+  tags: Array<string>;
+};
+
+export type BlogsProps = {
+  blogs: Array<BlogMatter>;
+};
+
+const Blogs: React.FC<BlogsProps> = ({ blogs }) => {
   return (
     <Box>
       <Box maxW={"80%"} w={"85%"} m={"auto"} mt={24}>
@@ -29,17 +45,24 @@ const Blogs: React.FC = () => {
           All Blogs
         </Heading>
         <Flex
-          mt={8}
+          mt={12}
           gap={12}
           flexDirection={{ sm: "column", md: "column", lg: "row" }}
         >
           <Box w={{ sm: "100%", md: "100%", lg: "70%" }}>
             <VStack spacing={4}>
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
+              {blogs.map((blog, index) => (
+                <Card
+                  key={index}
+                  title={blog.title}
+                  synopsis={blog.synopsis}
+                  user={blog.author}
+                  userAvatar={blog.authorProfilePic}
+                  published={blog.published}
+                  tags={blog.tags}
+                  slug={blog.slug}
+                />
+              ))}
             </VStack>
             <HStack mt={6}>
               <Button
@@ -100,3 +123,30 @@ const Blogs: React.FC = () => {
 };
 
 export default Blogs;
+
+export async function getStaticProps() {
+  const fs = require("fs");
+
+  const blogsDirPath = `${process.cwd()}/blogs`;
+
+  const files = fs.readdirSync(blogsDirPath, "utf-8");
+  const markdownFiles = files.filter((fn: any) =>
+    fn.endsWith(".md")
+  ) as Array<string>;
+
+  const blogs: Array<BlogMatter> = markdownFiles.map((blog) => {
+    const path = `${blogsDirPath}/${blog}`;
+    const rawContent = fs.readFileSync(path, { encoding: "utf-8" });
+    const { data } = matter(rawContent);
+    if (data.tags && typeof data.tags === "string") {
+      data.tags = data.tags.split(", ");
+    }
+    return data;
+  }) as Array<BlogMatter>;
+
+  return {
+    props: {
+      blogs,
+    },
+  };
+}
