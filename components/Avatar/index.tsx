@@ -2,7 +2,7 @@ import { Box, HStack, Text } from "@chakra-ui/react";
 import { Image } from "../Image";
 
 export interface IUserAvatar {
-  imageSrc: StaticImageData;
+  imageSrc: StaticImageData | string;
   userName: string;
 }
 
