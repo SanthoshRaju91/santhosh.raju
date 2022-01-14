@@ -8,3 +8,9 @@ export type BlogMatter = {
     authorProfilePic: string;
     tags: Array<string>;
 };
+
+export type Blog = {
+    slug: string
+    meta: BlogMatter,
+    content: string
+}
