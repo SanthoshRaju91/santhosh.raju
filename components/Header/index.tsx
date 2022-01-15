@@ -1,19 +1,23 @@
 import Link from "next/link";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, Container, HStack } from "@chakra-ui/react";
 import { Image } from "../Image";
-import LogoLarge from "../../assets/Logo-Large.svg";
 
 const Header: React.FC = () => {
   return (
-    <Box maxW={"80%"} w={"85%"} m={"auto"} my={8}>
+    <Container
+      w={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
+      maxW={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
+      my={8}
+      p={0}
+    >
       <HStack>
         <Link href={"/"} passHref>
           <a>
-            <Image src={LogoLarge} alt="Logo" width={300} height={75}></Image>
+            <Image src="/Logo.svg" alt="Logo" width={250} height={65}></Image>
           </a>
         </Link>
       </HStack>
-    </Box>
+    </Container>
   );
 };
 
