@@ -16,4 +16,4 @@ const Home: React.FC<HomeProps> = ({ blogs }) => {
   );
 };
 
-export { Home };
+export default Home;

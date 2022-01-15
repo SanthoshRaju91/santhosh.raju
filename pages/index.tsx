@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Home } from "./Home";
+import Home from "./Home";
 import { Footer } from "../components/Footer";
 import { BlogMatter } from "../common/type";
 import getBlogs from "../common/getBlogs";
