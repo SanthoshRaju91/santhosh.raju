@@ -22,6 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           w={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
           maxW={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
           my={10}
+          p={0}
         >
           {children}
         </Container>
