@@ -174,7 +174,7 @@ const Share: React.FC = () => {
 
 const Blog: NextPage<BlogProps> = ({ blog }) => {
   return (
-    <Box maxW={"80%"} w={"75%"} m={"auto"} mt={24}>
+    <>
       <Heading
         fontSize={"3xl"}
         fontWeight={"black"}
@@ -195,7 +195,7 @@ const Blog: NextPage<BlogProps> = ({ blog }) => {
         </ReactMarkdown>
       </Box>
       <Share />
-    </Box>
+    </>
   );
 };
 

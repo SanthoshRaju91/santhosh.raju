@@ -23,7 +23,7 @@ import Photo from "../assets/Photo.png";
 
 const About: React.FC = () => {
   return (
-    <Box maxW={"80%"} w={"85%"} m={"auto"}>
+    <>
       <Flex
         pt={16}
         gap={16}
@@ -166,29 +166,6 @@ const About: React.FC = () => {
             />
           </Flex>
         </Box>
-
-        {/* <Flex
-          flexDirection={{ sm: "column", md: "column", lg: "row" }}
-          flexWrap={"wrap"}
-          gap={4}
-          mt={8}
-        >
-          <CompanyBlock
-            name="Rakuten"
-            title="Senior Software Engineer"
-            duration="Nov 2018 - Present"
-          />
-          <CompanyBlock
-            name="Deloitte USI"
-            title="Consultant"
-            duration="May 2016 - Nov 2018"
-          />
-          <CompanyBlock
-            name="Quinnox Consulting"
-            title="Software Engineer"
-            duration="Mar 2014 - Apr 2016"
-          />
-        </Flex> */}
       </Flex>
 
       <Box
@@ -225,7 +202,7 @@ const About: React.FC = () => {
           <SocialIcons />
         </Box>
       </Box>
-    </Box>
+    </>
   );
 };
 

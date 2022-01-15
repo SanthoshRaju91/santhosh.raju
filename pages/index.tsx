@@ -8,12 +8,7 @@ type IndexProps = {
   blogs: Array<BlogMatter>;
 };
 const Index: React.FC<IndexProps> = ({ blogs }) => {
-  return (
-    <Box>
-      <Home blogs={blogs} />
-      <Footer />
-    </Box>
-  );
+  return <Home blogs={blogs} />;
 };
 
 export async function getStaticProps() {
