@@ -4,22 +4,15 @@ import "@fontsource/open-sans/500.css";
 import "@fontsource/open-sans/600.css";
 import "@fontsource/open-sans/700.css";
 import "@fontsource/open-sans/800.css";
+
 import { AppProps } from "next/app";
-import Head from "next/head";
-import { Box, ChakraProvider } from "@chakra-ui/react";
-import { theme } from "../theme";
-import { Header } from "../components/Header";
+import Layout from "../components/Layout";
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider theme={theme}>
-      <Head>
-        <link rel="shortcut icon" href="/favicon.ico"></link>
-        <title>santhoshraju.dev</title>
-      </Head>
-      <Header />
+    <Layout>
       <Component {...pageProps} />
-    </ChakraProvider>
+    </Layout>
   );
 }
 
