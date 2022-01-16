@@ -1,12 +1,18 @@
 import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
+import Link from "next/link";
 import { AiOutlineCopyright } from "react-icons/ai";
+import useCustomColorModeValue from "../../common/useCustomColorModeValue";
 import { Image } from "../Image";
 
 const Copyright: React.FC = () => {
+  const { textColor } = useCustomColorModeValue();
+
   return (
     <HStack spacing={1}>
-      <AiOutlineCopyright size={"16px"} color="#565a5a" />
-      <Text fontSize={"xs"} fontWeight={"normal"} textColor={"blackAlpha.600"}>
+      <Text textColor={textColor}>
+        <AiOutlineCopyright size={"16px"} />
+      </Text>
+      <Text fontSize={"xs"} fontWeight={"thin"} textColor={textColor}>
         copyright 2022
       </Text>
     </HStack>
@@ -15,7 +21,7 @@ const Copyright: React.FC = () => {
 
 const Footer: React.FC = () => {
   return (
-    <Box py={8} mt={12} bgColor={"brand.50"}>
+    <Box>
       <Container
         maxW={{ sm: "xl", md: "3xl", lg: "4xl", xl: "6xl", "2xl": "7xl" }}
         px={6}
@@ -26,7 +32,12 @@ const Footer: React.FC = () => {
           justifyContent={"space-between"}
           alignItems={"center"}
         >
-          <Image src="/Logo.svg" alt="Logo" width={180} height={45}></Image>
+          <Link href="/" passHref>
+            <a>
+              <Image src="/Logo.svg" alt="Logo" width={180} height={45} />
+            </a>
+          </Link>
+
           <Box mt={{ sm: 4, md: 4, lg: 0 }}>
             <Copyright />
           </Box>
