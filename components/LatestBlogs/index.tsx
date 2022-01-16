@@ -13,22 +13,17 @@ const LatestBlogs: React.FC<LatestBlogsProps> = ({ blogs = [] }) => {
   const { textColor } = useCustomColorModeValue();
 
   return (
-    <Box my={20}>
-      <Flex flexDirection={"row"} gap={16}>
-        <Box
-          display={{
-            sm: "none",
-            md: "none",
-            lg: "block",
-            xl: "block",
-            "2xl": "block",
-          }}
-          bgColor={"teal.300"}
-          w={"20px"}
-          rounded={"sm"}
-          shadow={"base"}
-        />
-        <VStack alignItems={"left"} spacing={16} py={8}>
+    <Box my={10} mt={32}>
+      <Flex
+        flexDirection={"row"}
+        gap={{ sm: 4, md: 4, lg: 16, xl: 16, "2xl": 16 }}
+      >
+        <Box bgColor={"teal.300"} w={"20px"} rounded={"sm"} shadow={"base"} />
+        <VStack
+          alignItems={"left"}
+          spacing={{ sm: 8, md: 8, lg: 16, xl: 16, "2xl": 16 }}
+          py={{ sm: 4, md: 4, lg: 8, xl: 8, "2xl": 8 }}
+        >
           <Heading
             fontSize={{
               sm: "2xl",
