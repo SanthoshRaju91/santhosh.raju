@@ -4,6 +4,7 @@ import { AiOutlineTags } from "react-icons/ai";
 import { UserAvatar } from "../Avatar";
 import { Published } from "../Published";
 import Link from "next/link";
+import useCustomColorModeValue from "../../common/useCustomColorModeValue";
 
 export type CardProps = {
   title: string;
@@ -24,51 +25,57 @@ const Card: React.FC<CardProps> = ({
   tags = [],
   slug,
 }) => {
+  const { textColor, bgColor, borderColor } = useCustomColorModeValue();
+
   return (
     <Box
       maxW={"4xl"}
-      borderWidth={"1px"}
+      bgColor={bgColor}
+      borderWidth={2}
+      borderColor={borderColor}
       borderRadius={"lg"}
-      borderColor={"gray.200"}
-      boxShadow={"sm"}
-      p={6}
+      shadow={"sm"}
+      p={8}
     >
-      <VStack spacing={4} alignItems={"left"}>
-        <Link href={`/post/${slug}`} passHref>
-          <a>
-            <Text
-              fontSize={"2xl"}
-              fontWeight={"black"}
-              textColor={"blackAlpha.800"}
-              cursor={"pointer"}
-            >
-              {title}
-            </Text>
-          </a>
-        </Link>
-        <HStack justifyContent={"space-between"} alignItems={"center"}>
-          <HStack spacing={16}>
-            <UserAvatar imageSrc={userAvatar} userName={user} />
-            <Published publishedDate={published} />
-          </HStack>
-          <Link href={"/"}>
+      <VStack spacing={6} alignItems={"left"}>
+        <VStack alignItems={"left"} spacing={6}>
+          <Link href={`/post/${slug}`} passHref>
             <a>
-              <IoIosShareAlt size={28} color="#4A5568" />
+              <Text
+                fontSize={"2xl"}
+                fontWeight={"bold"}
+                textColor={textColor}
+                cursor={"pointer"}
+              >
+                {title}
+              </Text>
             </a>
           </Link>
-        </HStack>
-        <Text
-          fontSize={"sm"}
-          fontWeight={"medium"}
-          textColor={"blackAlpha.700"}
-        >
+          <HStack justifyContent={"space-between"} alignItems={"center"}>
+            <HStack spacing={16}>
+              <UserAvatar imageSrc={userAvatar} userName={user} />
+              <Published publishedDate={published} />
+            </HStack>
+            <Link href={"/"}>
+              <a>
+                <Text textColor={textColor}>
+                  <IoIosShareAlt size={"24px"} />
+                </Text>
+              </a>
+            </Link>
+          </HStack>
+        </VStack>
+
+        <Text fontSize={"sm"} fontWeight={"normal"} textColor={textColor}>
           {synopsis}
         </Text>
         <Box>
           <HStack>
             <HStack alignItems={"center"} spacing={1}>
-              <AiOutlineTags size={18} color="#0000007a" />
-              <Text fontSize={"sm"} textColor={"blackAlpha.600"}>
+              <Text textColor={textColor}>
+                <AiOutlineTags size={"18px"} />
+              </Text>
+              <Text fontSize={"sm"} textColor={textColor}>
                 Tags:{" "}
               </Text>
             </HStack>

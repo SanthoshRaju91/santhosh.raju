@@ -1,5 +1,6 @@
 import { Box, HStack, Text } from "@chakra-ui/react";
 import { Image } from "../Image";
+import useCustomColorModeValue from "../../common/useCustomColorModeValue";
 
 export interface IUserAvatar {
   imageSrc: StaticImageData | string;
@@ -10,6 +11,8 @@ const UserAvatar: React.FC<IUserAvatar> = ({
   imageSrc = "/authors/santhosh.raju.jpeg",
   userName,
 }) => {
+  const { textColor } = useCustomColorModeValue();
+
   return (
     <Box>
       <HStack spacing={2} alignItems="center">
@@ -22,7 +25,7 @@ const UserAvatar: React.FC<IUserAvatar> = ({
           alt="User"
           boxShadow={"sm"}
         />
-        <Text fontSize="xs" fontWeight={"medium"} textColor="blackAlpha.600">
+        <Text fontSize="sm" fontWeight={"light"} textColor={textColor}>
           {userName}
         </Text>
       </HStack>

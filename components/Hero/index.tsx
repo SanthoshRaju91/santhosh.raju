@@ -1,17 +1,11 @@
 import Link from "next/link";
-import {
-  Box,
-  Flex,
-  Heading,
-  HStack,
-  Text,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { MdWavingHand } from "react-icons/md";
+import useCustomColorModeValue from "../../common/useCustomColorModeValue";
 
 const Hero: React.FC = () => {
-  const textColor = useColorModeValue("gray.700", "gray.200");
+  const { textColor } = useCustomColorModeValue();
+
   return (
     <Flex
       flexDirection={{ sm: "column", md: "column", lg: "column", xl: "row" }}
