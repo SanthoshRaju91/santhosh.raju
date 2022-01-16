@@ -1,26 +1,6 @@
 import { Box, Container, Flex, HStack, Text } from "@chakra-ui/react";
-import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { AiOutlineCopyright } from "react-icons/ai";
 import { Image } from "../Image";
-
-export const SocialIcons: React.FC = () => {
-  return (
-    <HStack spacing={6}>
-      <a href="https://github.com/SanthoshRaju91" rel="noopener">
-        <BsGithub size={"22px"} color="#565a5a" />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
-        rel="noopener"
-      >
-        <BsLinkedin size={"22px"} color="#565a5a" />
-      </a>
-      <a href="https://twitter.com/santhoshraju2" rel="noopener">
-        <BsTwitter size={"22px"} color="#565a5a" />
-      </a>
-    </HStack>
-  );
-};
 
 const Copyright: React.FC = () => {
   return (
