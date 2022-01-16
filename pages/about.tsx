@@ -17,7 +17,7 @@ import { MdWork } from "react-icons/md";
 import { SiFreelancer } from "react-icons/si";
 import TechBlock from "../components/TechBlock";
 import CompanyBlock from "../components/CompanyBlock";
-import { SocialIcons } from "../components/Footer";
+import SocialIcons from "../components/SocialIcons";
 import { Image } from "../components/Image";
 import Photo from "../assets/Photo.png";
 
