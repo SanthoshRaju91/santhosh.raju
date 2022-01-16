@@ -5,6 +5,8 @@ const theme = extendTheme({
         heading: 'Poppins',
         body: 'Poppins'
     },
+    initialColorMode: "dark",
+    useSystemColorMode: false
 })
 
 export { theme }
