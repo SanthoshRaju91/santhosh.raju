@@ -52,7 +52,7 @@ const Card: React.FC<CardProps> = ({
             </a>
           </Link>
           <HStack justifyContent={"space-between"} alignItems={"center"}>
-            <HStack spacing={16}>
+            <HStack spacing={{ sm: 4, md: 4, lg: 16, xl: 16, "2xl": 16 }}>
               <UserAvatar imageSrc={userAvatar} userName={user} />
               <Published publishedDate={published} />
             </HStack>

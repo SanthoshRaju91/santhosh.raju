@@ -8,13 +8,27 @@ const Hero: React.FC = () => {
 
   return (
     <Flex
-      flexDirection={{ sm: "column", md: "column", lg: "column", xl: "row" }}
+      flexDirection={{ sm: "column", md: "column", lg: "row", xl: "row" }}
       justifyContent={"space-between"}
       alignItems={"center"}
     >
-      <VStack maxW={"50%"} spacing={10} alignItems={"left"}>
+      <VStack
+        maxW={{ sm: "100%", md: "100%", lg: "50%", xl: "50%", "2xl": "50%" }}
+        spacing={10}
+        alignItems={"left"}
+      >
         <VStack alignItems={"left"} spacing={5}>
-          <Heading fontSize={"5xl"} fontWeight={"bold"} textColor={textColor}>
+          <Heading
+            fontSize={{
+              sm: "3xl",
+              md: "3xl",
+              lg: "5xl",
+              xl: "5xl",
+              "2xl": "5xl",
+            }}
+            fontWeight={"bold"}
+            textColor={textColor}
+          >
             Build, Blog & Share
           </Heading>
           <Text fontSize={"md"} textColor={textColor} lineHeight={1.8}>
@@ -30,7 +44,17 @@ const Hero: React.FC = () => {
         </HStack>
       </VStack>
 
-      <VStack spacing={4}>
+      <VStack
+        spacing={4}
+        display={{
+          sm: "none",
+          md: "none",
+          lg: "flex",
+          xl: "flex",
+          "2xl": "flex",
+        }}
+        alignItems={"center"}
+      >
         <Box
           w={"350px"}
           h={"350px"}
