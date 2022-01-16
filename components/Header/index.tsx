@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Button, Container, HStack, useColorMode } from "@chakra-ui/react";
+import { Box, Button, Container, HStack, useColorMode } from "@chakra-ui/react";
 import { RiMoonLine, RiSunLine } from "react-icons/ri";
 
 import { Image } from "../Image";
@@ -10,15 +10,14 @@ const Header: React.FC = () => {
 
   return (
     <Container
-      w={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-      maxW={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-      my={8}
-      p={0}
+      maxW={{ sm: "xl", md: "3xl", lg: "4xl", xl: "6xl", "2xl": "7xl" }}
+      px={6}
+      py={10}
     >
       <HStack alignItems={"center"} justifyContent={"space-between"}>
         <Link href={"/"} passHref>
           <a>
-            <Image src="/Logo.svg" alt="Logo" width={250} height={65}></Image>
+            <Image src="/Logo.svg" alt="Logo" width={230} height={65}></Image>
           </a>
         </Link>
         <Button

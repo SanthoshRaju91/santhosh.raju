@@ -37,9 +37,9 @@ const Footer: React.FC = () => {
   return (
     <Box py={8} mt={12} bgColor={"brand.50"}>
       <Container
-        w={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-        maxW={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-        p={0}
+        maxW={{ sm: "xl", md: "3xl", lg: "4xl", xl: "6xl", "2xl": "7xl" }}
+        px={6}
+        py={10}
       >
         <Flex
           flexDirection={"row"}
