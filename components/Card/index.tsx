@@ -35,7 +35,8 @@ const Card: React.FC<CardProps> = ({
       borderColor={borderColor}
       borderRadius={"lg"}
       shadow={"sm"}
-      p={8}
+      px={{ sm: 4, md: 4, lg: 8, xl: 8, "2xl": 8 }}
+      py={8}
     >
       <VStack spacing={6} alignItems={"left"}>
         <VStack alignItems={"left"} spacing={6}>
