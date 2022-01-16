@@ -15,7 +15,11 @@ const Published: React.FC<IPublished> = ({ publishedDate }) => {
           <FaRegCalendarAlt size={"24px"} />
         </Text>
 
-        <Text fontSize={"sm"} fontWeight={"light"} textColor={textColor}>
+        <Text
+          fontSize={{ sm: "xs", md: "xs", lg: "sm", xl: "sm", "2xl": "sm" }}
+          fontWeight={"light"}
+          textColor={textColor}
+        >
           {publishedDate}
         </Text>
       </HStack>

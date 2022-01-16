@@ -24,8 +24,7 @@ const Footer: React.FC = () => {
     <Box>
       <Container
         maxW={{ sm: "xl", md: "3xl", lg: "4xl", xl: "6xl", "2xl": "7xl" }}
-        px={6}
-        py={10}
+        p={6}
       >
         <Flex
           flexDirection={"row"}
@@ -38,7 +37,7 @@ const Footer: React.FC = () => {
             </a>
           </Link>
 
-          <Box mt={{ sm: 4, md: 4, lg: 0 }}>
+          <Box>
             <Copyright />
           </Box>
         </Flex>
