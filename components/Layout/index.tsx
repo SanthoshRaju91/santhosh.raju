@@ -16,18 +16,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <link rel="favicon" href="/favicon.ico"></link>
         <title>santhoshraju.dev</title>
       </Head>
-      <Box>
-        <Header />
-        <Container
-          w={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-          maxW={{ sm: "80%", md: "80%", lg: "80%", xl: "80%", "2xl": "60%" }}
-          my={10}
-          p={0}
-        >
-          {children}
-        </Container>
-        <Footer />
-      </Box>
+
+      <Header />
+      <Container
+        maxW={{ sm: "xl", md: "3xl", lg: "4xl", xl: "6xl", "2xl": "7xl" }}
+        px={6}
+        py={10}
+      >
+        {children}
+      </Container>
+      <Footer />
     </ChakraProvider>
   );
 };
