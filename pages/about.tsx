@@ -197,12 +197,15 @@ const About: React.FC = () => {
           I am available for Freelance project, Remote work, Job Opportunities
           for just discussing about MLOps / Software Development in general.
         </Text>
-        <HStack spacing={2}>
-          <FiMail size={"18px"} color="#47bcb1" />
-          <Text fontSize={"md"} fontWeight={"bold"} textColor={"teal.300"}>
-            santhoshraju.ai@gmail.com
-          </Text>
-        </HStack>
+        <a href="mailto:santhoshraju.ai@gmail.com">
+          <HStack spacing={2}>
+            <FiMail size={"18px"} color="#47bcb1" />
+            <Text fontSize={"md"} fontWeight={"bold"} textColor={"teal.300"}>
+              santhoshraju.ai@gmail.com
+            </Text>
+          </HStack>
+        </a>
+
         <HStack py={10} spacing={4}>
           <Text textColor={textColor}>Connect with me on </Text>
           <SocialIcons />
