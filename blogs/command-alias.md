@@ -36,14 +36,21 @@ Turns out it’s really not that complicated(depending on the Operating System)
 
 Let’s check how to setup command alias in Linux core systems (Mac, Ubuntu)
 
-1. Switch to user directory `cd ~`
+1. Switch to user directory
+
+   ```shell
+   cd ~
+   ```
 
 2. Create a .bash_profile or .profile, if you already have one of these files in
    your current directory. Then you can edit the files and add the alias
    commands at the end of the file.
 
 3. The syntax for aliasing is pretty simple alias
-   `<your-alias>='<command-to-be-aliased>'`
+
+   ```shell
+   <your-alias>='<command-to-be-aliased>'
+   ```
 
    For eg — I want to alias the 10 characters git branch command to 2 character
    gb, so my syntax would be alias gb='git branch'
