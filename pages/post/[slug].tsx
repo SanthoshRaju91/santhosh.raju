@@ -20,6 +20,7 @@ import { UserAvatar } from "../../components/Avatar";
 import { Published } from "../../components/Published";
 import { Image } from "../../components/Image";
 import useCustomColorModeValue from "../../common/useCustomColorModeValue";
+import LinkPreview from "../../components/LinkPreview";
 
 type BlogProps = {
   blog: Blog;
@@ -106,6 +107,10 @@ const components = {
 
   ol({ children }: any) {
     return <OrderedList ml={8}>{children}</OrderedList>;
+  },
+
+  a({ href }: any) {
+    return <LinkPreview url={href} />;
   },
 };
 
