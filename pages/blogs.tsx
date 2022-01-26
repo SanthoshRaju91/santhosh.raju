@@ -1,108 +1,88 @@
-import {
-  Box,
-  Button,
-  Flex,
-  Grid,
-  Heading,
-  HStack,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Text, VStack } from "@chakra-ui/react";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 import { Card } from "../components/Card";
-import { Tag } from "../components/Tag";
 import { BlogMatter } from "../common/type";
 import getBlogs from "../common/getBlogs";
+import useCustomColorModeValue from "../common/useCustomColorModeValue";
 
 export type BlogsProps = {
   blogs: Array<BlogMatter>;
 };
 
+const tags = ["Javascript", "Devops", "Walk of Life", "Books", "Web Design"];
+
 const Blogs: React.FC<BlogsProps> = ({ blogs }) => {
+  const { textColor } = useCustomColorModeValue();
   return (
     <>
       <Heading
-        fontSize={"2xl"}
+        fontSize={"4xl"}
         fontWeight={"black"}
-        textColor={"blackAlpha.800"}
+        textColor={textColor}
         pb={1}
         inlineSize={"max-content"}
-        borderBottomWidth={1}
-        borderBottomColor={"blackAlpha.700"}
       >
         All Blogs
       </Heading>
-      <Flex
-        mt={12}
-        gap={12}
-        flexDirection={{ sm: "column", md: "column", lg: "row" }}
-      >
-        <Box w={{ sm: "100%", md: "100%", lg: "70%" }}>
-          <VStack spacing={4}>
-            {blogs.map((blog, index) => (
-              <Card
-                key={index}
-                title={blog.title}
-                synopsis={blog.synopsis}
-                user={blog.author}
-                userAvatar={blog.authorProfilePic}
-                published={blog.published}
-                tags={blog.tags}
-                slug={blog.slug}
-              />
+      <Box my={8} display={{ sm: "none", md: "none", lg: "block" }}>
+        <HStack spacing={4} alignItems={"center"}>
+          <Text fontSize={"sm"} textColor={textColor}>
+            Filter by tags:{" "}
+          </Text>
+          <HStack spacing={4}>
+            {tags.map((tag) => (
+              <Text
+                key={tag}
+                fontSize={"sm"}
+                textColor={"blue.500"}
+                borderBottomWidth={1}
+                borderBottomColor={"blue.500"}
+                borderBottomStyle={"dashed"}
+              >
+                {tag}
+              </Text>
             ))}
-          </VStack>
-          <HStack mt={6}>
-            <Button
-              bgColor={"transparent"}
-              fontSize={"lg"}
-              fontWeight={"bold"}
-              iconSpacing={2}
-              textColor={"blackAlpha.700"}
-              _hover={{ bgColor: "transparent", textColor: "blackAlpha.800" }}
-              leftIcon={<AiOutlineArrowLeft size={"20px"} />}
-            >
-              Previous
-            </Button>
-            <Button
-              bgColor={"transparent"}
-              fontSize={"lg"}
-              fontWeight={"bold"}
-              iconSpacing={2}
-              textColor={"blackAlpha.700"}
-              _hover={{ bgColor: "transparent", textColor: "blackAlpha.800" }}
-              rightIcon={<AiOutlineArrowRight size={"20px"} />}
-            >
-              Next
-            </Button>
           </HStack>
-        </Box>
-
-        <Box
-          w={{ sm: 0, md: 0, lg: "30%" }}
-          display={{ sm: "none", md: "none", lg: "block" }}
-        >
-          <Heading
+        </HStack>
+      </Box>
+      <Box my={12}>
+        <VStack alignItems={"left"} spacing={2}>
+          {blogs.map((blog, index) => (
+            <Card
+              key={index}
+              title={blog.title}
+              synopsis={blog.synopsis}
+              user={blog.author}
+              userAvatar={blog.authorProfilePic}
+              published={blog.published}
+              tags={blog.tags}
+              slug={blog.slug}
+            />
+          ))}
+        </VStack>
+        {/* <HStack alignItems={"left"} my={4} spacing={4}>
+          <Button
+            bgColor={"transparent"}
             fontSize={"lg"}
-            fontWeight={"black"}
-            textColor={"blackAlpha.800"}
-            pb={1}
-            inlineSize={"max-content"}
-            borderBottomWidth={1}
-            borderBottomColor={"blackAlpha.800"}
+            fontWeight={"bold"}
+            iconSpacing={2}
+            textColor={textColor}
+            leftIcon={<AiOutlineArrowLeft size={"20px"} />}
           >
-            Tags
-          </Heading>
-          <Grid mt={4} templateColumns={"repeat(2, 1fr)"} gap={4}>
-            <Tag text="Javascript" />
-            <Tag text="Frontend" />
-            <Tag text="Ansible" />
-            <Tag text="React.js" />
-            <Tag text="Devops" />
-            <Tag text="Walk of Life" />
-            <Tag text="Books" />
-          </Grid>
-        </Box>
-      </Flex>
+            Previous
+          </Button>
+          <Button
+            bgColor={"transparent"}
+            fontSize={"lg"}
+            fontWeight={"bold"}
+            iconSpacing={2}
+            textColor={textColor}
+            rightIcon={<AiOutlineArrowRight size={"20px"} />}
+          >
+            Next
+          </Button>
+        </HStack> */}
+      </Box>
     </>
   );
 };
