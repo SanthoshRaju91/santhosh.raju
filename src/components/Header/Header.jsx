@@ -51,6 +51,13 @@ const Header = () => {
             </div>
           )}
         </div>
+
+        <div className="Header__container--navs">
+          <a href="/blogs">Blogs</a>
+          <a href="/portfolio" className="portfolio">
+            My Portfolio
+          </a>
+        </div>
       </div>
     </header>
   );

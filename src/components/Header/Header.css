@@ -11,6 +11,10 @@
     height: 50px;
 }
 
+.Header__container--navs {
+    display: none;
+}
+
 .Header__container--actions button {
     background: transparent;
     border: transparent;
@@ -48,4 +52,32 @@
     text-decoration: none;
     color: var(--primary-text);
     font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+    .Header__container--actions {
+        display: none;
+    }
+
+    .Header__container--navs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 36px;
+    }
+
+    .Header__container--navs a {
+        color: var(--primary-text);
+        font-size: 0.9rem;
+        font-weight: 200;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+    }
+
+    .Header__container--navs .portfolio {
+        border: 1px solid var(--primary-text);
+        border-radius: 4px;
+        padding: 8px 24px;
+    }
+    
 }
