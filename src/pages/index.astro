@@ -35,7 +35,22 @@ import LetsChat from '../components/LetsChat/LetsChat.astro';
                     font-weight: 500;
                 }
             }
+        }
 
+        @media only screen and (min-width: 768px) {
+            margin: 76px 0;
+
+            &__container {
+                width: 90%;
+
+                h1 {
+                    font-size: 3rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
         }
     }
 
