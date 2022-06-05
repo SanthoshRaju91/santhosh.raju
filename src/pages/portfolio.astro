@@ -1,0 +1,133 @@
+---
+import IndexLayout from "../layouts/IndexLayout.astro";
+import Skill from "../components/Skill/Skill.astro";
+import LetsChat from "../components/LetsChat/LetsChat.astro";
+---
+
+<style lang="scss" scoped>
+    .Portfolio {
+        padding: 48px 0;
+
+        &__container {
+            &--introduction {
+                h1 {
+                    color: var(--primary);
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    line-height: 150%;
+                }
+
+                p {
+                    color: var(--primary-text);
+                    font-size: 1rem;
+                    font-weight: 200;
+                    line-height: 160%;
+
+                    &:nth-child(3) {
+                        color: var(--secondary-text);
+                        font-size: 0.9rem;
+                        padding: 16px 0;
+                    }
+
+                    &:nth-child(4) {
+                        color: var(--secondary-text);
+                        font-size: 0.9rem;
+                    }
+
+                    .linkedin,
+                    .blogs {
+                        border-bottom: 1px dotted var(--blue);
+                        color: var(--blue);
+                        font-weight: 500;
+                    }
+
+                    .github {
+                        border-bottom: 1px dotted var(--gray-light);
+                        color: var(--gray-light);
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &--skills {
+                padding: 48px 0;
+
+                h2 {
+                    color: var(--primary);
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                }
+
+                p {
+                    color: var(--secondary-text);
+                    font-size: 0.9rem;
+                    font-weight: 200;
+                    line-height: 160%;
+                }
+
+                .skills {
+                    padding: 16px 0;
+                    width: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+</style>
+
+<IndexLayout>
+    <section class="Portfolio">
+        <div class="Portfolio__container">
+            <div class="Portfolio__container--introduction">
+                <h1>I'm Santhosh Raju, software engineer and tech enthusiasts.</h1>
+                <p>I like to Build, Blog and Share stuff I do everyday. I specialise in building Web Application,
+                    Websites & Applications that scales. I'm <b>minimalistic</b> in communicaiton channles, but I still
+                    would like to connect with everyone.
+                    Connect with me on <a href="http://" class="linkedin">LinkedIn</a>, or check my work on <a
+                        href="http://" class="github">Github</a>.</p>
+                <p>
+                    I design, develop and deploy web applications and productionise Machine Learning Models at scale.
+                    Craft I have learned and practiced, and still do, over the past 8 years of my professional career. I
+                    have worked with multiple organisations and clients on their path to Digitisation. With Machine
+                    Learning & AI products on the rise, I'm now focusing on designing, building Machine Learning and
+                    Data Intensive Applications that scales from POC stage to Production.
+                </p>
+                <p>Alsom I love to play with <b>Raspberry Pi's</b> and reading <b>Books</b>, which you will find them in
+                    <a href="/blogs" class="blogs">my blogs</a>
+                </p>
+            </div>
+
+            <div class="Portfolio__container--skills">
+                <h2>Professional Skills</h2>
+                <p>Over the years I had the opportunity to learn and build applications with various programming
+                    languages and tools. But I was drawn to building web applications using <b>Javascript</b> which is
+                    my core skill.</p>
+                <div class="skills">
+                    <Skill icon="logos:javascript" skill="Javascript" />
+                    <Skill icon="logos:python" skill="Python" />
+                    <Skill icon="logos:java" skill="Java" />
+                    <Skill icon="logos:react" skill="React.js" />
+                    <Skill icon="logos:nodejs-icon" skill="Node.js" />
+                    <Skill icon="logos:nestjs" skill="Nest.js" />
+                    <Skill icon="logos:angular-icon" skill="Angular" />
+                    <Skill icon="logos:ember-tomster" skill="Ember" />
+                    <Skill icon="logos:python" skill="Fast API" />
+                    <Skill icon="logos:spring-icon" skill="Spring Boot" />
+                    <Skill icon="logos:flask" skill="Flask" />
+                    <Skill icon="logos:docker-icon" skill="Docker" />
+                    <Skill icon="logos:kubernetes" skill="Kubernetes" />
+                    <Skill icon="logos:jenkins" skill="Jenkins" />
+                    <Skill icon="logos:ansible" skill="Ansible" />
+
+                </div>
+            </div>
+
+            <div class="Portfolio__container--connect">
+                <LetsChat />
+            </div>
+        </div>
+    </section>
+</IndexLayout>
