@@ -8,5 +8,13 @@ export default defineConfig({
     ssr: {
       external: ["svgo"]
     }
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      langs: [],
+      wrap: true,
+
+    }
   }
 });
