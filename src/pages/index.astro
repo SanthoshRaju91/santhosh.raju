@@ -3,6 +3,22 @@ import { Icon } from 'astro-icon'
 import IndexLayout from '../layouts/IndexLayout.astro'
 import Article from '../components/Article/Article.astro';
 import LetsChat from '../components/LetsChat/LetsChat.astro';
+
+// export async function getStaticPaths() {
+//     const allPost = await Astro.glob("./blogs/*.md")
+//     allPost.forEach(post => {
+//         posts.push({
+//             url: post.url,
+//             frontmatter: post.frontmatter
+//         })
+//     })
+// }
+
+const response = await Astro.glob("./blogs/*.md")
+const allPosts = response.map(data => ({
+    url: data.url,
+    frontmatter: data.frontmatter
+}))
 ---
 
 <style lang="scss" scoped>
@@ -122,9 +138,11 @@ import LetsChat from '../components/LetsChat/LetsChat.astro';
                 </a>
             </div>
             <div class="Articles__container--content">
-                <Article title="Using command alias to help your Dev workflow"
-                    synopsis="Improve your Development workflow by shorten commonly used commands. And save yourself from Carpal Tunnel Syndrome. Mac / Linux and Windows users can follow this step-by-step guide, very easy to setup and be done with long typings of command"
-                    publisedDate="20 Nov, 2018" url="/" />
+                {allPosts.map(post => (
+                <Article title={post.frontmatter.title} synopsis={post.frontmatter.synopsis}
+                    publisedDate={post.frontmatter.published} url={post.url} />
+                ))}
+
             </div>
         </div>
     </div>
