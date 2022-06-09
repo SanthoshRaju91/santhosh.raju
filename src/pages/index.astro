@@ -4,16 +4,6 @@ import IndexLayout from '../layouts/IndexLayout.astro'
 import Article from '../components/Article/Article.astro';
 import LetsChat from '../components/LetsChat/LetsChat.astro';
 
-// export async function getStaticPaths() {
-//     const allPost = await Astro.glob("./blogs/*.md")
-//     allPost.forEach(post => {
-//         posts.push({
-//             url: post.url,
-//             frontmatter: post.frontmatter
-//         })
-//     })
-// }
-
 const response = await Astro.glob("./blogs/*.md")
 const allPosts = response.map(data => ({
     url: data.url,
