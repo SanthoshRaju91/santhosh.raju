@@ -1,0 +1,49 @@
+---
+import '../styles/color.css';
+import Header from '../components/Header/Header.jsx';
+import Footer from '../components/Footer/Footer.astro';
+---
+
+<html>
+
+<head>
+    <title>SanthoshRaju.dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--black);
+            color: var(--primary-text);
+            font-family: "Outfit", sans-serif;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                width: 70%;
+            }
+        }
+
+        @media only screen and (min-width: 1920px) {
+            body {
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <Header client:load />
+    <slot />
+    <Footer />
+</body>
+
+</html>
