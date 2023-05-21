@@ -1,20 +1,15 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [react()],
-  vite: {
-    ssr: {
-      external: ["svgo"]
-    }
-  },
-  markdown: {
-    shikiConfig: {
-      theme: 'github-dark',
-      langs: [],
-      wrap: true,
-
-    }
-  }
+  integrations: [
+    react(),
+    mdx({
+      extendPlugins: "default",
+      extendMarkdownConfig: false,
+      smartypants: true,
+      gfm: true,
+    }),
+  ],
 });
