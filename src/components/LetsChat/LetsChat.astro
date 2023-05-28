@@ -1,86 +1,89 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 ---
 
 <style lang="scss" scoped>
-    .LetsChat {
-        padding: 64px 20px;
+  .LetsChat {
+    padding: 64px 20px;
 
-        &__container {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+    &__container {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-            h1 {
-                color: var(--primary);
-                font-size: 1.4rem;
-            }
+      h1 {
+        color: var(--primary);
+        font-size: 1.4rem;
+      }
 
-            p {
-                color: var(--secondary-text);
-                font-size: 0.9rem;
-                font-weight: 200;
-                line-height: 150%;
-                text-align: center;
-            }
+      p {
+        color: var(--secondary-text);
+        font-size: 0.9rem;
+        font-weight: 200;
+        line-height: 150%;
+        text-align: center;
+      }
 
-            a {
-                background: var(--primary);
-                border-radius: 4px;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                width: 70%;
-                padding: 10px;
-                gap: 8px;
+      a {
+        background: var(--primary);
+        border-radius: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 70%;
+        padding: 10px;
+        gap: 8px;
 
-                span {
-                    color: var(--black);
-                    font-size: 1.1rem;
-                    font-weight: 500;
-                }
-
-                svg {
-                    width: 18px;
-                    height: 18px;
-                    color: var(--black);
-                }
-            }
-
-            @media only screen and (min-width: 768px) {
-                width: 70%;
-
-                h1 {
-                    font-size: 2rem;
-                }
-
-                p {
-                    font-size: 1rem;
-                }
-
-                a {
-                    width: 40%;
-                }
-            }
+        span {
+          color: var(--black);
+          font-size: 1.1rem;
+          font-weight: 500;
         }
 
-        @media only screen and (min-width:768px) {
-            padding: 80px 20px;
+        svg {
+          width: 18px;
+          height: 18px;
+          color: var(--black);
         }
+      }
+
+      @media only screen and (min-width: 768px) {
+        width: 70%;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        a {
+          width: 40%;
+        }
+      }
     }
+
+    @media only screen and (min-width: 768px) {
+      padding: 80px 20px;
+    }
+  }
 </style>
 
 <div class="LetsChat">
-    <div class="LetsChat__container">
-        <h1>What are you working on ?</h1>
-        <p>Let's have conversation! I'd love to header about what you're working on and find a way to work together</p>
-        <a href="mailto:santhoshraju.ai@gmail.com">
-            <span>Let's Chat</span>
-            <Icon pack="ri" name="chat-4-line" />
-        </a>
-    </div>
+  <div class="LetsChat__container">
+    <h1>What are you working on ?</h1>
+    <p>
+      Let's have conversation! I'd love to header about what you're working on
+      and find a way to work together
+    </p>
+    <a href="mailto:santhoshraju.ai@gmail.com">
+      <span>Let's Chat</span>
+      <Icon pack="ri" name="chat-4-line" />
+    </a>
+  </div>
 </div>
