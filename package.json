@@ -7,7 +7,10 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "commit": "cz",
+    "prepare": "husky install",
+    "lint": ""
   },
   "repository": {
     "type": "git",
@@ -27,8 +30,21 @@
   },
   "devDependencies": {
     "@astrojs/react": "^2.2.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "sass": "^1.52.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && npx cz --hook || true"
+    }
   }
 }
