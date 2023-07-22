@@ -12,10 +12,12 @@ import { Icon } from "astro-icon";
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 28px;
 
       h1 {
         color: var(--primary);
         font-size: 1.4rem;
+        margin: 0;
       }
 
       p {
@@ -24,6 +26,7 @@ import { Icon } from "astro-icon";
         font-weight: 200;
         line-height: 150%;
         text-align: center;
+        margin: 0;
       }
 
       a {
@@ -52,8 +55,6 @@ import { Icon } from "astro-icon";
       }
 
       @media only screen and (min-width: 768px) {
-        width: 70%;
-
         h1 {
           font-size: 2rem;
         }
@@ -78,8 +79,13 @@ import { Icon } from "astro-icon";
   <div class="LetsChat__container">
     <h1>What are you working on ?</h1>
     <p>
-      Let's have conversation! I'd love to header about what you're working on
-      and find a way to work together
+      I'm excited to engage in a meaningful conversation with you! It would be
+      wonderful to delve into the details of what you're currently working on
+      and explore potential avenues for collaboration. I genuinely believe that
+      by exchanging ideas and perspectives, we can discover synergies and create
+      opportunities to work together towards shared goals or projects. So,
+      please share your thoughts, aspirations, or any specific areas of
+      interest, and let's explore how we can collaborate
     </p>
     <a href="mailto:santhoshraju.ai@gmail.com">
       <span>Let's Chat</span>
