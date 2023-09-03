@@ -31,7 +31,7 @@ When I initially started reading, I took it slowly. I would read just one page a
 
 The truth about forming a habit lies in consistency and commitment. In the beginning, my focus was on committing to starting a new book after finishing the previous one, and consistently reading at least 8-10 pages each week. this consistent effort eventually blossomed into a habit and even enhanced my reading speed. (Nowadays, I can comfortably read about 60-70 pages a day during my commute, which spans approximately 3-4 hours.)
 
-This reading habit brought about a shift in my behaviour and perception. For instance, when my dinner is deployed, instead of turning on the TV, my instinct automatically reaches for a book. During weekends when I find myself alone with no particluar activities, my hands naturally reach for a book.
+This reading habit brought about a shift in my behaviour and perception. For instance, when my dinner is delayed, instead of turning on the TV, my instinct automatically reaches for a book. During weekends when I find myself alone with no particluar activities, my hands naturally reach for a book.
 
 **This is the power of habit. Once developed and cultivated, it can transform you into the person you've always aspired to be.**
 
@@ -39,7 +39,7 @@ This reading habit brought about a shift in my behaviour and perception. For ins
 
 Most individuals who attempt to form a habit give up quickly. This often happens due to setting stringent goals, lacking commitment, or failing to maintain consistency. If you're facing such challenges, I recommend starting small. Beginning small could mean something as simple as just **showing up**
 
-For instance, you could spend five minutes sitting in your chair during during scheduled reading time, or you could show up at the gym and engage in a brief five-minute conversation with your trainer. Research has indicated that **"showing up"** is often the most challenging part of habit formation.
+For instance, you could spend five minutes sitting in your chair during scheduled reading time, or you could show up at the gym and engage in a brief five-minute conversation with your trainer. Research has indicated that **"showing up"** is often the most challenging part of habit formation.
 
 If you're struggling, give this suggestion a try. You'll be astonished by the potency of such a tweak in your habit-forming journey.
 
