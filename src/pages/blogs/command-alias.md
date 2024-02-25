@@ -1,5 +1,5 @@
 ---
-# layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 slug: command-alias
 title: Using command alias, to help your Dev workflow
 synopsis: Improve your Development workflow by shorten commonly used commands. And save yourself from Carpal Tunnel Syndrome. Mac / Linux and Windows users can follow this step-by-step guide, very easy to setup and be done with long typings of command

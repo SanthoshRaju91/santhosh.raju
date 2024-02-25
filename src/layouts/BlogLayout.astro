@@ -1,0 +1,42 @@
+---
+import marked from 'marked';
+import Header from "../components/Header/Header.astro";
+import Footer from '../components/Footer/Footer.astro';
+
+const { title, published, tags } = Astro.props.content;
+---
+
+<style>
+  .markdown-content p {
+    @apply text-red-600;
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <title>{title}</title>
+  </head>
+  <body class="bg-body w-full h-full bg-center bg-no-repeat bg-cover">
+    <Header />
+    <article class="flex flex-col py-28 w-[84%] mx-auto xl:container xl:justify-between xl:w-[60%]">
+      <div class="flex flex-col gap-4">
+        <h1 class="text-tertiary-100 text-2xl font-bold">{title}</h1>
+        <div class="flex flex-row gap-6">
+          <div class="flex flex-row text-sm text-tertiary-100 gap-2">
+            <p>Published on</p>
+            <strong>{published}</strong>
+          </div>
+          <div class="flex flex-row gap-1">           
+            {tags.map(tag => <p class="text-sm text-blue-700 underline">{tag}</p>)}            
+          </div>
+        </div>
+      </div>
+      <!-- <div class="text-tertiary-100 py-10 markdown-content">
+        <slot></slot>
+      </div> -->
+    </article>
+    <Footer />
+  </body>
+</html>

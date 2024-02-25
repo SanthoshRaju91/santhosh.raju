@@ -1,5 +1,5 @@
 ---
-# layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 slug: jupyter
 title: Essential guide to Jupyter notebook
 synopsis: Discover all the essentials of Jupyter Notebook and unlock its full potential. Includes cheatsheet for both Windows & Mac users

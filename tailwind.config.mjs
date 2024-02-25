@@ -20,7 +20,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
   safelist: {
     pattern: /(bg|text|border)-(primary|secondary|accent|tertiary)/,
     variants: ["hover", "focus", "after", "before", "selection"],
