@@ -1,5 +1,5 @@
 ---
-# layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 slug: three-books-a-month
 title: I read 3 books this month
 synopsis: In this article, I share my journey to reading 1 page a day to reading 3 books a month. How this small step followed consistently led me to form an habit I'm grateful for in life.

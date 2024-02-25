@@ -1,80 +1,20 @@
----
-import { Icon } from "astro-icon";
----
-
-<style lang="scss" scoped>
-  .Footer {
-    padding: 32px 0;
-
-    &__container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-
-      &--left {
-        p {
-          color: var(--secondary-text);
-          font-size: 0.8rem;
-          font-weight: 400;
-
-          b {
-            color: var(--primary-text);
-          }
-
-          a {
-            border-bottom: 1px dotted var(--primary-text);
-          }
-        }
-      }
-
-      &--right {
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-
-        a {
-          text-decoration: none;
-
-          svg {
-            width: 40px;
-            height: 40px;
-            color: var(--primary-text);
-          }
-        }
-      }
-
-      @media only screen and (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-    }
-  }
-</style>
-<footer class="Footer">
-  <div class="Footer__container">
-    <div class="Footer__container--left">
-      <p>Designed and developed by <b>Santhosh Raju</b></p>
-      <p>
-        Designed with <a href="https://www.figma.com" target="_blank"
-          ><b>Figma</b></a
-        >, Built with <a href="https://astro.build/" target="_blank"
-          ><b>Astro.build</b></a
-        >, Hosted on <a href="https://vercel.com" target="_blank"
-          ><b>Vercel</b></a
-        >
-      </p>
+<footer>
+    <div class="flex flex-col gap-6 md:flex-row md:items-center justify-between w-[84%] mx-auto xl:container xl:w-[60%] py-10 border-t border-secondary-200">
+        <div class="flex flex-col gap-2 text-sm text-tertiary-100">
+            <p>Designed and developed by <strong>Santhosh Raju</strong></p>
+            <p>Designed with <strong>Figma</strong>, built with <strong>Astro.build</strong>, hosted on <strong>Vercel</strong></p>
+        </div>
+        <div class="flex flex-row items-center gap-4">
+            <a
+                href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
+                target="_blank"
+            >
+                <img src="/LinkedIn.svg" alt="LinkedIn-profile" />
+                
+            </a>
+            <a href="https://github.com/SanthoshRaju91" target="_blank">
+                <img src="/Github.svg" alt="Github-profile" />
+            </a>
+        </div>
     </div>
-    <div class="Footer__container--right">
-      <a
-        href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
-        target="_blank"
-      >
-        <Icon pack="ri" name="linkedin-box-fill" />
-      </a>
-      <a href="https://github.com/SanthoshRaju91" target="_blank">
-        <Icon pack="ri" name="github-fill" />
-      </a>
-    </div>
-  </div>
 </footer>

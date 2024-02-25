@@ -1,5 +1,5 @@
 ---
-# layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogPostLayout.astro"
 slug: mlops
 title: What is MLOps
 synopsis: MLOps is a process of automating Machine Learning using DevOps methodologies.

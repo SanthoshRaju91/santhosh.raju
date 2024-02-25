@@ -1,0 +1,61 @@
+---
+const { title, synopsis, publisedDate, url } = Astro.props;
+---
+
+<style lang="scss" scoped>
+  .Article {
+    background: var(--black-alt);
+    border-radius: 4px;
+
+    &__container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 12px;
+      border-left: 10px solid #8a2e70;
+      border-radius: 4px;
+
+      &--content {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: 20px;
+
+        h1 {
+          color: var(--primary-text);
+          font-size: 1.4rem;
+          line-height: 130%;
+          font-weight: 500;
+          margin: 0;
+        }
+
+        p {
+          color: var(--secondary-text);
+          font-size: 0.9rem;
+          font-weight: 200;
+          line-height: 150%;
+          margin: 0;
+        }
+
+        span {
+          color: var(--gray);
+          font-size: 0.8rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+</style>
+
+<div class="Article">
+  <a href={url} class="Article__container">
+    <div class="Article__container--content">
+      <h1>{title}</h1>
+      <p>{synopsis}</p>
+      <span>{publisedDate}</span>
+    </div>
+  </a>
+</div>
