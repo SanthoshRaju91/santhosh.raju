@@ -13,7 +13,7 @@ tags:
 
 ![Books](/three-books-a-month/Books.jpeg)
 
-"Habits are the compound interest of self improvement" - James Clear
+> "Habits are the compound interest of self improvement" - James Clear
 
 Upon reading the title, you might not be astonised, and I wouldn't expect more. In fact, there are many who read more books that I do in a month.
 
