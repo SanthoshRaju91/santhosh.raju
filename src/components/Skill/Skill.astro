@@ -1,0 +1,10 @@
+---
+import { Icon } from 'astro-icon'
+
+const { skill, icon } = Astro.props
+---
+
+<div class="w-full border border-gray-100 flex flex-row items-center p-4 rounded gap-2">
+    <Icon name={icon} class="w-5 h-5" />
+    <h4 class="text-sm font-normal text-tertiary-200">{skill}</h4>
+</div>

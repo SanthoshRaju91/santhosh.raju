@@ -1,0 +1,56 @@
+---
+import MySiteLayout from "../layouts/MySiteLayout.astro";
+import Skill from '../components/Skill/Skill.astro';
+---
+
+<MySiteLayout>
+    <div class="flex flex-col gap-16 items-start py-36 w-[84%] md:w-[60%] md:container mx-auto">
+        <div class="flex flex-row">
+            <div class="flex flex-col gap-8">
+                <h1 class="text-primary-200 text-4xl font-bold">I'm Santhosh Raju, software engineer and tech enthusiasts</h1>
+                <p class="text-tertiary-200 font-normal leading-loose"> I like to Build, Blog and Share stuff I do everyday. I specialise in
+                    building Web Application, Websites & Applications that scales. I'm <b
+                      >minimalistic</b
+                    > in communicaiton channles, but I still would like to connect with everyone.
+                    Connect with me on <a
+                      href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
+                      class="linkedin">LinkedIn</a
+                    >, or check my work on <a
+                      href="https://github.com/SanthoshRaju91"
+                      class="github">Github</a
+                    >.
+                </p>
+                <p class="text-tertiary-200 font-normal leading-loose">
+                    I design, develop and deploy web applications and productionise
+                    Machine Learning Models at scale. Craft I have learned and practiced,
+                    and still do, over the past 8 years of my professional career. I have
+                    worked with multiple organisations and clients on their path to
+                    Digitisation. With Machine Learning & AI products on the rise, I'm now
+                    focusing on designing, building Machine Learning and Data Intensive
+                    Applications that scales from POC stage to Production.
+                </p>
+                <p class="text-tertiary-200 font-normal leading-loose">
+                    Also, I love to play with <b>Raspberry Pi's</b> and reading <b>Books</b>, which you will find them in
+                    <a href="/blogs" class="blogs">my blogs</a>
+                </p>                
+            </div>            
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full md:grid-cols-4">
+            <Skill icon="logos:javascript" skill="Javascript" />
+            <Skill icon="logos:python" skill="Python" />
+            <Skill icon="logos:java" skill="Java" />
+            <Skill icon="logos:react" skill="React.js" />
+            <Skill icon="logos:nodejs-icon" skill="Node.js" />
+            <Skill icon="logos:nestjs" skill="Nest.js" />
+            <Skill icon="logos:angular-icon" skill="Angular" />
+            <Skill icon="logos:ember-tomster" skill="Ember" />
+            <Skill icon="logos:python" skill="Fast API" />
+            <Skill icon="logos:spring-icon" skill="Spring Boot" />
+            <Skill icon="logos:flask" skill="Flask" />
+            <Skill icon="logos:docker-icon" skill="Docker" />
+            <Skill icon="logos:kubernetes" skill="Kubernetes" />
+            <Skill icon="logos:jenkins" skill="Jenkins" />
+            <Skill icon="logos:ansible" skill="Ansible" />
+        </div>
+    </div>
+</MySiteLayout>
