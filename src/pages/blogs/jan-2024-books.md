@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 slug: jan-2024-books
 title: "Monthly Reads: January 2024"
 synopsis: This past month I read two novels. One offering insights on overcoming procrastination and the other a love story in amidst a mysterious plot.

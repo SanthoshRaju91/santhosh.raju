@@ -1,61 +1,65 @@
 ---
-import IndexLayout from "../../layouts/IndexLayout.astro";
+import MySiteLayout from '../../layouts/MySiteLayout.astro';
 import Article from "../../components/Article/Article.astro";
 
+
+
+
+
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob("./*.md");
-  return paginate(allPosts, { pageSize: 10 });
+
+    function parseDateString(dateString) {
+        return new Date(dateString);
+    }
+
+    function sortPostsByPublisedDate(posts) {
+        const postsByDateObjects = posts.map(post => ({
+            ...post,
+            frontmatter: {
+                ...post.frontmatter,
+                publishedDate: parseDateString(post.frontmatter.published)
+            }
+        }))    
+        postsByDateObjects.sort((prev, curr) => {
+            const prevPublishedDate = prev.frontmatter.publishedDate;
+            const currPublishedDate = curr.frontmatter.publishedDate;
+            return currPublishedDate - prevPublishedDate
+        })
+        return postsByDateObjects
+    }
+
+    const allPosts = await Astro.glob("./*.md")
+    const sortedPosts = sortPostsByPublisedDate(allPosts)
+    return paginate(sortedPosts, { pageSize: 10 })
 }
 
-const { page } = Astro.props;
+
+
+const { page } = Astro.props as any;
 ---
 
-<style lang="scss" scoped>
-  .Blogs {
-    margin: 66px 0;
-
-    &__container {
-      width: 100%;
-
-      &--header {
-        h1 {
-          color: var(--primary);
-          font-size: 2rem;
-        }
-      }
-
-      &--content {
-        margin: 14px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      @media only screen and (min-width: 768px) {
-        width: 85%;
-      }
-    }
-  }
-</style>
-
-<IndexLayout>
-  <div class="Blogs">
-    <div class="Blogs__container">
-      <div class="Blogs__container--header">
-        <h1>All Blogs</h1>
-      </div>
-      <div class="Blogs__container--content">
-        {
-          page.data.map((post) => (
-            <Article
-              title={post.frontmatter.title}
-              synopsis={post.frontmatter.synopsis}
-              publisedDate={post.frontmatter.published}
-              url={post.url}
-            />
-          ))
-        }
-      </div>
+<MySiteLayout>
+    <div class="flex flex-col gap-16 items-start py-36 w-[84%] md:w-[60%] md:container mx-auto">
+        <div class="flex flex-col gap-6">
+            <div class="flex flex-row items-center gap-1">
+                <img src="/Written-Icon.svg" alt="Written" class="w-6 h-6 md:w-8 md:h-8" />
+                <p class="text-2xl md:text-3xl font-bold text-tertiary-100">Written blogs</p>
+            </div>
+            <p class="text-base text-tertiary-200">
+                Throughout the years, I've endeavored to share the wealth of knowledge and experiences gained from my journey through life via these blogs. Feel free to explore and immerse yourself in them as you see fit, finding inspiration and insights along the way.
+            </p>
+        </div>
+        <div class="md:w-8/12 flex flex-col gap-8">
+            {page.data.map((post) => (
+                <Article 
+                    title={post.frontmatter.title}
+                    synopsis={post.frontmatter.synopsis}
+                    publishedDate={post.frontmatter.published}
+                    url={post.url}
+                />
+            ))}
+        </div>
     </div>
-  </div>
-</IndexLayout>
+</MySiteLayout>
+
+

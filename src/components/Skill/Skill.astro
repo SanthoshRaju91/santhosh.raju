@@ -1,34 +1,10 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon'
 
-const { skill, icon } = Astro.props;
+const { skill, icon } = Astro.props
 ---
 
-<style lang="scss" scoped>
-  .Skill {
-    border-radius: 2px;
-    border: 1px solid var(--gray);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 16px;
-    gap: 8px;
-
-    svg {
-      color: var(--secondary-text);
-      width: 22px;
-      height: 22px;
-    }
-
-    h4 {
-      color: var(--secondary-text);
-      font-size: 0.9rem;
-      font-weight: 400;
-    }
-  }
-</style>
-
-<div class="Skill">
-  <Icon name={icon} />
-  <h4>{skill}</h4>
+<div class="w-full border border-gray-100 flex flex-row items-center p-4 rounded gap-2">
+    <Icon name={icon} class="w-5 h-5" />
+    <h4 class="text-sm font-normal text-tertiary-200">{skill}</h4>
 </div>

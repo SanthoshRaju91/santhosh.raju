@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 slug: jupyter
 title: Essential guide to Jupyter notebook
 synopsis: Discover all the essentials of Jupyter Notebook and unlock its full potential. Includes cheatsheet for both Windows & Mac users
@@ -157,7 +157,7 @@ To run a cell, use `Command + Enter` on Mac and `Ctrl + Enter` on Windows.
 
 Keyboard shortcuts are a very popular aspect of Jupyter Notebook. Besides the foundational shortcuts we discussed, there are many more available. I have compiled an essential list of keyboard shortcuts for both Mac and Windows users.
 
-##### Jupyter Notebook Shortcuts for Mac users
+#### Jupyter Notebook Shortcuts for Mac users
 
 | Shortcut              | Description                       |
 | --------------------- | --------------------------------- |
@@ -194,7 +194,7 @@ Keyboard shortcuts are a very popular aspect of Jupyter Notebook. Besides the fo
 | `Alt + Up`            | Move current cell up              |
 | `Alt + Down`          | Move current cell down            |
 
-##### Jupyter Notebook Shortcuts for Windows users
+#### Jupyter Notebook Shortcuts for Windows users
 
 | Shortcut           | Description                       |
 | ------------------ | --------------------------------- |

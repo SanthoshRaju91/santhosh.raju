@@ -1,150 +1,79 @@
 ---
-import { Icon } from "astro-icon";
-import IndexLayout from "../layouts/IndexLayout.astro";
+import MySiteLayout from "../layouts/MySiteLayout.astro";
 import Article from "../components/Article/Article.astro";
-import LetsChat from "../components/LetsChat/LetsChat.astro";
+import Connection from "../components/Connection/Connection.astro";
 
-const response = await Astro.glob("./blogs/*.md");
-const allPosts = response.map((data) => ({
-  url: data.url,
-  frontmatter: data.frontmatter,
-}));
+const response = await Astro.glob("./blogs/*.md")
+const allPosts = response.map(data => ({
+    url: data.url,
+    frontmatter: data.frontmatter
+}))
+const sortedPosts = sortPostsByPublisedDate(allPosts)
+const topFourPosts = takeTopFourPosts(sortedPosts);
+
+function sortPostsByPublisedDate(posts) {
+    const postsByDateObjects = posts.map(post => ({
+        ...post,
+        frontmatter: {
+            ...post.frontmatter,
+            publishedDate: parseDateString(post.frontmatter.published)
+        }
+    }))    
+    postsByDateObjects.sort((prev, curr) => {
+        const prevPublishedDate = prev.frontmatter.publishedDate;
+        const currPublishedDate = curr.frontmatter.publishedDate;
+        return currPublishedDate - prevPublishedDate
+    })
+    return postsByDateObjects
+}
+
+function parseDateString(dateString) {
+    return new Date(dateString);
+}
+
+function takeTopFourPosts(posts) {
+    const topFourPosts = posts.splice(0,4) 
+    return topFourPosts
+}
+
+
 ---
 
-<style lang="scss" scoped>
-  .Hero {
-    margin: 66px 0;
-
-    &__container {
-      h1 {
-        color: var(--primary);
-        font-size: 2.2rem;
-        font-weight: 700;
-        line-height: 130%;
-      }
-
-      p {
-        color: var(--secondary-text);
-        font-size: 1rem;
-        font-weight: 200;
-        line-height: 150%;
-
-        .linkedin {
-          border-bottom: 1px dotted var(--blue);
-          color: var(--blue);
-          font-weight: 500;
-        }
-
-        .github {
-          border-bottom: 1px dotted var(--gray-light);
-          color: var(--gray-light);
-          font-weight: 500;
-        }
-      }
-    }
-
-    @media only screen and (min-width: 768px) {
-      margin: 76px 0;
-
-      &__container {
-        width: 90%;
-
-        h1 {
-          font-size: 3rem;
-        }
-
-        p {
-          font-size: 1rem;
-        }
-      }
-    }
-  }
-
-  .Articles {
-    &__container {
-      &--header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        h2 {
-          color: var(--primary-text);
-          font-size: 1.2rem;
-          font-weight: 500;
-        }
-
-        a {
-          color: var(--primary-text);
-          font-size: 0.8rem;
-          font-weight: 200;
-          display: inline-flex;
-          text-decoration: none;
-          align-items: center;
-          gap: 4px;
-
-          svg {
-            display: inline;
-            width: 16px;
-            height: 16px;
-          }
-        }
-      }
-
-      &--content {
-        margin: 16px 0;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-    }
-  }
-</style>
-
-<IndexLayout>
-  <div class="Hero">
-    <div class="Hero__container">
-      <h1>I'm Santhosh Raju, software engineer and tech enthusiasts.</h1>
-      <p>
-        I like to Build, Blog and Share stuff I do everyday. I specialize in
-        building Web Application, Websites & ML applications that scales. I'm
-        minimalistic in communication channels, but I still would like to
-        connect with everyone. Connect with me on <a
-          href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
-          class="linkedin">LinkedIn</a
-        >, or check my work on <a
-          href="https://github.com/SanthoshRaju91"
-          class="github">Github</a
-        >.
-      </p>
+<MySiteLayout>
+    <div class="flex flex-col gap-12 items-center py-36 w-[84%] mx-auto md:flex-row xl:container xl:justify-between xl:w-[60%]">
+        <div class="flex flex-col gap-4 md:w-[65%] xl:w-[50%]">         
+            <h1 class="text-3xl font-bold text-primary-200">I'm Santhosh Raju, software engineer and tech enthusiasts.</h1>
+            <h3 class="text-base text-tertiary-100 font-medium md:font-normal">
+                I like to Build, Blog and Share stuff I do everyday. I specialize in building Web Application, Websites & ML applications that scales. I'm minimalistic in communication channels, but I still would like to connect with everyone. Connect with me on LinkedIn, or check my work on Github.
+            </h3>
+        </div>
+        <div class="">
+            <img src="/Motto.svg" alt="Motto" class="w-full h-60" />
+        </div>
     </div>
-  </div>
 
-  <div class="Articles">
-    <div class="Articles__container">
-      <div class="Articles__container--header">
-        <h2>Latest Blogs</h2>
-        <a href="/blogs">
-          <span>All blogs</span>
-          <Icon pack="ri" name="speed-line" />
-        </a>
-      </div>
-      <div class="Articles__container--content">
-        {
-          allPosts.map((post) => (
-            <Article
-              title={post.frontmatter.title}
-              synopsis={post.frontmatter.synopsis}
-              publisedDate={post.frontmatter.published}
-              url={post.url}
-            />
-          ))
-        }
-      </div>
+    <div class="flex flex-col gap-12 items-center w-[84%] mx-auto xl:container xl:w-[60%]">    
+        <div class="w-full flex flex-row items-center  justify-between">            
+            <div class="flex flex-row items-center gap-1">
+                <img src="/Written-Icon.svg" alt="Written" class="w-5 h-5 md:w-8 md:h-8" />
+                <p class="text-xl md:text-3xl font-bold text-tertiary-100">Written blogs</p>
+            </div>
+            <a href="/blogs" class="text-sm text-tertiary-100 underline">View all blogs</a>
+        </div>
+
+        <div class="md:self-start md:w-8/12 flex flex-col gap-8">
+            {topFourPosts.map((post) => (
+                <Article 
+                    title={post.frontmatter.title}
+                    synopsis={post.frontmatter.synopsis}
+                    publishedDate={post.frontmatter.published}
+                    url={post.url}
+                />
+            ))}
+        </div>
     </div>
-  </div>
 
-  <div class="LetsChat">
-    <LetsChat />
-  </div>
-</IndexLayout>
+    <div class="flex flex-col gap-12 items-center py-28 w-[84%] mx-auto xl:container xl:w-[60%]">
+        <Connection />
+    </div>
+</MySiteLayout>

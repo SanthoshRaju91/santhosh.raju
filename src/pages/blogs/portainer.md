@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/BlogPostLayout.astro"
+layout: "../../layouts/BlogLayout.astro"
 slug: portainer
 title: Why I use Portainer.io ?
 synopsis: Running and managing Containers could never be this easy. Portainer.io is a Container Management System that is easy to install and easy to operate on your own for your local development.
