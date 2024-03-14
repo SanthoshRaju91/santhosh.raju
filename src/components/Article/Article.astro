@@ -5,10 +5,10 @@ const { title, synopsis, publishedDate, url } = Astro.props
 <a href={url} class="flex flex-col gap-4 border-b border-b-secondary-300 last:border-b-0 py-4 cursor-pointer">
     <div class="flex flex-col gap-2">
         <h1 class="text-2xl text-tertiary-100 font-bold hover:text-tertiary-200">{title}</h1>
-        <p class="text-base text-tertiary-200 font-normal">{synopsis}</p>
+        <p class="text-sm text-tertiary-200 font-light">{synopsis}</p>
     </div>
     <div class="flex flex-row gap-2">
         <img src="/Calendar.svg" alt="Published" />
-        <p class="text-sm text-tertiary-200">{publishedDate}</p>
+        <p class="text-sm text-tertiary-200 font-medium">{publishedDate}</p>
     </div>
 </a>
