@@ -27,14 +27,14 @@ Before we dive into the details, let's address the fundamental question: why doe
 
 - **Clarity and Understanding:** A clear commit message provides a concise summary of the changes made, aiding other developers and your future self in understanding the purpose and context of the changes without delving deep into the code.
 - **Historical Insight:** A well-crafted commit history enables quick comprehension of the code's evolution, facilitating debugging, refactoring, and extension of the codebase.
-- **\*Documentation:** Good commit messages serve as valuable documentation, offering insights into the project's history, including design decisions, bug fixes, and feature implementations.
+- **Documentation:** Good commit messages serve as valuable documentation, offering insights into the project's history, including design decisions, bug fixes, and feature implementations.
 - **Efficient Code Reviews:** Meaningful commit messages expedite the code review process, allowing reviewers to grasp the intent of the changes and provide relevant feedback.
 
 These points highlights the importance of investing time and effort into crafting good commit messages. Now, let's outline some simple rules to ensure your commit messages are clear and meaningful.
 
 ### Simple Rules for a Good and Meaningful Commit Message
 
-According to [CBEAMS](https://cbea.ms/git-commit/), there are seven rules to follow for great commit messages. However, for brevity, we'll focus on the essentials:
+According to [CBEAMS](https://cbea.ms/git-commit/), there are seven rules to follow for great commit messages. However, for simplicity, we'll focus on the essentials and good enough:
 
 1. Subject and Body: Each commit message should have a subject and a body, separated by a blank line.
 2. Conciseness: Limit the subject line to 50 characters and the body to 72 characters.
@@ -57,7 +57,7 @@ npm init -y # Initialize Node.js project
 git init # Initialize git repository
 ```
 
-Once the project is initialised, will mimick a real world code repository with a README file and src directory that would usually contain all the source code.
+Once the project is initialised, will mimick a real world code repository with a README file and `src` directory that would usually contain all the source code.
 
 ```bash
 .
@@ -67,18 +67,19 @@ Once the project is initialised, will mimick a real world code repository with a
     └── index.js
 ```
 
-Next, install commitizen globally and initialize the project with the cz-conventional-changelog adapter:
+Next, install commitizen globally and initialize the project with the `cz-conventional-changelog` adapter:
 
 ```bash
 npm install -g commitizen # Install commitizen globally
-commitizen init cz-conventional-changelog --save-dev # Initialize project with commitizen
 
+commitizen init cz-conventional-changelog --save-dev # Initialize project with commitizen
 ```
 
 Finally, integrate commitizen with husky to execute it automatically when committing changes:
 
 ```bash
 npm install --save-dev husky # Install husky
+
 npx husky init # Initialize husky
 ```
 
