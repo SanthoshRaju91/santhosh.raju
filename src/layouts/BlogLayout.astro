@@ -80,6 +80,14 @@ const { title, published, tags } = Astro.props.content;
   .markdown-content table tbody tr td {
     @apply px-6 py-4;
   }
+
+  .markdown-content a {
+    @apply leading-loose text-blue-600 border-b pb-1 border-blue-600 border-dashed;
+  }
+
+  .markdown-content code {
+    @apply font-mono leading-loose text-sm bg-[#24292e] px-2 py-1 rounded-sm text-red-600;
+  }
 </style>
 
 <html lang="en">
