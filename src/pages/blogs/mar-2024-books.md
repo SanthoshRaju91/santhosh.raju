@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
-slug: jan-2024-books
+slug: mar-2024-books
 title: "Monthly Reads: Mar 2024"
 synopsis: With the story of reuniting the siblings to "How to become a Straight-A student". Join me as we explore Academic insights and bid farewell to the gripping tales of Hossein.
 published: Apr 14, 2024
