@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogLayout.astro"
 slug: jun-2024-books
-title: "Montly Reads: July 2024"
+title: "Montly Reads: June 2024"
 synopsis: "This edition features a summary of 'How Will You Measure Your Life?' by Clayton Christensen. The author offers strategies for finding happiness in career and relationships while maintaining integrity. His personal stories and professional insights provide a valuable guide for a fulfilling life."
 published: Jul 7, 2024
 authorProfilePic: /authors/santhosh.raju.jpeg
