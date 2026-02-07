@@ -10,6 +10,10 @@ tags:
   - 2026
 ---
 
+<div class="w-full flex flex-row justify-center">
+  <img src="/adlerian-psychology/teleology.png" alt="Feb-2024"  />
+</div>
+
 Last year, I read Ichiro Kishimi and Fumitake Koga's book "The Courage to Be Disliked". It's a conversation between a youth and a philosopher, mostly about Adlerian psychology and its principles. I'll be honest -- the conversation was intense. A few concepts needed re-reading to truly sink in. I started applying them at work and in my relationships. Some are working, others I'm still consciously improving. The reason I'm writing this isn't to boast. I want to bring these concepts to you and share how I'm using them in my daily life. This will be a series of posts covering the core principles as I dive deeper.
 
 Let's start with the first and most important concept: Teleology. I chose to begin here because it deals with one of the most misunderstood words in our lives -- "Purpose".
