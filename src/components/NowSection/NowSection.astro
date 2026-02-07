@@ -1,15 +1,23 @@
 ---
 ---
 
-<div class="w-full flex flex-col gap-3 p-6 border border-secondary-300 rounded-lg bg-secondary-200/30">
-    <div class="flex flex-row items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-primary-200 animate-pulse"></span>
-        <p class="text-sm font-semibold text-primary-200 uppercase tracking-wide">Now</p>
+<div class="now-card relative w-full rounded-xl p-[1px] overflow-hidden">
+    <div class="absolute inset-0 rounded-xl bg-gradient-to-r from-primary-100 via-primary-200 to-accent-100 opacity-60 animate-pulse"></div>
+    <div class="relative flex flex-col gap-4 p-6 md:p-8 rounded-xl bg-secondary-100">
+        <div class="flex flex-row items-center gap-2">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-200 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-primary-200"></span>
+            </span>
+            <p class="font-heading text-sm font-bold text-primary-200 uppercase tracking-widest">What I'm up to now</p>
+        </div>
+        <div class="flex flex-col gap-3">
+            <p class="text-lg text-tertiary-100 font-medium">
+                Currently reading: <strong class="text-primary-300 font-semibold">The Life Impossible - Matt Haig</strong>
+            </p>
+            <p class="text-base text-tertiary-100 font-normal leading-relaxed">
+                Building AI agents to automate my tasks at work using Claude Skills & Sub-agents. Exploring Adlerian psychology.
+            </p>
+        </div>
     </div>
-    <p class="text-lg text-tertiary-100 font-light">
-        Currently reading: <strong class="text-primary-300">The Courage to Be Disliked</strong>
-    </p>
-    <p class="text-base text-tertiary-200 font-light">
-        Building ML pipelines and exploring Adlerian psychology.
-    </p>
 </div>
