@@ -1,10 +1,11 @@
 ---
 import '@fontsource-variable/inter'
+import '@fontsource-variable/space-grotesk'
 
 import Header from "../components/Header/Header.astro";
 import Footer from '../components/Footer/Footer.astro';
 
-const { title, published, tags } = Astro.props.content;
+const { title, published, tags = [], synopsis } = Astro.props.content;
 ---
 
 <style is:global>
@@ -13,60 +14,59 @@ const { title, published, tags } = Astro.props.content;
   }
 
   .markdown-content h1 {
-    @apply text-4xl font-bold mt-12 mb-6;
+    @apply font-heading text-3xl md:text-4xl font-bold text-tertiary-100 mt-12 mb-6;
   }
 
   .markdown-content h2 {
-    @apply text-3xl font-bold mt-12 mb-6;
+    @apply font-heading text-2xl md:text-3xl font-bold text-tertiary-100 mt-12 mb-6;
   }
 
   .markdown-content h3 {
-    @apply text-2xl font-bold mt-12 mb-6;
+    @apply font-heading text-xl md:text-2xl font-bold text-tertiary-100 mt-10 mb-4;
   }
 
   .markdown-content h4 {
-   @apply text-lg text-tertiary-200 underline font-semibold my-4; 
+    @apply font-heading text-lg text-tertiary-200 font-semibold my-4;
   }
 
   .markdown-content ol {
-    @apply list-decimal my-4 pl-10;
+    @apply list-decimal my-4 pl-10 text-tertiary-200;
   }
-  
 
   .markdown-content ul {
-    @apply list-disc my-4 pl-10;
+    @apply list-disc my-4 pl-10 text-tertiary-200;
   }
 
   .markdown-content hr {
-    @apply border-gray-600 my-6;
+    @apply border-tertiary-100/10 my-8;
   }
 
   .markdown-content p {
-    @apply text-base leading-8 text-tertiary-100;
+    @apply text-base md:text-lg leading-8 text-tertiary-200 font-normal my-4;
   }
+
   .markdown-content img {
-    @apply my-6;
+    @apply my-6 rounded-lg;
   }
 
   .markdown-content blockquote {
-    @apply p-4 my-6 border-s-4 border-gray-300 bg-secondary-100;
+    @apply p-5 my-6 border-l-2 border-primary-200/40 bg-secondary-200/30 rounded-r-lg;
   }
 
   .markdown-content blockquote p {
-    @apply text-lg font-medium italic;
+    @apply text-base md:text-lg font-normal italic text-tertiary-200/80 my-0;
   }
 
   .markdown-content pre {
-    @apply px-4 py-2 my-4 rounded-sm shadow-sm;
+    @apply px-5 py-4 my-6 rounded-lg shadow-sm overflow-x-auto;
   }
 
   .markdown-content table {
-    /* @apply table table-fixed my-8; */
-    @apply w-full text-sm text-left rtl:text-right text-tertiary-200 my-6;
+    @apply w-full text-sm text-left rtl:text-right text-tertiary-200 my-6 rounded-lg overflow-hidden;
   }
 
   .markdown-content table thead {
-    @apply text-sm text-tertiary-200 uppercase bg-secondary-200 ;
+    @apply text-sm text-tertiary-200 uppercase bg-secondary-200;
   }
 
   .markdown-content table thead th {
@@ -74,7 +74,7 @@ const { title, published, tags } = Astro.props.content;
   }
 
   .markdown-content table tbody tr {
-    @apply odd:bg-secondary-100 even:bg-secondary-200 border-b border-gray-700;
+    @apply odd:bg-secondary-100 even:bg-secondary-200/50 border-b border-tertiary-100/5;
   }
 
   .markdown-content table tbody tr td {
@@ -82,11 +82,15 @@ const { title, published, tags } = Astro.props.content;
   }
 
   .markdown-content a {
-    @apply leading-loose text-blue-600 border-b pb-1 border-blue-600 border-dashed;
+    @apply text-primary-200 underline decoration-primary-200/40 underline-offset-2 hover:decoration-primary-200 transition-colors duration-200;
   }
 
   .markdown-content code {
-    @apply font-mono leading-loose text-sm bg-[#24292e] px-2 py-1 rounded-sm text-red-600;
+    @apply font-mono text-sm bg-secondary-200/60 px-2 py-0.5 rounded text-primary-300;
+  }
+
+  .markdown-content pre code {
+    @apply bg-transparent px-0 py-0 text-inherit;
   }
 </style>
 
@@ -97,26 +101,48 @@ const { title, published, tags } = Astro.props.content;
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{title}</title>
   </head>
-  <body class="bg-body w-full h-full bg-center bg-no-repeat bg-cover">
+  <body class="bg-[#111111] w-full min-h-screen flex flex-col">
     <Header />
-    <article class="flex flex-col pt-40 w-[84%] mx-auto xl:container xl:justify-between xl:w-[60%]">
-      <div class="flex flex-col gap-4">
-        <h1 class="text-tertiary-100 text-4xl md:text-5xl font-bold">{title}</h1>
-        <div class="flex flex-row gap-6">
-          <div class="flex flex-row text-sm text-tertiary-100 gap-2">
-            <p>Published on</p>
-            <strong>{published}</strong>
+    <main class="flex-1">
+      <article class="flex flex-col pt-36 pb-16 w-[84%] mx-auto xl:container xl:w-[60%]">
+        <!-- Post Header -->
+        <div class="flex flex-col gap-6 md:w-[75%]">
+          <div class="flex flex-row items-center gap-4 text-sm text-tertiary-200/60">
+            <div class="flex flex-row items-center gap-2">
+              <img src="/Calendar.svg" alt="Published" class="w-4 h-4 opacity-60" />
+              <span>{published}</span>
+            </div>
           </div>
-          <div class="flex flex-row gap-1">           
-            {tags.map(tag => <p class="text-sm text-blue-400 underline">{tag}</p>)}            
-          </div>
+          <h1 class="font-heading text-4xl md:text-5xl font-bold text-tertiary-100 leading-tight">{title}</h1>
+          {synopsis && (
+            <p class="text-lg md:text-xl text-tertiary-200/70 font-light leading-relaxed">{synopsis}</p>
+          )}
+          {tags.length > 0 && (
+            <div class="flex flex-row flex-wrap gap-2">
+              {tags.map(tag => (
+                <span class="text-sm text-accent-100 bg-accent-200/20 px-3 py-1 rounded">{tag}</span>
+              ))}
+            </div>
+          )}
         </div>
-      </div>
-      <div class="text-tertiary-100 py-10 markdown-content">
-        <slot></slot>
-      </div>
-    </article>
+
+        <!-- Divider -->
+        <div class="border-t border-tertiary-100/10 my-10"></div>
+
+        <!-- Post Content -->
+        <div class="text-tertiary-100 markdown-content md:w-[75%]">
+          <slot></slot>
+        </div>
+
+        <!-- Back to blogs -->
+        <div class="mt-16 pt-8 border-t border-tertiary-100/10">
+          <a href="/blogs" class="text-sm font-heading font-medium text-tertiary-200 hover:text-primary-200 transition-colors duration-200 flex flex-row items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            Back to all posts
+          </a>
+        </div>
+      </article>
+    </main>
     <Footer />
   </body>
 </html>
-
