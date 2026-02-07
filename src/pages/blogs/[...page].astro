@@ -15,7 +15,7 @@ export async function getStaticPaths({ paginate }) {
                 ...post.frontmatter,
                 publishedDate: parseDateString(post.frontmatter.published)
             }
-        }))    
+        }))
         postsByDateObjects.sort((prev, curr) => {
             const prevPublishedDate = prev.frontmatter.publishedDate;
             const currPublishedDate = curr.frontmatter.publishedDate;
@@ -24,38 +24,68 @@ export async function getStaticPaths({ paginate }) {
         return postsByDateObjects
     }
 
+    function estimateReadingTime(compiledHtml) {
+        if (!compiledHtml) return "";
+        const text = compiledHtml.replace(/<[^>]*>/g, "");
+        const wordCount = text.split(/\s+/).filter(Boolean).length;
+        const minutes = Math.ceil(wordCount / 200);
+        return `${minutes} min read`;
+    }
+
     const allPosts = await Astro.glob("./*.md")
-    const sortedPosts = sortPostsByPublisedDate(allPosts)
+    const postsWithReadingTime = allPosts.map(post => ({
+        ...post,
+        readingTime: estimateReadingTime(post.compiledContent()),
+    }))
+    const sortedPosts = sortPostsByPublisedDate(postsWithReadingTime)
     return paginate(sortedPosts, { pageSize: 10 })
 }
-
-
 
 const { page } = Astro.props as any;
 ---
 
 <MySiteLayout>
-    <div class="flex flex-col gap-16 items-start py-36 w-[84%] md:w-[60%] md:container mx-auto">
-        <div class="flex flex-col gap-6">
-            <div class="flex flex-row items-center gap-1">
-                <img src="/Written-Icon.svg" alt="Written" class="w-6 h-6 md:w-8 md:h-8" />
-                <p class="text-2xl md:text-3xl font-bold text-tertiary-100">Written blogs</p>
-            </div>
-            <p class="text-base text-tertiary-200">
-                Throughout the years, I've endeavored to share the wealth of knowledge and experiences gained from my journey through life via these blogs. Feel free to explore and immerse yourself in them as you see fit, finding inspiration and insights along the way.
-            </p>
+    <!-- Header -->
+    <div class="flex flex-col gap-6 items-start pt-36 pb-12 w-[84%] mx-auto xl:container xl:w-[60%]">
+        <div class="flex flex-row items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 text-primary-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" /></svg>
+            <h1 class="font-heading text-2xl md:text-3xl font-bold text-tertiary-100">Latest Writings</h1>
         </div>
-        <div class="md:w-8/12 flex flex-col gap-8">
+        <p class="text-base md:text-lg text-tertiary-200 font-light leading-relaxed md:w-[75%]">
+            Thoughts on software engineering, AI, psychology, and the books I read — written to share what I learn along the way.
+        </p>
+    </div>
+
+    <!-- Blog Posts Grid -->
+    <div class="w-[84%] mx-auto xl:container xl:w-[60%] pb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {page.data.map((post) => (
-                <Article 
+                <Article
                     title={post.frontmatter.title}
                     synopsis={post.frontmatter.synopsis}
                     publishedDate={post.frontmatter.published}
                     url={post.url}
+                    tags={post.frontmatter.tags}
+                    readingTime={post.readingTime}
                 />
             ))}
         </div>
+
+        <!-- Pagination -->
+        {(page.url.prev || page.url.next) && (
+            <div class="flex flex-row items-center justify-center gap-4 mt-12">
+                {page.url.prev && (
+                    <a href={page.url.prev} class="text-sm font-heading font-medium text-tertiary-200 border border-tertiary-100/20 rounded-full px-5 py-2 hover:bg-primary-100/15 hover:border-primary-200/40 hover:text-primary-200 transition-all duration-200">
+                        Previous
+                    </a>
+                )}
+                <span class="text-sm text-tertiary-200/60">Page {page.currentPage} of {page.lastPage}</span>
+                {page.url.next && (
+                    <a href={page.url.next} class="text-sm font-heading font-medium text-tertiary-200 border border-tertiary-100/20 rounded-full px-5 py-2 hover:bg-primary-100/15 hover:border-primary-200/40 hover:text-primary-200 transition-all duration-200">
+                        Next
+                    </a>
+                )}
+            </div>
+        )}
     </div>
 </MySiteLayout>
-
-

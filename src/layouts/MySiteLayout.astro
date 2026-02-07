@@ -1,5 +1,6 @@
 ---
 import '@fontsource-variable/inter'
+import '@fontsource-variable/space-grotesk'
 
 import Header from "../components/Header/Header.astro";
 import Footer from '../components/Footer/Footer.astro';
@@ -11,12 +12,11 @@ import Footer from '../components/Footer/Footer.astro';
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Santhoshraju.dev</title>
     </head>
-    <body class="bg-body w-full h-full bg-center bg-no-repeat bg-cover">
+    <body class="bg-[#111111] w-full min-h-screen flex flex-col">
         <Header />
-        <slot></slot>
+        <main class="flex-1">
+            <slot></slot>
+        </main>
         <Footer />
     </body>
 </html>
-
-
-

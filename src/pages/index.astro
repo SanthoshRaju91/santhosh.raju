@@ -1,15 +1,20 @@
 ---
 import MySiteLayout from "../layouts/MySiteLayout.astro";
-import Article from "../components/Article/Article.astro";
+import Skill from "../components/Skill/Skill.astro";
+import NowSection from "../components/NowSection/NowSection.astro";
+import FeaturedPost from "../components/FeaturedPost/FeaturedPost.astro";
+import BlogCard from "../components/BlogCard/BlogCard.astro";
 import Connection from "../components/Connection/Connection.astro";
 
 const response = await Astro.glob("./blogs/*.md")
 const allPosts = response.map(data => ({
     url: data.url,
-    frontmatter: data.frontmatter
+    frontmatter: data.frontmatter,
+    readingTime: estimateReadingTime(data.compiledContent()),
 }))
 const sortedPosts = sortPostsByPublisedDate(allPosts)
-const topFourPosts = takeTopFourPosts(sortedPosts);
+const featuredPost = sortedPosts[0];
+const remainingPosts = sortedPosts.slice(1, 4);
 
 function sortPostsByPublisedDate(posts) {
     const postsByDateObjects = posts.map(post => ({
@@ -18,7 +23,7 @@ function sortPostsByPublisedDate(posts) {
             ...post.frontmatter,
             publishedDate: parseDateString(post.frontmatter.published)
         }
-    }))    
+    }))
     postsByDateObjects.sort((prev, curr) => {
         const prevPublishedDate = prev.frontmatter.publishedDate;
         const currPublishedDate = curr.frontmatter.publishedDate;
@@ -31,49 +36,142 @@ function parseDateString(dateString) {
     return new Date(dateString);
 }
 
-function takeTopFourPosts(posts) {
-    const topFourPosts = posts.splice(0,4) 
-    return topFourPosts
+function estimateReadingTime(compiledHtml) {
+    if (!compiledHtml) return "";
+    const text = compiledHtml.replace(/<[^>]*>/g, "");
+    const wordCount = text.split(/\s+/).filter(Boolean).length;
+    const minutes = Math.ceil(wordCount / 200);
+    return `${minutes} min read`;
 }
-
-
 ---
 
 <MySiteLayout>
-    <div class="flex flex-col gap-12 items-center py-36 w-[84%] mx-auto md:flex-row xl:container xl:justify-between xl:w-[60%]">
-        <div class="flex flex-col gap-4 md:w-[65%] xl:w-[50%]">         
-            <h1 class="text-4xl font-bold text-primary-200">I'm Santhosh Raju, software engineer and tech enthusiasts.</h1>
-            <h3 class="text-base text-tertiary-200 font-medium md:font-light">
+    <!-- Hero Section -->
+    <div class="flex flex-col gap-8 items-start py-36 w-[84%] mx-auto xl:container xl:w-[60%]">
+        <div class="flex flex-col gap-4 md:w-[75%]">
+            <h1 class="font-heading text-4xl md:text-5xl font-bold text-primary-200 leading-tight">
+                I'm Santhosh Raju,
+                <span class="tagline-container">
+                    <span class="tagline">I build AI applications that scale.</span>
+                    <span class="tagline">I write about psychology and tech.</span>
+                    <span class="tagline">I ship things and share what I learn.</span>
+                </span>
+            </h1>
+            <p class="text-lg text-tertiary-200 font-normal md:font-light md:text-xl leading-relaxed">
                 I like to Build, Blog and Share stuff I do everyday. I specialize in building Web Application, Websites & ML applications that scales. I'm minimalistic in communication channels, but I still would like to connect with everyone. Connect with me on LinkedIn, or check my work on Github.
-            </h3>
+            </p>
         </div>
-        <div class="">
-            <img src="/Motto.svg" alt="Motto" class="w-full h-60" />
+        <blockquote class="border-l-2 border-primary-100/40 pl-4 mt-4">
+            <p class="text-base text-tertiary-200/60 italic leading-relaxed">
+                "If one writes an article, one considers a matter more deeply than that without a goal, thinking alone or speaking with someone about it"
+            </p>
+            <cite class="text-sm text-primary-200/50 not-italic">— Richard Feynman</cite>
+        </blockquote>
+    </div>
+
+    <!-- Skills/Tech Stack Section -->
+    <div class="flex flex-col gap-8 items-center w-[84%] mx-auto xl:container xl:w-[60%]">
+        <div class="w-full flex flex-row items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 text-primary-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+            <p class="font-heading text-2xl md:text-3xl font-bold text-tertiary-100">Tech Stack</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full md:grid-cols-4">
+            <Skill icon="logos:react" skill="React.js" />
+            <Skill icon="logos:nodejs-icon" skill="Node.js" />
+            <Skill icon="logos:python" skill="Python" />
+            <Skill icon="logos:docker-icon" skill="Docker" />
+            <Skill icon="logos:kubernetes" skill="Kubernetes" />
+            <Skill icon="logos:javascript" skill="Javascript" />
+            <Skill icon="logos:nestjs" skill="Nest.js" />
+            <Skill icon="logos:java" skill="Java" />
         </div>
     </div>
 
-    <div class="flex flex-col gap-12 items-center w-[84%] mx-auto xl:container xl:w-[60%]">    
-        <div class="w-full flex flex-row items-center  justify-between">            
+    <!-- Now Section -->
+    <div class="flex flex-col gap-8 items-center w-[84%] mx-auto xl:container xl:w-[60%] py-12">
+        <NowSection />
+    </div>
+
+    <!-- Written Blogs Section -->
+    <div class="flex flex-col gap-12 items-center w-[84%] mx-auto xl:container xl:w-[60%]">
+        <div class="w-full flex flex-row items-center justify-between">
             <div class="flex flex-row items-center gap-1">
-                <img src="/Written-Icon.svg" alt="Written" class="w-5 h-5 md:w-8 md:h-8" />
-                <p class="text-xl md:text-3xl font-bold text-tertiary-100">Written blogs</p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 text-primary-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" /></svg>
+                <p class="font-heading text-2xl md:text-3xl font-bold text-tertiary-100">Latest Writings</p>
             </div>
-            <a href="/blogs" class="text-sm text-tertiary-100 underline">View all blogs</a>
+            <a href="/blogs" class="text-base text-tertiary-100 underline">View all blogs</a>
         </div>
 
-        <div class="md:self-start md:w-8/12 flex flex-col gap-8">
-            {topFourPosts.map((post) => (
-                <Article 
+        <!-- Featured Post -->
+        <div class="w-full">
+            <FeaturedPost
+                title={featuredPost.frontmatter.title}
+                synopsis={featuredPost.frontmatter.synopsis}
+                publishedDate={featuredPost.frontmatter.published}
+                url={featuredPost.url}
+                tags={featuredPost.frontmatter.tags}
+                readingTime={featuredPost.readingTime}
+            />
+        </div>
+
+        <!-- Remaining Posts -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6">
+            {remainingPosts.map((post) => (
+                <BlogCard
                     title={post.frontmatter.title}
                     synopsis={post.frontmatter.synopsis}
                     publishedDate={post.frontmatter.published}
                     url={post.url}
+                    tags={post.frontmatter.tags}
+                    readingTime={post.readingTime}
                 />
             ))}
         </div>
     </div>
 
+    <!-- Connection Section -->
     <div class="flex flex-col gap-12 items-center py-28 w-[84%] mx-auto xl:container xl:w-[60%]">
         <Connection />
     </div>
 </MySiteLayout>
+
+<style>
+    .tagline-container {
+        display: block;
+        position: relative;
+        height: 5em;
+        overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+        .tagline-container {
+            height: 3em;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .tagline-container {
+            height: 1.5em;
+        }
+    }
+
+    .tagline {
+        display: block;
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        animation: taglineRotate 9s infinite;
+    }
+
+    .tagline:nth-child(1) { animation-delay: 0s; }
+    .tagline:nth-child(2) { animation-delay: 3s; }
+    .tagline:nth-child(3) { animation-delay: 6s; }
+
+    @keyframes taglineRotate {
+        0%   { opacity: 0; transform: translateY(10px); }
+        5%   { opacity: 1; transform: translateY(0); }
+        30%  { opacity: 1; transform: translateY(0); }
+        35%  { opacity: 0; transform: translateY(-10px); }
+        100% { opacity: 0; }
+    }
+</style>

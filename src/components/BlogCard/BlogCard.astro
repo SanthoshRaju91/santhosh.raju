@@ -6,21 +6,17 @@ const { title, synopsis, publishedDate, url, tags = [], readingTime = "" } = Ast
     hover:border-primary-100/40 hover:shadow-[0_0_15px_rgba(46,139,87,0.1)]
     transition-all duration-300 cursor-pointer hover:scale-[1.01]">
     <div class="flex flex-col gap-2">
-        <h2 class="font-heading text-xl md:text-2xl text-tertiary-100 font-bold
+        <h2 class="font-heading text-2xl text-tertiary-100 font-bold
             group-hover:text-primary-200 transition-colors duration-300">{title}</h2>
-        {synopsis && (
-            <p class="text-base text-tertiary-200 font-normal line-clamp-2">{synopsis}</p>
-        )}
+        <p class="text-base text-tertiary-200 font-normal line-clamp-2">{synopsis}</p>
     </div>
-    {tags.length > 0 && (
-        <div class="flex flex-row flex-wrap gap-2">
-            {tags.map((tag) => (
-                <span class="text-sm text-accent-100 bg-accent-200/20 px-2 py-1 rounded">
-                    {tag}
-                </span>
-            ))}
-        </div>
-    )}
+    <div class="flex flex-row flex-wrap gap-2">
+        {tags.map((tag) => (
+            <span class="text-sm text-accent-100 bg-accent-200/20 px-2 py-1 rounded">
+                {tag}
+            </span>
+        ))}
+    </div>
     <div class="flex flex-row items-center gap-4">
         <div class="flex flex-row gap-2 items-center">
             <img src="/Calendar.svg" alt="Published" />
