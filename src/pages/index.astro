@@ -137,28 +137,11 @@ function estimateReadingTime(compiledHtml) {
 
 <style>
     .tagline-container {
-        display: block;
-        position: relative;
-        height: 5em;
-        overflow: hidden;
-    }
-
-    @media (min-width: 768px) {
-        .tagline-container {
-            height: 3em;
-        }
-    }
-
-    @media (min-width: 1280px) {
-        .tagline-container {
-            height: 1.5em;
-        }
+        display: grid;
     }
 
     .tagline {
-        display: block;
-        position: absolute;
-        width: 100%;
+        grid-area: 1 / 1;
         opacity: 0;
         animation: taglineRotate 9s infinite;
     }
