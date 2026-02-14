@@ -35,14 +35,22 @@ If `$ARGUMENTS` is provided, check only that specific blog post file. Otherwise,
 
 5. **Image references** - Check that referenced images in `public/` directories actually exist
 
+### AUTHENTICITY RULE (NON-NEGOTIABLE)
+
+- NEVER rewrite or replace the author's personal stories, reflections, or emotional passages
+- Personal anecdotes, confessions, and lived experiences are SACRED — do not rephrase, polish, or "improve" them
+- Only flag objective errors (spelling, grammar, broken references) in personal sections
+- If a personal passage has a grammar issue, suggest a minimal fix — do not rewrite the sentence
+- The author's authentic voice matters more than editorial polish
+
 ### Output
 
 For each issue found, report:
 - **Location**: frontmatter field or approximate position in the post
 - **Issue**: what's wrong
-- **Suggestion**: the corrected text
+- **Suggestion**: the minimal corrected text (preserve original wording as much as possible)
 
 Group issues by severity:
 - **Must fix**: Spelling errors in titles/headings, missing frontmatter, broken images
-- **Should fix**: Body text spelling/grammar, awkward phrasing
-- **Optional**: Style suggestions, minor improvements
+- **Should fix**: Body text spelling/grammar
+- **Optional**: Minor grammar tweaks (NEVER style rewrites of personal content)
