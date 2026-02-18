@@ -55,7 +55,7 @@ These three life tasks are interconnected. Avoidance in one often influences the
 
 After reading the chapter on Life tasks in the book, I realised how I have been avoiding Friendship -- the Life task. Being an introvert, I slowly started enjoying being **Alone**. When I say this most people confuse **Alone** with **Loneliness**. They are not the same thing. Loneliness is the pain of wanting connection and not having it. But when a person genuinely enjoys being Alone, it means he has tasted that part of life which he will not trade it for anything. Because of this guilty pleasure, I started distancing myself from my friends and from friendships that displayed **vertical relationships**.
 
-What made this real for me was an unexpected phone call this week -- from a school friend living in Dubai. We hadn't spoken in nearly ten years. The distance and the years didn't matter. Within minutes, we were talking as equals, openly, without pretence. That single conversation reminded me what I had been avoiding.
+What made this real for me was an unexpected phone call last week -- from a school friend living in Dubai. We hadn't spoken in nearly ten years. The distance and the years didn't matter. Within minutes, we were talking as equals, openly, without pretence. That single conversation reminded me what I had been avoiding.
 
 As Adler emphasised, **life tasks** are not solved once and for all. They are ongoing processes. Every stage of life reintroduces them in new forms. Careers change, friendships evolve, relationships deepen or dissolve. The question remains constant:
 
