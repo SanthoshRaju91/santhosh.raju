@@ -52,6 +52,18 @@ reflects genuine emotion. Flag it as a deviation if needed, but
 do NOT revise it.
 
 --------------------------------------------------
+SURFACE ERROR CHECK
+--------------------------------------------------
+Before style analysis, scan for and flag:
+- Typos and spelling errors (e.g., "dwelve", "posses", "somethign")
+- Grammar mistakes (subject-verb agreement, tense consistency)
+- Punctuation errors (extra spaces, missing quotes, misplaced periods)
+- Missing or malformed frontmatter (e.g., unclosed quotes in layout field)
+- Broken image paths or empty attributes
+
+These are objective errors that should be corrected regardless of personal/authentic content.
+
+--------------------------------------------------
 STYLE-ONLY REVISION
 --------------------------------------------------
 Revise ONLY:
@@ -74,6 +86,11 @@ Return EXACTLY these three sections:
 
 ### STYLE PROFILE SUMMARY
 - 5–7 concise points describing the author's style
+
+### SURFACE ERRORS
+List all typos, grammar, punctuation, and frontmatter issues found:
+- Line X: "original" → "corrected"
+- Flag frontmatter issues (e.g., missing closing quotes, empty required fields)
 
 ### STYLE MISALIGNMENTS
 - Specific passages that deviate
