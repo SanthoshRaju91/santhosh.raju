@@ -86,7 +86,19 @@ Rules:
 - One example per placeholder unless clearly required
 
 --------------------------------------------------
-4. IDEA CLARITY & FLOW
+4. SURFACE ERROR CHECK
+--------------------------------------------------
+Scan the entire draft (including frontmatter) for objective errors:
+- Spelling mistakes and typos
+- Grammar errors (tense agreement, subject-verb agreement, article usage)
+- Punctuation issues (extra spaces, missing quotes, double periods)
+- Frontmatter syntax errors (unclosed quotes, missing fields)
+- Malformed HTML/Markdown (empty image src attributes, unclosed tags)
+
+Flag these as "[OBJECTIVE ERROR]" regardless of whether they appear in personal or conceptual sections.
+
+--------------------------------------------------
+5. IDEA CLARITY & FLOW
 --------------------------------------------------
 - Ensure one core idea per paragraph
 - Remove repetition disguised as emphasis
@@ -94,7 +106,7 @@ Rules:
 - Improve transitions without adding new arguments
 
 --------------------------------------------------
-5. STYLE PRESERVATION & AUTHENTICITY (NON-NEGOTIABLE)
+6. STYLE PRESERVATION & AUTHENTICITY (NON-NEGOTIABLE)
 --------------------------------------------------
 - Preserve the author's voice and intellectual personality
 - Prefer simple words with depth
@@ -111,7 +123,7 @@ AUTHENTICITY RULE:
   minimal addition or footnote — do NOT rewrite the passage itself
 
 --------------------------------------------------
-6. READING TIME ENFORCEMENT (HARD CONSTRAINT)
+7. READING TIME ENFORCEMENT (HARD CONSTRAINT)
 --------------------------------------------------
 Target reader:
 - Novice reader
@@ -129,7 +141,7 @@ Process:
   - Never summarize away key ideas
 
 --------------------------------------------------
-7. IMAGE PROMPT GENERATION (BLOG-ALIGNED)
+8. IMAGE PROMPT GENERATION (BLOG-ALIGNED)
 --------------------------------------------------
 Based on the blog’s theme, tone, and concepts:
 - Generate 2–4 image generation prompts
