@@ -64,7 +64,12 @@ export const GET: APIRoute = async ({ props }) => {
                 children: tag,
               },
             }))
-          : [{ type: "div", props: { style: { display: "flex" }, children: "" } }],
+          : [
+              {
+                type: "div",
+                props: { style: { display: "flex" }, children: "" },
+              },
+            ],
     },
   };
 
@@ -156,7 +161,13 @@ export const GET: APIRoute = async ({ props }) => {
     },
   };
 
-  const contentChildren = [tagsRow, titleEl, ...(truncatedDesc ? [descEl] : []), dividerEl, footerEl];
+  const contentChildren = [
+    tagsRow,
+    titleEl,
+    ...(truncatedDesc ? [descEl] : []),
+    dividerEl,
+    footerEl,
+  ];
 
   const svg = await satori(
     {

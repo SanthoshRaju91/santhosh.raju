@@ -26,6 +26,7 @@ Blog posts on santhoshraju.dev lack structured SEO metadata (`description`, `key
 ### Phase 1: Update BlogLayout.astro to emit SEO meta tags
 
 **Files to modify:**
+
 - `src/layouts/BlogLayout.astro`
 
 Destructure `description` and `keywords` from `Astro.props.content` alongside existing fields. Add into `<head>`:
@@ -51,6 +52,7 @@ Both `description` and `keywords` are optional so existing posts without them wo
 ### Phase 2: Add @astrojs/sitemap integration
 
 **Files to modify:**
+
 - `astro.config.mjs`
 - `package.json` (add `@astrojs/sitemap` dependency)
 
@@ -73,9 +75,11 @@ export default defineConfig({
 ### Phase 3: Create SEO review skill
 
 **Files to create:**
+
 - `.claude/skills/seo-blog-review/README.md`
 
 The skill instructs Claude to act as an SEO content strategist. Given a blog post it:
+
 1. Identifies primary topic and reader search intent
 2. Suggests 5–8 SEO keywords (prefer long-tail 3–5 word phrases)
 3. Writes a meta description (≤ 155 characters) including the primary keyword
@@ -89,6 +93,7 @@ The skill instructs Claude to act as an SEO content strategist. Given a blog pos
 **Files to modify (all in `src/pages/blogs/`):**
 
 Priority order from issue:
+
 1. `inferiority-is-not-the-enemy.md`
 2. `life-tasks-adlerian-psychology.md`
 3. `Adlerian-psychology.md`
@@ -97,6 +102,7 @@ Priority order from issue:
 6. Remaining posts: `what-is-mlops.md`, `command-alias.md`, `portainer.md`, `three-books-a-month.md`, `essential-guide-to-jupyter.md`, `feb-2024-books.md`, `mar-2024-books.md`, `jan-2024-books.md`
 
 Add to each post's frontmatter:
+
 ```yaml
 description: "≤155 char meta description with primary keyword"
 keywords:
@@ -137,17 +143,21 @@ docs/
 ## Verification Steps
 
 1. **Meta tags render correctly**
+
    - Run `npm run dev`, open any blog post, view page source
    - Confirm `<meta name="description">`, `<meta name="keywords">`, `<meta property="og:title">` are present
 
 2. **All posts have frontmatter fields**
+
    - `grep -L "description:" src/pages/blogs/*.md` should return nothing
 
 3. **Build passes**
+
    - `npm run build` completes without errors
    - `npm run lint` passes
 
 4. **Sitemap generated**
+
    - After build, `dist/sitemap-index.xml` and `dist/sitemap-0.xml` exist
 
 5. **Lighthouse SEO score**

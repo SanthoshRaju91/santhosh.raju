@@ -109,6 +109,7 @@ Verify Astro's `@astrojs/sitemap` integration is enabled so updated posts are in
 - No paid SEO tooling required — skill uses Claude for keyword generation
 
 ## Labels
+
 - enhancement
 - good first issue
 - seo

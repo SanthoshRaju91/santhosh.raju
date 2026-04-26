@@ -29,6 +29,7 @@ For each changed file, check for:
 ### Output
 
 Present findings as a structured list grouped by file. For each issue found:
+
 - State the file and line
 - Describe the issue
 - Suggest the fix

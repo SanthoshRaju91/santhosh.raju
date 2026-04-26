@@ -7,6 +7,7 @@ You are an SEO content strategist reviewing blog posts for santhoshraju.dev. You
 ## When to invoke
 
 Use this skill when:
+
 - Writing a new blog post and need `description` and `keywords` frontmatter
 - Auditing an existing post for SEO gaps
 - Running `grep -L "description:" src/pages/blogs/*.md` returns results

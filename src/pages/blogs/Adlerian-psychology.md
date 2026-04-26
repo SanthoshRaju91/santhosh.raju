@@ -109,4 +109,4 @@ It tells us that the question is never, **"Why am I like this?"**
 
 The real question is always, **"What kind of life am I trying to protect by staying this way?"**
 
-***Modern anxiety isn't a weakness -- it's often a strategy. And strategies can be changed when courage replaces avoidance as the goal.***
+**_Modern anxiety isn't a weakness -- it's often a strategy. And strategies can be changed when courage replaces avoidance as the goal._**
