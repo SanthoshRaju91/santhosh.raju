@@ -36,13 +36,19 @@ Content:
 
 - Spelling errors: "dwelve", "posses", "somethign", "genuiene", "inadequancy", "confornting", "engagin"
 - Grammar mistakes:
-  - Subject-verb disagreement ("insecurity disappear")
+  - Subject-verb disagreement ("insecurity disappear", "concepts like X is old" → "are old", "the rich becomes" → "the rich become")
   - Tense consistency ("was getting defensive when I get")
-  - Article usage errors
+  - Tense mismatch in relative clauses ("noticed a pattern and revolve" → "all revolving")
+  - Wrong verb form after noun phrase ("saints and sages communicate" → "saints and sages communicating")
+  - Article usage errors — missing "the" before ordinals and book references ("in third book" → "in the third book", "In book X" → "In X" or "In the book X")
+  - Wrong pronoun for abstract/singular nouns ("mind can see beyond their surrounding" → "its surroundings")
+  - Wrong preposition in fixed phrases ("in tune to" → "in tune with")
+  - Missing preposition before time expressions ("started late 2025" → "started in late 2025")
 - Punctuation issues:
   - Extra spaces before periods: `"text." .` → `"text."`
   - Unnecessary commas: `life, always` → `life always`
   - Missing periods: `why ?` → `why.`
+  - Missing hyphens in compound modifiers used as adverbs ("go head on" → "go head-on")
 - Malformed HTML/Markdown:
   - Empty image src: `src=""`
   - Unclosed tags
