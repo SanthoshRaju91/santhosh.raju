@@ -13,17 +13,20 @@ Run: !`git diff --name-only --cached -- 'src/components/NowSection/NowSection.as
 ### What to check
 
 1. **Grammar and spelling**
+
    - Typos in book titles, author names, and activities
    - Subject-verb agreement
    - Missing or incorrect articles (a/an/the)
    - Comma splices (joining independent clauses with just a comma)
 
 2. **Sentence structure**
+
    - Avoid run-on sentences
    - Ensure parallel structure in list items
    - Check for proper punctuation at sentence endings
 
 3. **HTML/Semantic structure**
+
    - List items should use proper `<ul>` and `<li>` tags (not asterisks in paragraphs)
    - Book titles should use semantic `<em>` or `<cite>` tags
    - Maintain consistent styling classes
@@ -37,16 +40,18 @@ Run: !`git diff --name-only --cached -- 'src/components/NowSection/NowSection.as
 
 - "I wanted to have a leisure read, started..." → "I wanted a leisure read, so I started..."
 - "practicing Trachtenberg method" → "practicing the Trachtenberg method"
-- Asterisks (*) for bullet points → proper `<ul><li>` structure
+- Asterisks (\*) for bullet points → proper `<ul><li>` structure
 
 ### Output
 
 For each issue found, report:
+
 - **Line**: approximate line number
 - **Issue**: what's wrong
 - **Suggestion**: corrected text
 
 Group by severity:
+
 - **Must fix**: Typos, broken HTML structure, missing articles in proper nouns
 - **Should fix**: Grammar issues, awkward phrasing, comma splices
 - **Optional**: Style improvements (only if they preserve the original voice)

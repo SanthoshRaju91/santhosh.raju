@@ -28,7 +28,6 @@ In this blog, I will talk about **Life Tasks** in Adlerian psychology. The idea 
 
 > Life tasks matter because they test whether a person can live cooperatively within society. For Adler, mental health is not defined by the absence of symptoms but by the willingness to engage meaningfully in these three areas. When a person struggles psychologically, it often reveals avoidance of one or more of these tasks.
 
-
 ## Work -- First Life Task
 
 Work, in Adlerian terms, does not simply mean employment or income. It refers to contribution. Every human being must find a way to be useful to others. The central question is not **"What job do I have?"** but **"In what way do I contribute to the common good?"** A person who works only for status or superiority may appear successful, but internally may feel hollow. Contribution generates a sense of belonging; comparison generates anxiety.

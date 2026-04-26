@@ -15,6 +15,7 @@ This skill creates structured implementation plans from issue definitions stored
 ## When to Use
 
 Activate when handling requests like:
+
 - Creating an implementation plan from an issue file
 - Generating a plan for a specific issue number
 - Converting issue requirements to implementation steps
@@ -24,6 +25,7 @@ Activate when handling requests like:
 ## Activation Patterns
 
 **Trigger phrases:**
+
 - "create implementation plan"
 - "generate plan from issue"
 - "plan implementation for issue"
@@ -37,12 +39,14 @@ Activate when handling requests like:
 ### Step 1: Read the Issue File
 
 Locate and read the issue file:
+
 - Default path: `docs/issues/{issue-number}/issue.md`
 - Extract: title, description, acceptance criteria, labels
 
 ### Step 2: Analyze Requirements
 
 Parse the issue to identify:
+
 - **Core functionality** from the description
 - **Acceptance criteria** as requirement checklists
 - **Technical constraints**: performance, interfaces, file locations
@@ -51,6 +55,7 @@ Parse the issue to identify:
 ### Step 3: Determine Tech Stack
 
 Check project context:
+
 - Look for `package.json`, `tsconfig.json`, config files
 - Review existing source files for patterns
 - Check for TECHNICAL_SPEC or documentation
@@ -68,26 +73,34 @@ Write comprehensive plan to `docs/issues/{issue-number}/plan.md`:
 > **Related Issue:** [Issue #{number}: {Issue Title}](../../issues/issue-{number}/issue.md)
 
 ## Context
+
 Brief explanation of what this issue addresses.
 
 ## Requirements Summary
+
 Bullet list of key requirements from acceptance criteria.
 
 ## User Preferences
+
 Tech stack or approach decisions based on context.
 
 ## Implementation Plan
 
 ### Phase 1: [Phase Name]
+
 **Files to create/modify:**
+
 - `path/to/file.ts` - Purpose and key contents
 
 ### Phase 2: [Phase Name]
+
 [Continue with additional phases...]
 
 ## File Structure
 ```
+
 [ASCII tree of expected file structure]
+
 ```
 
 ## Verification Steps
@@ -100,6 +113,7 @@ Optional: things intentionally excluded.
 ### Step 5: Present the Plan
 
 After creating the plan:
+
 1. Confirm successful creation
 2. Summarize key implementation phases
 3. Highlight important technical decisions
@@ -116,10 +130,12 @@ After creating the plan:
 ## Plan Structure Guidelines
 
 ### Context Section
+
 - Explain the issue's purpose and importance
 - Reference any related issues or dependencies
 
 ### Requirements Summary
+
 - Extract bullet points from acceptance criteria
 - Group related requirements
 - Note any implied requirements
@@ -127,22 +143,26 @@ After creating the plan:
 ### Implementation Phases
 
 **Typical phase structure:**
+
 1. **Setup Phase**: Project configuration, dependencies
 2. **Types Phase**: Interfaces, type definitions
 3. **Core Phase**: Main implementation files
 4. **Tests Phase**: Unit tests, integration tests
 
 **For each phase:**
+
 - List files to create/modify
 - Describe purpose of each file
 - Include key function/class signatures
 
 ### File Structure
+
 - Use ASCII tree format
 - Show full directory hierarchy
 - Group related files
 
 ### Verification Steps
+
 - Map each step to acceptance criteria
 - Include specific commands to run
 - Note expected outcomes
@@ -152,6 +172,7 @@ After creating the plan:
 **User request:** "Create an implementation plan for issue #25"
 
 **Actions:**
+
 1. Read `docs/issues/issue-25/issue.md`
 2. Analyze acceptance criteria and requirements
 3. Check existing project structure
@@ -161,21 +182,27 @@ After creating the plan:
 ## Common Issue Patterns
 
 ### Feature Implementation Issues
+
 Typical phases:
+
 1. Setup (dependencies, config)
 2. Types (interfaces, types)
 3. Implementation (core logic)
 4. Tests (unit tests)
 
 ### Bug Fix Issues
+
 Typical phases:
+
 1. Investigation (reproduce, locate)
 2. Fix implementation
 3. Regression tests
 4. Documentation update
 
 ### Refactoring Issues
+
 Typical phases:
+
 1. Analysis (current state)
 2. Migration plan
 3. Implementation
@@ -184,8 +211,10 @@ Typical phases:
 ## Additional Resources
 
 ### References
+
 - `../example-plans/` - Example implementation plans (if available)
 
 ### Related Skills
+
 - Use agent skills for complex multi-file implementations
 - Use testing skills for test plan generation

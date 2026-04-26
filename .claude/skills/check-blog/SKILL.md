@@ -17,6 +17,7 @@ If `$ARGUMENTS` is provided, check only that specific blog post file. Otherwise,
 ### What to check
 
 1. **Spelling mistakes** - Catch misspelled words in titles, synopsis, headings, and body text. Pay special attention to:
+
    - Blog post `title` and `synopsis` in frontmatter (these are highly visible)
    - Section headings
    - Author and book names (verify consistency within the post)
@@ -24,6 +25,7 @@ If `$ARGUMENTS` is provided, check only that specific blog post file. Otherwise,
 2. **Grammar** - Awkward phrasing, subject-verb disagreement, missing articles, run-on sentences
 
 3. **Frontmatter validation** - Ensure all required fields are present and well-formed:
+
    - `layout` must be `"../../layouts/BlogLayout.astro"`
    - `slug` must be a valid URL slug (lowercase, hyphens, no spaces)
    - `title` must be present and non-empty
@@ -46,11 +48,13 @@ If `$ARGUMENTS` is provided, check only that specific blog post file. Otherwise,
 ### Output
 
 For each issue found, report:
+
 - **Location**: frontmatter field or approximate position in the post
 - **Issue**: what's wrong
 - **Suggestion**: the minimal corrected text (preserve original wording as much as possible)
 
 Group issues by severity:
+
 - **Must fix**: Spelling errors in titles/headings, missing frontmatter, broken images
 - **Should fix**: Body text spelling/grammar
 - **Optional**: Minor grammar tweaks (NEVER style rewrites of personal content)
