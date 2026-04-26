@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "August 2024 reads: Matt Haig's Midnight Library on life's alternate paths and Charles Duhigg's Smarter Faster Better on productive goal setting."
+keywords:
+  - Midnight Library Matt Haig review
+  - Smarter Faster Better Charles Duhigg
+  - monthly book reviews August 2024
+  - SMART goals and stretch goals productivity
+  - philosophy of life book review
+  - productivity and focus strategies
 ---
 
 <div class="w-full flex flex-row justify-center">

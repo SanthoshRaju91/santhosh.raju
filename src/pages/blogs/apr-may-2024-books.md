@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "April and May 2024 reads: Stoicism with Seneca, Morgan Housel's Same as Ever, and Cal Newport's Slow Productivity for meaningful deep work."
+keywords:
+  - Slow Productivity Cal Newport review
+  - Focus on What Matters Stoicism Seneca
+  - Same as Ever Morgan Housel review
+  - monthly book reviews April May 2024
+  - stoic philosophy beginners guide
+  - slow productivity deep work principles
 ---
 
 <div class="w-full flex flex-row justify-center">

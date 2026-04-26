@@ -9,6 +9,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Linux
   - Git
+description: "Learn why clear git commit messages matter and how commitizen with husky automates conventional commits in Node.js projects."
+keywords:
+  - git commit message best practices
+  - commitizen conventional commits setup
+  - husky git hooks Node.js
+  - cz-conventional-changelog tutorial
+  - writing meaningful commit messages
+  - git workflow automation
 ---
 
 <div class="w-full flex flex-row justify-center">

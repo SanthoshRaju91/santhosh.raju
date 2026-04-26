@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "September 2024 reads: Murakami's Colorless Tsukuru Tazaki on loneliness and identity, plus Naveen Lakkur's FOUND framework for startup ideas."
+keywords:
+  - Colorless Tsukuru Tazaki Murakami review
+  - FOUND framework Naveen Lakkur
+  - monthly book reviews September 2024
+  - Haruki Murakami first read recommendation
+  - startup idea validation framework
+  - self-discovery novel review
 ---
 
 <div class="w-full flex flex-row justify-center">

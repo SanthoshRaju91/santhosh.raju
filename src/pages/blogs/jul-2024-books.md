@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "July 2024 reads: Kristin Hannah's Comfort and Joy, Fredrik Backman's Anxious People, plus Tokyo travel conversations on leadership and tech."
+keywords:
+  - Comfort and Joy Kristin Hannah review
+  - Anxious People Fredrik Backman review
+  - monthly book reviews July 2024
+  - leadership lessons from engineering managers
+  - Tokyo travel experience blog
+  - feel-good novels to read
 ---
 
 <div class="w-full flex flex-row justify-center">

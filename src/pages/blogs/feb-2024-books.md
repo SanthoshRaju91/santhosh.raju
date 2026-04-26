@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "February 2024 reads: Khaled Hosseini's war narratives in The Kite Runner and A Thousand Splendid Suns, plus GenAI insights from a ChatGPT book."
+keywords:
+  - The Kite Runner Khaled Hosseini review
+  - A Thousand Splendid Suns book summary
+  - Modern Generative AI ChatGPT book review
+  - monthly book reviews February 2024
+  - Khaled Hosseini Afghanistan war novels
+  - LLM large language model book
 ---
 
 <div class="w-full flex flex-row justify-center">

@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "January 2024 monthly reads: Jan Yager's FINISH technique for beating procrastination and Karen Swann's Scottish mystery novel The Stolen Hours."
+keywords:
+  - monthly book reviews January 2024
+  - How to Finish Everything You Start Jan Yager
+  - FINISH technique beat procrastination
+  - The Stolen Hours Karen Swann review
+  - overcoming procrastination book tips
+  - reading journal 2024 monthly recap
 ---
 
 I'm an avid reader who finds solace in books, preferring them over movies or video games. Books create a comforting space just for me.

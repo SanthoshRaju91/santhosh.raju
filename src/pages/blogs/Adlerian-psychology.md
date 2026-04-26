@@ -8,6 +8,15 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Psychology
   - 2026
+description: "Teleology in Adlerian psychology: behaviours serve hidden purposes, not past causes. Recognising purpose restores freedom, choice, and courage."
+keywords:
+  - Adlerian psychology teleology
+  - Alfred Adler purpose over cause
+  - Courage to Be Disliked summary
+  - modern anxiety as avoidance strategy
+  - behaviour and hidden goals Adler
+  - teleology social media scrolling
+  - psychological freedom and choice
 ---
 
 <div class="w-full flex flex-row justify-center">

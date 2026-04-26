@@ -9,6 +9,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Linux
   - Docker
+description: "Portainer.io makes Docker container management easy via a web UI. Learn to install Portainer on Docker and deploy Redis in just a few clicks."
+keywords:
+  - Portainer.io Docker container management
+  - install Portainer Docker standalone
+  - container management web UI
+  - deploy Redis with Portainer
+  - Raspberry Pi Docker setup guide
+  - Docker local development tools
 ---
 
 In this blog, we will discuss about Portainer.io, one of the many Container Management Tools.
