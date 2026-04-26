@@ -9,6 +9,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Books
   - Motivation
+description: "From reading 1 page a day to 3 books a month—discover how small consistent steps build a lasting reading habit that transforms your daily life."
+keywords:
+  - how to build a reading habit
+  - reading 3 books a month journey
+  - consistency and commitment habit formation
+  - James Clear compound interest habits
+  - starting small to build habits
+  - reading habit benefits personal growth
 ---
 
 ![Books](/three-books-a-month/Books.jpeg)

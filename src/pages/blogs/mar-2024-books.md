@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "March 2024 reads: Hosseini's And the Mountains Echoed concludes his war trilogy, plus Cal Newport's study techniques in How to Become a Straight-A Student."
+keywords:
+  - And the Mountains Echoed Hosseini review
+  - How to Become a Straight-A Student Cal Newport
+  - monthly book reviews March 2024
+  - Khaled Hosseini final book review
+  - study habits high achieving students
+  - reading log 2024 books
 ---
 
 <div class="w-full flex flex-row justify-center">

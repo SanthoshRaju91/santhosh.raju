@@ -11,6 +11,14 @@ tags:
   - Linux
   - Git
   - Javascript
+description: "Speed up your dev workflow with command aliases on Mac, Linux, and Windows. Step-by-step guide to setting up bash and PowerShell shortcuts."
+keywords:
+  - command alias bash setup Mac Linux
+  - Windows doskey alias developer workflow
+  - bash profile aliases terminal shortcuts
+  - git command aliases productivity
+  - developer workflow automation tips
+  - reduce terminal typing with aliases
 ---
 
 I have been using the command alias for a while now, and it has been a boon in

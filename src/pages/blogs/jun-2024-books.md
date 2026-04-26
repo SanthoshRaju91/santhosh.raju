@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "How Will You Measure Your Life by Clayton Christensen: strategies for career happiness, meaningful relationships, and living with integrity."
+keywords:
+  - How Will You Measure Your Life review
+  - Clayton Christensen career happiness
+  - finding purpose in work and relationships
+  - work-life balance self-help book
+  - integrity and personal strategy
+  - monthly book reviews June 2024
 ---
 
 <div class="w-full flex flex-row justify-center">

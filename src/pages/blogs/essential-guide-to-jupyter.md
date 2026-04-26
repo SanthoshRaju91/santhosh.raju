@@ -7,6 +7,14 @@ published: July 22, 2023
 authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Python
+description: "Complete guide to Jupyter Notebook: installation on Mac and Windows, keyboard shortcuts, cell modes, and tips for data science workflows."
+keywords:
+  - Jupyter Notebook complete guide
+  - install Jupyter Notebook Mac Windows
+  - Jupyter keyboard shortcuts cheatsheet
+  - Jupyter cell types code markdown
+  - data science interactive computing tools
+  - Python data analysis with Jupyter
 ---
 
 In the dynamic world of data science and machine learning, Jupyter Notebook has emerged as an indispensable tool for interactive computing and collaborative data exploration. If you are new to Jupyter Notebook or seeking to enhance your proficiency with this versatile platform, you've come to the right place!

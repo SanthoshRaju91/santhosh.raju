@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Psychology
   - 2026
+description: "Inferiority is not a flaw to eliminate—it's the signal that growth is possible. Explore Adler's view on inferiority, courage, and contribution."
+keywords:
+  - Adlerian psychology inferiority
+  - inferiority complex vs healthy inferiority
+  - Alfred Adler personal growth
+  - courage and contribution Adler
+  - overcoming inferiority feelings
+  - psychological health Adlerian
 ---
 
 <div class="w-full flex flex-row justify-center">

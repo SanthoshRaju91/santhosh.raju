@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - Psychology
   - 2026
+description: "Adler's three life tasks—work, friendship, and love—are unavoidable tests of courage and equality that define psychological health."
+keywords:
+  - Adlerian life tasks work friendship love
+  - Alfred Adler three life tasks
+  - horizontal vs vertical relationships Adler
+  - psychological health Adlerian psychology
+  - social interest Adler
+  - meaningful participation in life
 ---
 
 <div class="w-full flex flex-row justify-center">

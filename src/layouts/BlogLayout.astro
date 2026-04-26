@@ -5,7 +5,7 @@ import '@fontsource-variable/space-grotesk'
 import Header from "../components/Header/Header.astro";
 import Footer from '../components/Footer/Footer.astro';
 
-const { title, published, tags = [], synopsis } = Astro.props.content;
+const { title, published, tags = [], synopsis, description, keywords } = Astro.props.content;
 ---
 
 <style is:global>
@@ -100,6 +100,13 @@ const { title, published, tags = [], synopsis } = Astro.props.content;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {keywords?.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={Astro.url} />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body class="bg-[#111111] w-full min-h-screen flex flex-col">
     <Header />

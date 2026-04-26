@@ -8,6 +8,14 @@ authorProfilePic: /authors/santhosh.raju.jpeg
 tags:
   - books
   - 2024
+description: "October 2024 reads: Kristin Hannah's The Women on Vietnam War nurses and Murakami's South of the Border West of the Sun on desire and loss."
+keywords:
+  - The Women Kristin Hannah review
+  - South of the Border West of the Sun Murakami
+  - monthly book reviews October 2024
+  - Vietnam War women fiction
+  - Haruki Murakami love story
+  - books about human desire
 ---
 
 <div class="w-full flex flex-row justify-center">
