@@ -1,0 +1,52 @@
+---
+const { title, synopsis, publishedDate, url, tags = [], readingTime = "" } = Astro.props;
+---
+
+<a href={url} class="featured-card group flex flex-col gap-5 p-6 border border-secondary-300 rounded-lg
+    bg-secondary-200/20 hover:bg-secondary-200/40 hover:border-primary-100/30
+    transition-all duration-300 cursor-pointer">
+    <div class="flex flex-row items-center gap-3">
+        <span class="text-sm font-semibold text-primary-200 uppercase tracking-wider
+            bg-primary-100/10 px-3 py-1 rounded">Featured</span>
+        {readingTime && (
+            <span class="text-sm text-tertiary-200 font-medium">{readingTime}</span>
+        )}
+    </div>
+    <div class="flex flex-col gap-3">
+        <h1 class="font-heading text-3xl md:text-4xl text-tertiary-100 font-bold
+            group-hover:text-primary-200 transition-colors duration-300">{title}</h1>
+        <p class="text-lg text-tertiary-200 font-normal leading-relaxed">{synopsis}</p>
+    </div>
+    <div class="flex flex-row flex-wrap gap-2">
+        {tags.map((tag) => (
+            <span class="text-sm text-primary-300 bg-primary-100/10 px-3 py-1 rounded">
+                {tag}
+            </span>
+        ))}
+    </div>
+    <div class="flex flex-row gap-2 items-center">
+        <img src="/Calendar.svg" alt="Published" />
+        <p class="text-base text-tertiary-200 font-medium">{publishedDate}</p>
+    </div>
+</a>
+
+<style>
+    .featured-card {
+        animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .featured-card:hover {
+        animation: none;
+    }
+
+    @keyframes pulseGlow {
+        0%, 100% {
+            box-shadow: 0 0 0 0 rgba(46, 139, 87, 0);
+            border-color: #454545;
+        }
+        50% {
+            box-shadow: 0 0 20px 2px rgba(46, 139, 87, 0.15);
+            border-color: rgba(97, 188, 132, 0.3);
+        }
+    }
+</style>

@@ -1,0 +1,60 @@
+---
+import MySiteLayout from "../layouts/MySiteLayout.astro";
+import Skill from '../components/Skill/Skill.astro';
+---
+
+<MySiteLayout>
+    <!-- Introduction -->
+    <div class="flex flex-col gap-6 items-start pt-36 pb-12 w-[84%] mx-auto xl:container xl:w-[60%]">
+        <div class="flex flex-col gap-6 md:w-[75%]">
+            <h1 class="font-heading text-4xl md:text-5xl font-bold text-primary-200 leading-tight">
+                I'm Santhosh Raju, software engineer and AI engineer
+            </h1>
+            <p class="text-lg text-tertiary-200 font-normal md:font-light md:text-xl leading-relaxed">
+                I build web applications, APIs, and machine learning systems that work reliably at scale. I also design and build AI agents — autonomous systems that reason, use tools, and get things done. Over the past 11+ years, I've helped organisations ship products from early-stage prototypes to production-grade platforms. Connect with me on <a
+                    href="https://www.linkedin.com/in/santhosh-nagaraj-9558b0157/"
+                    class="text-primary-200 hover:text-primary-300 underline transition-colors duration-200">LinkedIn</a>,
+                or check my work on <a
+                    href="https://github.com/SanthoshRaju91"
+                    class="text-primary-200 hover:text-primary-300 underline transition-colors duration-200">Github</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- What I Do -->
+    <div class="flex flex-col gap-6 w-[84%] mx-auto xl:container xl:w-[60%] pb-12">
+        <div class="flex flex-col gap-6 md:w-[75%]">
+            <p class="text-base md:text-lg text-tertiary-200 font-normal leading-relaxed">
+                Right now, my focus is on designing and deploying data-intensive and ML-powered applications — taking them from proof-of-concept to production. I work across the full stack: frontend, backend, infrastructure, and MLOps pipelines.
+            </p>
+            <p class="text-base md:text-lg text-tertiary-200 font-normal leading-relaxed">
+                Outside of work, I tinker with <b>Raspberry Pi's</b> and read a lot of <b>books</b> — you'll find both in <a href="/blogs" class="text-primary-200 hover:text-primary-300 underline transition-colors duration-200">my blogs</a>.
+            </p>
+        </div>
+    </div>
+
+    <!-- Tech Stack Section -->
+    <div class="flex flex-col gap-8 items-center w-[84%] mx-auto xl:container xl:w-[60%] pb-16">
+        <div class="w-full flex flex-row items-center gap-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 md:w-8 md:h-8 text-primary-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+            <p class="font-heading text-2xl md:text-3xl font-bold text-tertiary-100">Tech Stack</p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full md:grid-cols-3 lg:grid-cols-5">
+            <Skill icon="logos:javascript" skill="Javascript" />
+            <Skill icon="logos:python" skill="Python" />
+            <Skill icon="logos:java" skill="Java" />
+            <Skill icon="logos:react" skill="React.js" />
+            <Skill icon="logos:nodejs-icon" skill="Node.js" />
+            <Skill icon="logos:nestjs" skill="Nest.js" />
+            <Skill icon="logos:angular-icon" skill="Angular" />
+            <Skill icon="logos:ember-tomster" skill="Ember" />
+            <Skill icon="logos:python" skill="Fast API" />
+            <Skill icon="logos:spring-icon" skill="Spring Boot" />
+            <Skill icon="logos:flask" skill="Flask" />
+            <Skill icon="logos:docker-icon" skill="Docker" />
+            <Skill icon="logos:kubernetes" skill="Kubernetes" />
+            <Skill icon="logos:jenkins" skill="Jenkins" />
+            <Skill icon="logos:ansible" skill="Ansible" />
+        </div>
+    </div>
+</MySiteLayout>

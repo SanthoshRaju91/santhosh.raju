@@ -1,0 +1,368 @@
+{
+  "projectName": "santhosh.raju",
+  "generatedAt": "2026-05-28T14:17:33.793Z",
+  "fileCount": 49,
+  "moduleCount": 8,
+  "modules": [
+    {
+      "name": "components",
+      "directory": "src/components",
+      "purpose": "UI components",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 8
+    },
+    {
+      "name": "docs",
+      "directory": "docs",
+      "purpose": "Code in docs/",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 2
+    },
+    {
+      "name": "layouts",
+      "directory": "src/layouts",
+      "purpose": "Code in src/layouts/",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 2
+    },
+    {
+      "name": "pages",
+      "directory": "src/pages",
+      "purpose": "Page components",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 24
+    },
+    {
+      "name": "public",
+      "directory": "public",
+      "purpose": "Code in public/",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 1
+    },
+    {
+      "name": "scripts",
+      "directory": "scripts",
+      "purpose": "Scripts and tooling",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 1
+    },
+    {
+      "name": "src",
+      "directory": "src",
+      "purpose": "Code in src/",
+      "language": "typescript",
+      "isTest": false,
+      "fileCount": 36
+    },
+    {
+      "name": "styles",
+      "directory": "src/styles",
+      "purpose": "Code in src/styles/",
+      "language": "unknown",
+      "isTest": false,
+      "fileCount": 1
+    }
+  ],
+  "files": [
+    {
+      "path": ".eslintrc.cjs",
+      "extension": ".cjs",
+      "sizeBytes": "457",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": ".eslintrc.js",
+      "extension": ".js",
+      "sizeBytes": "558",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": ".prettierrc.json",
+      "extension": ".json",
+      "sizeBytes": "47",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "astro.config.mjs",
+      "extension": ".mjs",
+      "sizeBytes": "660",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "CLAUDE.md",
+      "extension": ".md",
+      "sizeBytes": "2298",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "docs/issues/issue-80/issue.md",
+      "extension": ".md",
+      "sizeBytes": "3872",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "docs/issues/issue-80/plan.md",
+      "extension": ".md",
+      "sizeBytes": "5117",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "eslint-report.json",
+      "extension": ".json",
+      "sizeBytes": "113474",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "Jenkinsfile",
+      "extension": "Jenkinsfile",
+      "sizeBytes": "1618",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "package.json",
+      "extension": ".json",
+      "sizeBytes": "2272",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "public/robots.txt",
+      "extension": ".txt",
+      "sizeBytes": "22",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "scripts/pull-issue.sh",
+      "extension": ".sh",
+      "sizeBytes": "1233",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/Article/Article.astro",
+      "extension": ".astro",
+      "sizeBytes": "1355",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/BlogCard/BlogCard.astro",
+      "extension": ".astro",
+      "sizeBytes": "1245",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/Connection/Connection.astro",
+      "extension": ".astro",
+      "sizeBytes": "1465",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/FeaturedPost/FeaturedPost.astro",
+      "extension": ".astro",
+      "sizeBytes": "1843",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/Footer/Footer.astro",
+      "extension": ".astro",
+      "sizeBytes": "1214",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/Header/Header.astro",
+      "extension": ".astro",
+      "sizeBytes": "1002",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/NowSection/NowSection.astro",
+      "extension": ".astro",
+      "sizeBytes": "1419",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/components/Skill/Skill.astro",
+      "extension": ".astro",
+      "sizeBytes": "286",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/env.d.ts",
+      "extension": ".ts",
+      "sizeBytes": "39",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/layouts/BlogLayout.astro",
+      "extension": ".astro",
+      "sizeBytes": "5464",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/layouts/MySiteLayout.astro",
+      "extension": ".astro",
+      "sizeBytes": "586",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/[...page].astro",
+      "extension": ".astro",
+      "sizeBytes": "4129",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/Adlerian-psychology.md",
+      "extension": ".md",
+      "sizeBytes": "10999",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/apr-may-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "6272",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/aug-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "4472",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/building-codeguide.md",
+      "extension": ".md",
+      "sizeBytes": "2722",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/command-alias.md",
+      "extension": ".md",
+      "sizeBytes": "4128",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/essential-guide-to-jupyter.md",
+      "extension": ".md",
+      "sizeBytes": "14021",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/feb-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "4337",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/importance-of-good-commit-message.md",
+      "extension": ".md",
+      "sizeBytes": "5681",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/inferiority-is-not-the-enemy.md",
+      "extension": ".md",
+      "sizeBytes": "7466",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/jan-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "3673",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/jul-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "4989",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/jun-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "7917",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/life-tasks-adlerian-psychology.md",
+      "extension": ".md",
+      "sizeBytes": "7666",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/mar-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "3797",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/oct-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "4882",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/portainer.md",
+      "extension": ".md",
+      "sizeBytes": "5195",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/sep-2024-books.md",
+      "extension": ".md",
+      "sizeBytes": "4142",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/stranger-things.md",
+      "extension": ".md",
+      "sizeBytes": "7898",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/three-books-a-month.md",
+      "extension": ".md",
+      "sizeBytes": "4696",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/blogs/what-is-mlops.md",
+      "extension": ".md",
+      "sizeBytes": "6368",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "extension": ".astro",
+      "sizeBytes": "7166",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/og/[slug].png.ts",
+      "extension": ".ts",
+      "sizeBytes": "5719",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/pages/portfolio.astro",
+      "extension": ".astro",
+      "sizeBytes": "3913",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "src/styles/main.css",
+      "extension": ".css",
+      "sizeBytes": "62",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    },
+    {
+      "path": "tailwind.config.mjs",
+      "extension": ".mjs",
+      "sizeBytes": "1333",
+      "indexedAt": "2026-05-28T14:17:33.793Z"
+    }
+  ]
+}
